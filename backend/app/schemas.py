@@ -35,6 +35,21 @@ class TransactionIn(BaseModel):
     _pnl = field_validator("pnl_month", mode="before")(_month)
 
 
+class ReceiptOut(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: int
+    kind: str
+    url: Optional[str]
+    filename: Optional[str]
+    content_type: Optional[str]
+    size: Optional[int]
+
+
+class LinkIn(BaseModel):
+    url: str
+
+
 class TransactionOut(BaseModel):
     id: int
     is_plan: bool
@@ -59,6 +74,8 @@ class TransactionOut(BaseModel):
     project_close_date: Optional[dt.date]
     comment: Optional[str]
     import_warning: Optional[str]
+    receipts: list[ReceiptOut] = []
+    verified_at: Optional[dt.datetime] = None
 
 
 class TransactionPage(BaseModel):

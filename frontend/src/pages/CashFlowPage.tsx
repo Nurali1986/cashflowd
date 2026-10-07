@@ -28,6 +28,7 @@ export default function CashFlowPage({ isPlan }: { isPlan: boolean }) {
     article_id: params.get('article') ?? '',
     pnl_month: params.get('pnl') ?? '',
     cash: params.get('cash') ?? '',
+    receipt: params.get('receipt') ?? '',
     warnings_only: params.get('warnings') === '1',
     page: Number(params.get('page') ?? 0),
   }
@@ -41,7 +42,7 @@ export default function CashFlowPage({ isPlan }: { isPlan: boolean }) {
 
   const url = `/api/transactions${query({
     is_plan: isPlan, date_from: filters.date_from, date_to: filters.date_to, account_id: filters.account_id,
-    kind: filters.kind, category: filters.category, article_id: filters.article_id, pnl_month: filters.pnl_month, project_id: filters.project_id, q: filters.q, cash: filters.cash,
+    kind: filters.kind, category: filters.category, article_id: filters.article_id, pnl_month: filters.pnl_month, project_id: filters.project_id, q: filters.q, cash: filters.cash, receipt: filters.receipt,
     warnings_only: filters.warnings_only, limit: PAGE, offset: filters.page * PAGE,
   })}`
   const { data, error: loadError, loading, refresh } = useData<TransactionPage>(url)
@@ -78,7 +79,7 @@ export default function CashFlowPage({ isPlan }: { isPlan: boolean }) {
       />
 
       <Card>
-        <div className="grid grid-cols-2 gap-3 border-b border-slate-100 p-3 md:grid-cols-4 xl:grid-cols-9">
+        <div className="grid grid-cols-2 gap-3 border-b border-slate-100 p-3 md:grid-cols-5 xl:grid-cols-10">
           <Field label="Sanadan"><Input type="date" value={filters.date_from} onChange={e => setFilter('from', e.target.value)} /></Field>
           <Field label="Sanagacha"><Input type="date" value={filters.date_to} onChange={e => setFilter('to', e.target.value)} /></Field>
           <Field label="СЧЕТ"><AccountSelect value={filters.account_id} onChange={v => setFilter('account', v)} allLabel="Barcha hisoblar" /></Field>
@@ -108,6 +109,15 @@ export default function CashFlowPage({ isPlan }: { isPlan: boolean }) {
               <option value="">Hammasi</option>
               <option value="cash">Sanali (ДДС)</option>
               <option value="accrual">Sanasiz (faqat P&L)</option>
+            </Select>
+          </Field>
+          <Field label="Chek">
+            <Select value={filters.receipt} onChange={e => setFilter('receipt', e.target.value)}>
+              <option value="">Hammasi</option>
+              <option value="with">Chek bor</option>
+              <option value="without">Chek yo'q</option>
+              <option value="unverified">Tekshirilmagan</option>
+              <option value="verified">Tekshirilgan ✓</option>
             </Select>
           </Field>
           <Field label="Qidiruv" className="col-span-2">

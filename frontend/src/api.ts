@@ -20,6 +20,15 @@ export interface Meta {
   inactive_statuses: string[]
 }
 
+export interface Receipt {
+  id: number
+  kind: 'file' | 'link'
+  url: string | null
+  filename: string | null
+  content_type: string | null
+  size: number | null
+}
+
 export interface Transaction {
   id: number
   is_plan: boolean
@@ -44,6 +53,8 @@ export interface Transaction {
   project_close_date: string | null
   comment: string | null
   import_warning: string | null
+  receipts: Receipt[]
+  verified_at: string | null
 }
 
 export interface TransactionInput {

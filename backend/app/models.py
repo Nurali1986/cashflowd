@@ -1,8 +1,8 @@
 """Database tables. Each one mirrors an input area of the original Excel workbook."""
-from datetime import date
+from datetime import date, datetime
 from typing import Optional
 
-from sqlalchemy import Boolean, Date, Float, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy import Boolean, Date, DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from .database import Base
@@ -108,11 +108,30 @@ class Transaction(Base):
     comment: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     # Problems found while importing the Excel row (e.g. amount typed as text); empty when the row is clean.
     import_warning: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    # Set when a reviewer has compared the payment with its receipt (chek).
+    verified_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
 
     article: Mapped[Optional[Article]] = relationship(lazy="joined")
     account: Mapped[Optional[Account]] = relationship(foreign_keys=[account_id], lazy="joined")
     to_account: Mapped[Optional[Account]] = relationship(foreign_keys=[to_account_id], lazy="joined")
     project: Mapped[Optional[Project]] = relationship(lazy="joined")
+    receipts: Mapped[list["Receipt"]] = relationship(lazy="selectin", order_by="Receipt.id", cascade="all, delete-orphan")
+
+
+class Receipt(Base):
+    """Proof of payment for a Cash flow row: an uploaded photo/PDF of the receipt or a link to an online check."""
+
+    __tablename__ = "receipts"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    transaction_id: Mapped[int] = mapped_column(ForeignKey("transactions.id", ondelete="CASCADE"), index=True)
+    kind: Mapped[str] = mapped_column(String(8))  # "file" | "link"
+    url: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    filename: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
+    stored_name: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    content_type: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
+    size: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.now)
 
 
 class ExchangeRate(Base):

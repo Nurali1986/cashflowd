@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { AlertTriangle, Copy, Pencil, Trash2 } from 'lucide-react'
 import type { Transaction } from '../api'
 import { decimal, dmy, money } from '../format'
 import { IconButton, KindBadge } from '../ui'
+import { ReceiptCell, ReceiptViewer } from './Receipts'
 
 export default function TransactionTable({ rows, onEdit, onCopy, onDelete, editingId, compact = false }: {
   rows: Transaction[]
@@ -12,8 +14,10 @@ export default function TransactionTable({ rows, onEdit, onCopy, onDelete, editi
   compact?: boolean
 }) {
   const actions = onEdit || onCopy || onDelete
+  const [viewing, setViewing] = useState<Transaction | null>(null)
   return (
     <div className="overflow-auto">
+      {viewing && <ReceiptViewer t={viewing} onClose={() => setViewing(null)} onChanged={setViewing} />}
       <table className="sheet w-full min-w-[1100px]">
         <thead>
           <tr>
@@ -26,6 +30,7 @@ export default function TransactionTable({ rows, onEdit, onCopy, onDelete, editi
             <th className="num">Summa</th>
             <th>Kim uchun (Proyekt)</th>
             <th>КОММЕНТАРИЙ</th>
+            <th title="Chek (rasm / link) va tekshiruv">Chek</th>
             {!compact && <th>МЕСЯЦ ДДС</th>}
             {actions && <th className="w-24"></th>}
           </tr>
@@ -63,6 +68,7 @@ export default function TransactionTable({ rows, onEdit, onCopy, onDelete, editi
               <td className="max-w-[260px] truncate text-slate-600" title={t.comment ?? ''}>
                 {t.comment && /^https?:\/\//.test(t.comment) ? <a href={t.comment} target="_blank" rel="noreferrer" className="text-sky-600 underline">havola</a> : t.comment}
               </td>
+              <td className="whitespace-nowrap"><ReceiptCell t={t} onOpen={() => setViewing(t)} /></td>
               {!compact && <td className="whitespace-nowrap text-slate-500">{t.cf_month_label}</td>}
               {actions && (
                 <td className="whitespace-nowrap text-right">

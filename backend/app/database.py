@@ -1,7 +1,7 @@
 import os
 import time
 
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine, inspect, text
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
@@ -36,6 +36,20 @@ def wait_for_database(attempts: int = 60) -> None:
                 raise
             print("Database is not ready yet, retrying…", flush=True)
             time.sleep(1)
+
+
+def add_missing_columns() -> None:
+    """create_all() does not alter existing tables; add columns introduced after the first release."""
+    added = {"transactions": {"verified_at": "TIMESTAMP"}}
+    inspector = inspect(engine)
+    with engine.begin() as conn:
+        for table, columns in added.items():
+            if not inspector.has_table(table):
+                continue
+            existing = {c["name"] for c in inspector.get_columns(table)}
+            for name, sql_type in columns.items():
+                if name not in existing:
+                    conn.execute(text(f"ALTER TABLE {table} ADD COLUMN {name} {sql_type}"))
 
 
 def get_db():

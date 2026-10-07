@@ -1,6 +1,7 @@
 import io
 import os
-from datetime import date
+import uuid
+from datetime import date, datetime
 from typing import Optional
 
 from fastapi import Depends, FastAPI, File, HTTPException, Query, UploadFile
@@ -12,16 +13,22 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from . import logic, models, schemas
-from .database import BASE_DIR, Base, SessionLocal, engine, get_db, wait_for_database
+from .database import BASE_DIR, Base, SessionLocal, add_missing_columns, engine, get_db, wait_for_database
 from .exporter import export_workbook
 from .importer import import_workbook
 from .models import EXPENSE, INCOME, TRANSFER
 
 SEED_WORKBOOK = os.path.join(BASE_DIR, "data_source.xlsx")
+# Receipt photos/PDFs; in docker-compose this is inside the mounted ./backend folder, so files survive rebuilds.
+UPLOAD_DIR = os.getenv("UPLOAD_DIR", os.path.join(BASE_DIR, "uploads"))
+MAX_UPLOAD = 15 * 1024 * 1024
+ALLOWED_TYPES = {"image/jpeg": ".jpg", "image/png": ".png", "image/webp": ".webp", "image/heic": ".heic",
+                 "image/heif": ".heif", "image/gif": ".gif", "application/pdf": ".pdf"}
 FRONTEND_DIST = os.getenv("FRONTEND_DIST", os.path.join(os.path.dirname(BASE_DIR), "frontend", "dist"))
 
 wait_for_database()
 Base.metadata.create_all(bind=engine)
+add_missing_columns()
 
 app = FastAPI(title="Pifagor Cash flow & P&L")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
@@ -133,6 +140,8 @@ def _tx_out(t: models.Transaction, settings: dict) -> schemas.TransactionOut:
         project_close_date=t.project.close_date if t.project else None,
         comment=t.comment,
         import_warning=t.import_warning,
+        receipts=[schemas.ReceiptOut.model_validate(r) for r in t.receipts],
+        verified_at=t.verified_at,
     )
 
 
@@ -150,6 +159,7 @@ def list_transactions(
     q: Optional[str] = None,
     warnings_only: bool = False,
     cash: Optional[str] = None,
+    receipt: Optional[str] = None,
     sort: str = "date_desc",
     limit: int = Query(200, le=5000),
     offset: int = 0,
@@ -182,6 +192,14 @@ def list_transactions(
         stmt = stmt.where(models.Transaction.import_warning.is_not(None))
 
     rows = list(db.scalars(stmt).unique())
+    if receipt == "with":
+        rows = [t for t in rows if t.receipts]
+    elif receipt == "without":
+        rows = [t for t in rows if not t.receipts]
+    elif receipt == "unverified":
+        rows = [t for t in rows if t.verified_at is None]
+    elif receipt == "verified":
+        rows = [t for t in rows if t.verified_at is not None]
     if q:
         needle = q.strip().lower()
         rows = [t for t in rows if needle in " ".join(filter(None, [
@@ -204,6 +222,7 @@ def list_transactions(
 
 
 def _apply_tx(db: Session, t: models.Transaction, data: schemas.TransactionIn):
+    before = (t.amount, t.date, t.account_id, t.article_id)
     t.is_plan = data.is_plan
     t.date = data.date
     t.pnl_month = data.pnl_month or (data.date.replace(day=1) if data.date else None)
@@ -256,6 +275,9 @@ def _apply_tx(db: Session, t: models.Transaction, data: schemas.TransactionIn):
         t.project_id = None
     # The row was reviewed by a person, so import warnings no longer apply.
     t.import_warning = None
+    # A changed amount/date/account/article no longer matches the receipt that was checked.
+    if t.id is not None and before != (t.amount, t.date, t.account_id, t.article_id):
+        t.verified_at = None
 
 
 @app.post("/api/transactions", response_model=schemas.TransactionOut)
@@ -266,6 +288,11 @@ def create_transaction(data: schemas.TransactionIn, db: Session = Depends(get_db
     db.commit()
     db.refresh(t)
     return _tx_out(t, logic.get_settings(db))
+
+
+@app.get("/api/transactions/{tx_id}", response_model=schemas.TransactionOut)
+def get_transaction(tx_id: int, db: Session = Depends(get_db)):
+    return _tx_out(_get(db, models.Transaction, tx_id), logic.get_settings(db))
 
 
 @app.put("/api/transactions/{tx_id}", response_model=schemas.TransactionOut)
@@ -279,9 +306,89 @@ def update_transaction(tx_id: int, data: schemas.TransactionIn, db: Session = De
 
 @app.delete("/api/transactions/{tx_id}")
 def delete_transaction(tx_id: int, db: Session = Depends(get_db)):
-    db.delete(_get(db, models.Transaction, tx_id))
+    t = _get(db, models.Transaction, tx_id)
+    files = [r.stored_name for r in t.receipts if r.stored_name]
+    db.delete(t)
     db.commit()
+    for name in files:
+        _remove_file(name)
     return {"ok": True}
+
+
+# ---------------------------------------------------------------- receipts (chek: photo / PDF / link)
+
+def _remove_file(stored_name: str):
+    try:
+        os.remove(os.path.join(UPLOAD_DIR, stored_name))
+    except FileNotFoundError:
+        pass
+
+
+@app.post("/api/transactions/{tx_id}/receipts", response_model=schemas.ReceiptOut)
+async def upload_receipt(tx_id: int, file: UploadFile = File(...), db: Session = Depends(get_db)):
+    t = _get(db, models.Transaction, tx_id)
+    content_type = (file.content_type or "").lower()
+    if content_type not in ALLOWED_TYPES:
+        raise HTTPException(400, "Faqat rasm (JPG, PNG, WEBP, HEIC) yoki PDF yuklash mumkin")
+    content = await file.read()
+    if len(content) > MAX_UPLOAD:
+        raise HTTPException(400, "Fayl juda katta (15 MB dan oshmasin)")
+    if not content:
+        raise HTTPException(400, "Fayl bo'sh")
+    os.makedirs(UPLOAD_DIR, exist_ok=True)
+    stored_name = f"{uuid.uuid4().hex}{ALLOWED_TYPES[content_type]}"
+    with open(os.path.join(UPLOAD_DIR, stored_name), "wb") as fh:
+        fh.write(content)
+    r = models.Receipt(transaction_id=t.id, kind="file", filename=os.path.basename(file.filename or "chek")[:255],
+                       stored_name=stored_name, content_type=content_type, size=len(content))
+    db.add(r)
+    db.commit()
+    return r
+
+
+@app.post("/api/transactions/{tx_id}/receipts/link", response_model=schemas.ReceiptOut)
+def add_receipt_link(tx_id: int, data: schemas.LinkIn, db: Session = Depends(get_db)):
+    t = _get(db, models.Transaction, tx_id)
+    url = data.url.strip()
+    if not url.lower().startswith(("http://", "https://")):
+        raise HTTPException(400, "Link http:// yoki https:// bilan boshlanishi kerak")
+    r = models.Receipt(transaction_id=t.id, kind="link", url=url)
+    db.add(r)
+    db.commit()
+    return r
+
+
+@app.get("/api/receipts/{receipt_id}/file")
+def receipt_file(receipt_id: int, db: Session = Depends(get_db)):
+    r = _get(db, models.Receipt, receipt_id)
+    if r.kind != "file" or not r.stored_name:
+        raise HTTPException(404, "Fayl yo'q")
+    path = os.path.join(UPLOAD_DIR, r.stored_name)
+    if not os.path.isfile(path):
+        raise HTTPException(404, "Fayl serverda topilmadi")
+    # inline so the reviewer sees the photo/PDF in the browser instead of downloading it
+    return FileResponse(path, media_type=r.content_type, filename=r.filename,
+                        content_disposition_type="inline")
+
+
+@app.delete("/api/receipts/{receipt_id}")
+def delete_receipt(receipt_id: int, db: Session = Depends(get_db)):
+    r = _get(db, models.Receipt, receipt_id)
+    stored = r.stored_name
+    db.delete(r)
+    db.commit()
+    if stored:
+        _remove_file(stored)
+    return {"ok": True}
+
+
+@app.put("/api/transactions/{tx_id}/verified", response_model=schemas.TransactionOut)
+def set_verified(tx_id: int, verified: bool, db: Session = Depends(get_db)):
+    t = _get(db, models.Transaction, tx_id)
+    t.verified_at = datetime.now() if verified else None
+    db.commit()
+    db.refresh(t)
+    return _tx_out(t, logic.get_settings(db))
 
 
 # ---------------------------------------------------------------- projects (P&L)

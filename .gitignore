@@ -6,3 +6,4 @@ backend/*.db-journal
 node_modules/
 frontend/dist/
 *.tsbuildinfo
+backend/uploads/
