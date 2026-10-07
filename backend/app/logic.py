@@ -29,7 +29,15 @@ DEFAULT_SETTINGS = {
     "start_date": "2024-07-01",
     "pnl_use_close_date": "0",
     "company_name": "Pifagor",
+    # One status per line (настройки F14:F20); editable on the настройки page.
+    "project_statuses": "\n".join(models.PROJECT_STATUSES),
 }
+
+
+def project_statuses(settings: dict) -> list[str]:
+    statuses = [s.strip() for s in (settings.get("project_statuses") or "").splitlines() if s.strip()]
+    # The inactive statuses drive the «Kim uchun» filter, so they are always available.
+    return statuses + [s for s in models.INACTIVE_STATUSES if s not in statuses]
 
 
 # ---------------------------------------------------------------- helpers

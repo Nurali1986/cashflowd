@@ -212,7 +212,7 @@ export default function TransactionForm({ isPlan, editing, copyFrom, onSaved, on
         <Field label="Kim uchun to'lov (o'quvchi F.I.Sh / proyekt)" className="col-span-2">
           <Input list="project-options" value={draft.project} onChange={e => set('project', e.target.value)} placeholder="Ixtiyoriy" />
           <datalist id="project-options">
-            {meta.projects.map(p => <option key={p.id} value={p.name}>{p.customer ?? ''}</option>)}
+            {meta.projects.filter(p => p.active).map(p => <option key={p.id} value={p.name}>{p.customer ?? ''}</option>)}
           </datalist>
           {!projectExists && <span className="text-xs text-amber-600">Yangi loyiha sifatida P&L ro'yxatiga qo'shiladi</span>}
         </Field>

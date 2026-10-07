@@ -74,14 +74,16 @@ def meta(db: Session = Depends(get_db)):
             for a in logic.ordered_articles(db)
         ],
         "projects": [
-            {"id": p.id, "name": p.name, "customer": p.customer, "close_date": p.close_date}
+            {"id": p.id, "name": p.name, "customer": p.customer, "close_date": p.close_date, "status": p.status,
+             "active": p.status not in models.INACTIVE_STATUSES}
             for p in db.scalars(select(models.Project).order_by(models.Project.name))
         ],
         "directory": [
             schemas.DirectoryOut.model_validate(d).model_dump()
             for d in db.scalars(select(models.DirectoryItem).order_by(models.DirectoryItem.kind, models.DirectoryItem.sort))
         ],
-        "statuses": models.PROJECT_STATUSES,
+        "statuses": logic.project_statuses(settings),
+        "inactive_statuses": models.INACTIVE_STATUSES,
     }
 
 
@@ -92,6 +94,11 @@ def update_settings(values: dict[str, Optional[str]], db: Session = Depends(get_
             raise HTTPException(400, f"Noma'lum sozlama: {key}")
         if key == "start_date":
             date.fromisoformat(value)
+        if key == "project_statuses":
+            removed = set(logic.project_statuses(logic.get_settings(db))) - set(logic.project_statuses({key: value}))
+            used = db.scalars(select(models.Project.status).where(models.Project.status.in_(removed))).first() if removed else None
+            if used:
+                raise HTTPException(409, f"«{used}» statusi loyihalarda ishlatilgan — o'chirib bo'lmaydi")
         db.merge(models.Setting(key=key, value=value))
     db.commit()
     return logic.get_settings(db)
@@ -298,11 +305,11 @@ def get_project(project_id: int, db: Session = Depends(get_db)):
     return _project_out(_get(db, models.Project, project_id), logic.project_figures(db))
 
 
-def _apply_project(p: models.Project, data: schemas.ProjectIn):
+def _apply_project(p: models.Project, data: schemas.ProjectIn, statuses: list[str]):
     name = " ".join(data.name.split())
     if not name:
         raise HTTPException(400, "Loyiha nomini kiriting")
-    if data.status and data.status not in models.PROJECT_STATUSES:
+    if data.status and data.status not in statuses:
         raise HTTPException(400, "Noto'g'ri status")
     for key, value in data.model_dump().items():
         if isinstance(value, str):
@@ -314,7 +321,7 @@ def _apply_project(p: models.Project, data: schemas.ProjectIn):
 @app.post("/api/projects", response_model=schemas.ProjectOut)
 def create_project(data: schemas.ProjectIn, db: Session = Depends(get_db)):
     p = models.Project(sort=(db.scalar(select(func.max(models.Project.sort))) or 0) + 1)
-    _apply_project(p, data)
+    _apply_project(p, data, logic.project_statuses(logic.get_settings(db)))
     db.add(p)
     _commit(db, "Bu nomli loyiha")
     return _project_out(p, logic.project_figures(db))
@@ -323,7 +330,7 @@ def create_project(data: schemas.ProjectIn, db: Session = Depends(get_db)):
 @app.put("/api/projects/{project_id}", response_model=schemas.ProjectOut)
 def update_project(project_id: int, data: schemas.ProjectIn, db: Session = Depends(get_db)):
     p = _get(db, models.Project, project_id)
-    _apply_project(p, data)
+    _apply_project(p, data, logic.project_statuses(logic.get_settings(db)))
     _commit(db, "Bu nomli loyiha")
     return _project_out(p, logic.project_figures(db))
 
@@ -411,10 +418,32 @@ def create_article(data: schemas.ArticleIn, db: Session = Depends(get_db)):
     return schemas.ArticleOut.model_validate(a)
 
 
+@app.post("/api/articles/reorder")
+def reorder_articles(ids: list[int], db: Session = Depends(get_db)):
+    """Set the order of the настройки tree: ids in the new order (categories follow their first article)."""
+    by_id = {a.id: a for a in db.scalars(select(models.Article))}
+    rest = [a for a in logic.ordered_articles(db) if a.id not in ids]
+    for i, a in enumerate([by_id[x] for x in ids if x in by_id] + rest):
+        a.sort = i
+    db.commit()
+    return {"ok": True}
+
+
 @app.put("/api/articles/{article_id}", response_model=schemas.ArticleOut)
 def update_article(article_id: int, data: schemas.ArticleIn, db: Session = Depends(get_db)):
     a = _get(db, models.Article, article_id)
     _apply_article(a, data)
+    # Renaming/moving onto an existing article merges the two: its operations move over and this one goes.
+    target = db.scalar(select(models.Article).where(
+        models.Article.id != a.id, models.Article.type == a.type, models.Article.category == a.category,
+        models.Article.subcategory.is_(None) if a.subcategory is None else models.Article.subcategory == a.subcategory))
+    if target is not None:
+        db.expire(a)
+        for t in db.scalars(select(models.Transaction).where(models.Transaction.article_id == article_id)):
+            t.article_id, t.kind = target.id, target.type
+        db.delete(db.get(models.Article, article_id))
+        db.commit()
+        return schemas.ArticleOut.model_validate(target)
     for t in db.scalars(select(models.Transaction).where(models.Transaction.article_id == a.id)):
         t.kind = a.type
     _commit(db, "Bu статья")

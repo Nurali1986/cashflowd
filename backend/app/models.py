@@ -12,7 +12,9 @@ EXPENSE = "РАСХОД"
 TRANSFER = "ПЕРЕВОД"
 KINDS = (INCOME, EXPENSE, TRANSFER)
 
-PROJECT_STATUSES = ("новый", "в работе", "выполнен", "отменен")
+PROJECT_STATUSES = ("новый", "в работе", "приостановлен", "выполнен", "отменен")
+# Projects with these statuses drop out of the «Kim uchun» list (настройки AN in the workbook).
+INACTIVE_STATUSES = ("приостановлен", "выполнен", "отменен")
 
 
 class Setting(Base):
