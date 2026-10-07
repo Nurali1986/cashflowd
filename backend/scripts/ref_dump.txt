@@ -1,0 +1,317 @@
+=== справочник (all non-empty) ===
+1 ['ДАТА НАЧАЛА', None, 'КАТЕГОРИЯ ДОХОДЫ', 'КАТЕГОРИЯ (доходы)', 'ПОДКАТЕГОРИЯ (доходы)', None, 'КАТЕГОРИЯ РАСХОДЫ', 'КАТЕГОРИЯ (расходы)', 'ПОДКАТЕГОРИЯ (расходы)', None, 'СЧЕТ', None, 'СУММА НА НАЧАЛО,\nруб', None, 'ЗАКАЗЧИК', 'КАТЕГОРИЯ ЗАКАЗА', None, 'ПЕРИОДЫ', 'ОТОБРАЖЕНИЕ', None, 'ГОДА']
+2 [datetime.datetime(2024, 7, 1, 0, 0), None, "Maktab to'lovi", 'Asoschi pul kiritdi', 'Investitsiya', None, 'Marketing', 'Marketing', 'SMM ', None, 'Click', None, None, None, 'Investitsiya', "Kurs To'lovi", None, 'ИЮЛЬ 2024', False, None, 2026.0]
+3 [None, None, 'Asoschi pul kiritdi', "Maktab to'lovi", '1-sinf a (uzbek)', None, 'Platforma xarajatlar', 'Marketing', 'Target', None, 'Bank hisobi', None, None, None, '1-sinf a (uzbek)', None, None, 'АВГУСТ 2024', False, None, 2027.0]
+4 ['Учитывать в ОПУ\nдату закрытия\nпроекта', None, None, None, '1-sinf b (rus)', None, 'Xodimlar maoshi', 'Ofis xarajatlari', 'Arenda', None, 'Naqd', None, None, None, '1-sinf b (rus)', None, None, 'СЕНТЯБРЬ 2024', False, None, None]
+5 [None, None, None, None, '2-sinf a (uzbek)', None, 'Vazvrat', 'Ofis xarajatlari', 'WIFI', None, None, None, None, None, '1-sinf v (rus)', None, None, 'ОКТЯБРЬ 2024', False, None, None]
+6 [None, None, None, None, '2-sinf b (rus)', None, 'Nalog', 'Nalog', 'Nalog', None, None, None, None, None, '2-sinf a (uzbek)', None, None, 'НОЯБРЬ 2024', False, None, None]
+7 ['НЕТ', None, None, None, '3-sinf a (uzbek)', None, 'Ofis xarajatlari', 'Ofis xarajatlari', 'Kanstovar', None, None, None, None, None, '2-sinf b (rus)', None, None, 'ДЕКАБРЬ 2024', False, None, None]
+8 [None, None, None, None, '3-sinf b (rus)', None, 'Kamunal', 'Kamunal', 'Svet', None, None, None, None, None, '3-sinf a (uzbek)', None, None, 'ЯНВАРЬ 2025', True, None, None]
+9 [None, None, None, None, '4-sinf a (uzbek)', None, None, 'Kamunal', 'Suv', None, None, None, None, None, '3-sinf b (rus)', None, None, 'ФЕВРАЛЬ 2025', True, None, None]
+10 [None, None, None, None, '4-sinf b (rus)', None, None, 'Xodimlar maoshi', 'Telefon', None, None, None, None, None, '4-sinf a (uzbek)', None, None, 'МАРТ 2025', True, None, None]
+11 [None, None, None, None, '5-sinf a (uzbek)', None, None, 'Xodimlar maoshi', 'Investitsiya', None, None, None, None, None, '4-sinf b (rus)', None, None, 'АПРЕЛЬ 2025', True, None, None]
+12 [None, None, None, None, '5-sinf b (rus)', None, None, 'Xodimlar maoshi', 'Har xil kutilmagan', None, None, None, None, None, '5-sinf a (uzbek)', None, None, 'МАЙ 2025', True, None, None]
+13 [None, None, None, None, '6-sinf a (uzbek)', None, None, 'Xodimlar maoshi', 'Xozmag', None, None, None, None, None, '5-sinf b (rus)', None, None, 'ИЮНЬ 2025', True, None, None]
+14 [None, None, None, None, '6-sinf b (rus)', None, None, 'Xodimlar maoshi', 'Koffee Break', None, None, None, None, None, '6-sinf a (uzbek)', None, None, 'ИЮЛЬ 2025', True, None, None]
+15 [None, None, None, None, '7-sinf a (uzbek)', None, None, 'Xodimlar maoshi', 'Ishga taklif eloni', None, None, None, None, None, '6-sinf b (rus)', None, None, 'АВГУСТ 2025', True, None, None]
+16 [None, None, None, None, '7-sinf b (rus)', None, None, 'Xodimlar maoshi', 'Direktor (Salomov Salohiddin)', None, None, None, None, None, '7-sinf a (uzbek)', None, None, 'СЕНТЯБРЬ 2025', True, None, None]
+17 [None, None, None, None, '8-sinf a (uzbek)', None, None, 'Xodimlar maoshi', 'Tizimchi (Adhambek Azimovich)', None, None, None, None, None, '7-sinf b (rus)', None, None, 'ОКТЯБРЬ 2025', True, None, None]
+18 [None, None, None, None, '8-sinf b (rus)', None, None, 'Xodimlar maoshi', 'Kabilbayev Umirali (qorovul)', None, None, None, None, None, '8-sinf a (uzbek)', None, None, 'НОЯБРЬ 2025', True, None, None]
+19 [None, None, None, None, '9-sinf a (uzbek)', None, None, 'Xodimlar maoshi', 'Kabilbayeva Saragul (tozalovchi)', None, None, None, None, None, '8-sinf b (rus)', None, None, 'ДЕКАБРЬ 2025', True, None, None]
+20 [None, None, None, None, '9-sinf b (rus)', None, None, 'Xodimlar maoshi', 'Xashimova Shoxsanam (tozalovchi)', None, None, None, None, None, '9-sinf a (uzbek)', None, None, 'ЯНВАРЬ 2026', True, None, None]
+21 [None, None, None, None, '10-sinf a (uzbek)', None, None, 'Xodimlar maoshi', 'Karimova Xilola Mukimovna (dir., o‘inb.)', None, None, None, None, None, '9-sinf b (rus)', None, None, 'ФЕВРАЛЬ 2026', True, None, None]
+22 [None, None, None, None, '10-sinf b (rus)', None, None, 'Xodimlar maoshi', 'Babayeva Kamila (ingliz tili)', None, None, None, None, None, '10-sinf a (uzbek)', None, None, 'МАРТ 2026', True, None, None]
+23 [None, None, None, None, '11-sinf a (uzbek)', None, None, 'Xodimlar maoshi', 'Choriyev Nodir (J/T)', None, None, None, None, None, '10-sinf b (rus)', None, None, 'АПРЕЛЬ 2026', True, None, None]
+24 [None, None, None, None, '11-sinf b (rus)', None, None, 'Xodimlar maoshi', 'Obidova Muqaddam Hikmatovna (tasviriy san’at)', None, None, None, None, None, '11-sinf a (uzbek)', None, None, 'МАЙ 2026', True, None, None]
+25 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Amriddinova Mexrinigor Zafarovna (ingliz tili)', None, None, None, None, None, '11-sinf b (rus)', None, None, None, None, None, None]
+26 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Burovina Aleksandra Vasilevna (fizika)', None, None, None, None, None, '0-sinf b (rus)', None, None, None, None, None, None]
+27 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Abduxakimova Sanobar Zaynitdinovna (psixolog)', None, None, None, None, None, None, None, None, None, None, None, None]
+28 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Jamilova Shahlo Fazliddin qizi (ingliz tili)', None, None, None, None, None, None, None, None, None, None, None, None]
+29 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Orifxonova Xulkarxon Husniddin qizi (ingliz tili)', None, None, None, None, None, None, None, None, None, None, None, None]
+30 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Ergasheva Feruza Abdurashidovna (boshlang‘ich sinf)', None, None, None, None, None, None, None, None, None, None, None, None]
+31 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Qayumova Madinaxon Muxtorjon qizi (tarix)', None, None, None, None, None, None, None, None, None, None, None, None]
+32 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Vinnikova Mariya Igorevna (boshlang‘ich sinf)', None, None, None, None, None, None, None, None, None, None, None, None]
+33 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Islamkulova Omina (rus tili)', None, None, None, None, None, None, None, None, None, None, None, None]
+34 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Xazratov Zufar Ixtiyarovich (matematika)', None, None, None, None, None, None, None, None, None, None, None, None]
+35 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Abdukarimov Daler Azamatovich (matematika)', None, None, None, None, None, None, None, None, None, None, None, None]
+36 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Shukurov Axmad (fizika)', None, None, None, None, None, None, None, None, None, None, None, None]
+37 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Hakimova Sarvinoz Utkurovna (ingliz tili)', None, None, None, None, None, None, None, None, None, None, None, None]
+38 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Paljanova Lyudmila Yuldashevna (boshlang‘ich sinf)', None, None, None, None, None, None, None, None, None, None, None, None]
+39 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Almuxamedova Rezida Tavgatovna (boshlang‘ich sinf)', None, None, None, None, None, None, None, None, None, None, None, None]
+40 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Turdieva Durdona Muxtorjon qizi (biologiya)', None, None, None, None, None, None, None, None, None, None, None, None]
+41 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Shonazarova Zebo (admin)', None, None, None, None, None, None, None, None, None, None, None, None]
+42 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Artiqova Sayyora (bibliotek)', None, None, None, None, None, None, None, None, None, None, None, None]
+43 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Bo‘riyeva Zilola (admin)', None, None, None, None, None, None, None, None, None, None, None, None]
+44 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Qobilboyeva Aliya (Hamshira)', None, None, None, None, None, None, None, None, None, None, None, None]
+45 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Jo‘rayeva Mohinur (kimyo)', None, None, None, None, None, None, None, None, None, None, None, None]
+46 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Amanxo‘jayev Ziyodulla (CHQBT)', None, None, None, None, None, None, None, None, None, None, None, None]
+47 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Barotova Shaxnoza (nazoratci)', None, None, None, None, None, None, None, None, None, None, None, None]
+48 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Informatika (informatika)', None, None, None, None, None, None, None, None, None, None, None, None]
+49 [None, None, None, None, None, None, None, 'Xodimlar maoshi', 'Xumoyun (matematika)', None, None, None, None, None, None, None, None, None, None, None, None]
+
+=== настройки N:Q (tree) and R:U (transfers), I:M ===
+3 N-Q: ('ДЛЯ СВОДА', None, None, None) | R-U: (None, 'ПЕРЕВОДЫ МЕЖДУ СЧЕТАМИ', None, None)
+4 N-Q: (1.0, 'ДОХОД', None, "Kurs to'lovi") | R-U: ('ПЕРЕВОД.  → ', 'ПЕРЕВОД', None, None)
+5 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '1-sinf a (uzbek)') | R-U: ('ПЕРЕВОД.  → ', 'ПЕРЕВОД', None, None)
+6 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '1-sinf b (rus)') | R-U: ('', None, None, None)
+7 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '2-sinf a (uzbek)') | R-U: ('', None, None, None)
+8 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '2-sinf b (rus)') | R-U: ('', None, None, None)
+9 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '3-sinf a (uzbek)') | R-U: ('', None, None, None)
+10 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '3-sinf b (rus)') | R-U: ('', None, None, None)
+11 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '4-sinf a (uzbek)') | R-U: ('', None, None, None)
+12 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '4-sinf b (rus)') | R-U: ('', None, None, None)
+13 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '5-sinf a (uzbek)') | R-U: ('', None, None, None)
+14 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '5-sinf b (rus)') | R-U: ('', None, None, None)
+15 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '6-sinf a (uzbek)') | R-U: ('', None, None, None)
+16 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '6-sinf b (rus)') | R-U: ('', None, None, None)
+17 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '7-sinf a (uzbek)') | R-U: ('', None, None, None)
+18 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '7-sinf b (rus)') | R-U: ('', None, None, None)
+19 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '8-sinf a (uzbek)') | R-U: ('', None, None, None)
+20 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '8-sinf b (rus)') | R-U: ('', None, None, None)
+21 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '9-sinf a (uzbek)') | R-U: ('', None, None, None)
+22 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '9-sinf b (rus)') | R-U: ('', None, None, None)
+23 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '10-sinf a (uzbek)') | R-U: ('', None, None, None)
+24 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '10-sinf b (rus)') | R-U: ('', None, None, None)
+25 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '11-sinf a (uzbek)') | R-U: ('', None, None, None)
+26 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '11-sinf b (rus)') | R-U: ('', None, None, None)
+27 N-Q: (None, 'ДОХОД', "Kurs to'lovi", '0-sinf b (rus)') | R-U: ('', None, None, None)
+28 N-Q: (1.0, 'ДОХОД', None, 'Asoschi pul kiritdi') | R-U: ('', None, None, None)
+29 N-Q: (None, 'ДОХОД', 'Asoschi pul kiritdi', 'Investitsiya') | R-U: ('', None, None, None)
+31 N-Q: (1.0, 'РАСХОД', None, 'Marketing') | R-U: ('', None, None, None)
+32 N-Q: (None, 'РАСХОД', 'Marketing', 'Maosh') | R-U: ('', None, None, None)
+33 N-Q: (None, 'РАСХОД', 'Marketing', "Flayer/Banner/E'lon") | R-U: ('', None, None, None)
+34 N-Q: (None, 'РАСХОД', 'Marketing', 'Target') | R-U: ('', None, None, None)
+35 N-Q: (None, 'РАСХОД', 'Marketing', 'Ishga taklif eloni') | R-U: ('', None, None, None)
+36 N-Q: (None, 'РАСХОД', 'Marketing', "bog'chalar uchun sovg'a") | R-U: ('', None, None, None)
+37 N-Q: (None, 'РАСХОД', 'Marketing', 'Banner') | R-U: ('', None, None, None)
+38 N-Q: (1.0, 'РАСХОД', None, 'Platforma xarajatlar') | R-U: ('', None, None, None)
+39 N-Q: (None, 'РАСХОД', 'Platforma xarajatlar', 'LC') | R-U: ('', None, None, None)
+40 N-Q: (None, 'РАСХОД', 'Platforma xarajatlar', 'Unicraft') | R-U: ('', None, None, None)
+41 N-Q: (None, 'РАСХОД', 'Platforma xarajatlar', 'Zoom/Voov meeting') | R-U: ('', None, None, None)
+42 N-Q: (1.0, 'РАСХОД', None, 'Xodimlar maoshi') | R-U: ('', None, None, None)
+43 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Direktor (Salomov Salohiddin)') | R-U: ('', None, None, None)
+44 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Tizimchi (Adhambek Azimovich)') | R-U: ('', None, None, None)
+45 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Kabilbayev Umirali (qorovul)') | R-U: ('', None, None, None)
+46 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Kabilbayeva Saragul (tozalovchi)') | R-U: ('', None, None, None)
+47 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Xashimova Shoxsanam (tozalovchi)') | R-U: ('', None, None, None)
+48 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Karimova Xilola Mukimovna (dir., o‘inb.)') | R-U: ('', None, None, None)
+49 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Babayeva Kamila (ingliz tili)') | R-U: ('', None, None, None)
+50 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Choriyev Nodir (J/T)') | R-U: ('', None, None, None)
+51 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Obidova Muqaddam Hikmatovna (tasviriy san’at)') | R-U: ('', None, None, None)
+52 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Amriddinova Mexrinigor Zafarovna (ingliz tili)') | R-U: ('', None, None, None)
+53 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Burovina Aleksandra Vasilevna (fizika)') | R-U: ('', None, None, None)
+54 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Abduxakimova Sanobar Zaynitdinovna (psixolog)') | R-U: ('', None, None, None)
+55 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Jamilova Shahlo Fazliddin qizi (ingliz tili)') | R-U: ('', None, None, None)
+56 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Orifxonova Xulkarxon Husniddin qizi (ingliz tili)') | R-U: ('', None, None, None)
+57 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Ergasheva Feruza Abdurashidovna (boshlang‘ich sinf)') | R-U: ('', None, None, None)
+58 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Qayumova Madinaxon Muxtorjon qizi (tarix)') | R-U: ('', None, None, None)
+59 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Vinnikova Mariya Igorevna (boshlang‘ich sinf)') | R-U: ('', None, None, None)
+60 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Islamkulova Omina (rus tili)') | R-U: ('', None, None, None)
+61 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Xazratov Zufar Ixtiyarovich (matematika)') | R-U: ('', None, None, None)
+62 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Abdukarimov Daler Azamatovich (matematika)') | R-U: ('', None, None, None)
+63 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Shukurov Axmad (fizika)') | R-U: ('', None, None, None)
+64 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Hakimova Sarvinoz Utkurovna (ingliz tili)') | R-U: ('', None, None, None)
+65 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Paljanova Lyudmila Yuldashevna (boshlang‘ich sinf)') | R-U: ('', None, None, None)
+66 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Almuxamedova Rezida Tavgatovna (boshlang‘ich sinf)') | R-U: ('', None, None, None)
+67 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Turdieva Durdona Muxtorjon qizi (biologiya)') | R-U: ('', None, None, None)
+68 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Shonazarova Zebo (admin)') | R-U: ('', None, None, None)
+69 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Artiqova Sayyora (bibliotek)') | R-U: ('', None, None, None)
+70 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Bo‘riyeva Zilola (admin)') | R-U: ('', None, None, None)
+71 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Qobilboyeva Aliya (Hamshira)') | R-U: ('', None, None, None)
+72 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Jo‘rayeva Mohinur (kimyo)') | R-U: ('', None, None, None)
+73 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Amanxo‘jayev Ziyodulla (CHQBT)') | R-U: ('', None, None, None)
+74 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Barotova Shaxnoza (nazoratci)') | R-U: ('', None, None, None)
+75 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Informatika (informatika)') | R-U: ('', None, None, None)
+76 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Xumoyun (matematika)') | R-U: ('', None, None, None)
+77 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Oshpaz') | R-U: ('', None, None, None)
+78 N-Q: (None, 'РАСХОД', 'Xodimlar maoshi', 'Durdiyev Shaxzod (matematika ustoz)') | R-U: ('', None, None, None)
+79 N-Q: (1.0, 'РАСХОД', None, 'Oshxona') | R-U: ('', None, None, None)
+80 N-Q: (None, 'РАСХОД', 'Oshxona', 'Pradukta') | R-U: ('', None, None, None)
+81 N-Q: (1.0, 'РАСХОД', None, 'Nalog') | R-U: ('', None, None, None)
+82 N-Q: (None, 'РАСХОД', 'Nalog', 'Nalog') | R-U: ('', None, None, None)
+83 N-Q: (1.0, 'РАСХОД', None, 'Ofis xarajatlari') | R-U: ('', None, None, None)
+84 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'Arenda') | R-U: ('', None, None, None)
+85 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'WIFI') | R-U: ('', None, None, None)
+86 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'Kanstovar') | R-U: ('', None, None, None)
+87 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'Telefon') | R-U: ('', None, None, None)
+88 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'Investitsiya') | R-U: ('', None, None, None)
+89 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'Har xil kutilmagan') | R-U: ('', None, None, None)
+90 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'Xozmag') | R-U: ('', None, None, None)
+91 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'Kitob') | R-U: ('', None, None, None)
+92 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'Kitob yandeks') | R-U: ('', None, None, None)
+93 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'cofebreak') | R-U: ('', None, None, None)
+94 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'speakingclub') | R-U: ('', None, None, None)
+95 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'bir martalik stakan, konfet, salfetka ...') | R-U: ('', None, None, None)
+96 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'Taksi') | R-U: ('', None, None, None)
+97 N-Q: (None, 'РАСХОД', 'Ofis xarajatlari', 'Tozalik xarajatlari') | R-U: ('', None, None, None)
+98 N-Q: (1.0, 'РАСХОД', None, 'Kamunal') | R-U: ('', None, None, None)
+99 N-Q: (None, 'РАСХОД', 'Kamunal', 'Svet') | R-U: ('', None, None, None)
+100 N-Q: (None, 'РАСХОД', 'Kamunal', 'Suv') | R-U: ('', None, None, None)
+101 N-Q: (1.0, 'РАСХОД', None, 'Konstovar') | R-U: ('', None, None, None)
+102 N-Q: (None, 'РАСХОД', 'Konstovar', 'Kitob') | R-U: ('', None, None, None)
+103 N-Q: (1.0, 'РАСХОД', None, 'maktab remonti') | R-U: ('', None, None, None)
+104 N-Q: (None, 'РАСХОД', 'maktab remonti', 'Usta') | R-U: ('', None, None, None)
+105 N-Q: (1.0, 'РАСХОД', None, 'vazvrat') | R-U: ('', None, None, None)
+106 N-Q: (1.0, 'РАСХОД', None, 'Xoshimova mavluda') | R-U: ('', None, None, None)
+107 N-Q: (None, 'РАСХОД', 'Xoshimova mavluda', 'Tozalik xodimasi') | R-U: ('', None, None, None)
+108 N-Q: (1.0, 'РАСХОД', None, 'Zuxra') | R-U: ('', None, None, None)
+109 N-Q: (None, 'РАСХОД', 'Zuxra', 'Operator') | R-U: ('', None, None, None)
+110 N-Q: (1.0, 'РАСХОД', None, 'Nigora') | R-U: ('', None, None, None)
+111 N-Q: (None, 'РАСХОД', 'Nigora', 'Operator') | R-U: ('', None, None, None)
+112 N-Q: (1.0, 'РАСХОД', None, 'Suxrob') | R-U: ('', None, None, None)
+113 N-Q: (None, 'РАСХОД', 'Suxrob', 'Operator') | R-U: ('', None, None, None)
+114 N-Q: (1.0, 'РАСХОД', None, 'Komissiya') | R-U: ('', None, None, None)
+115 N-Q: (None, 'РАСХОД', 'Komissiya', 'Komissiya') | R-U: ('', None, None, None)
+117 N-Q: (1.0, 'ПЕРЕВОД', 'Plastik', 'ПЕРЕВОД. Plastik') | R-U: ('', None, None, None)
+118 N-Q: (None, 'ПЕРЕВОД', 'Plastik', 'на счет (+)') | R-U: ('', None, None, None)
+119 N-Q: (None, 'ПЕРЕВОД', 'Plastik', 'со счета (-)') | R-U: ('', None, None, None)
+120 N-Q: (1.0, 'ПЕРЕВОД', 'Terminal', 'ПЕРЕВОД. Terminal') | R-U: ('', None, None, None)
+121 N-Q: (None, 'ПЕРЕВОД', 'Terminal', 'на счет (+)') | R-U: ('', None, None, None)
+122 N-Q: (None, 'ПЕРЕВОД', 'Terminal', 'со счета (-)') | R-U: ('', None, None, None)
+123 N-Q: (1.0, 'ПЕРЕВОД', 'Naqd', 'ПЕРЕВОД. Naqd') | R-U: ('', None, None, None)
+124 N-Q: (None, 'ПЕРЕВОД', 'Naqd', 'на счет (+)') | R-U: ('', None, None, None)
+125 N-Q: (None, 'ПЕРЕВОД', 'Naqd', 'со счета (-)') | R-U: ('', None, None, None)
+--- I:M sample
+3 ('для выпадающего списка', None, None, None, None)
+4 ("ДОХОД. Kurs to'lovi. 1-sinf a (uzbek)", 'ДОХОД', "Kurs to'lovi", '1-sinf a (uzbek)', "ДОХОД. Kurs to'lovi. 1-sinf a (uzbek)")
+5 ("ДОХОД. Kurs to'lovi. 1-sinf b (rus)", 'ДОХОД', "Kurs to'lovi", '1-sinf b (rus)', "ДОХОД. Kurs to'lovi. 1-sinf b (rus)")
+6 ("ДОХОД. Kurs to'lovi. 2-sinf a (uzbek)", 'ДОХОД', "Kurs to'lovi", '2-sinf a (uzbek)', "ДОХОД. Kurs to'lovi. 2-sinf a (uzbek)")
+7 ("ДОХОД. Kurs to'lovi. 2-sinf b (rus)", 'ДОХОД', "Kurs to'lovi", '2-sinf b (rus)', "ДОХОД. Kurs to'lovi. 2-sinf b (rus)")
+8 ("ДОХОД. Kurs to'lovi. 3-sinf a (uzbek)", 'ДОХОД', "Kurs to'lovi", '3-sinf a (uzbek)', "ДОХОД. Kurs to'lovi. 3-sinf a (uzbek)")
+9 ("ДОХОД. Kurs to'lovi. 3-sinf b (rus)", 'ДОХОД', "Kurs to'lovi", '3-sinf b (rus)', "ДОХОД. Kurs to'lovi. 3-sinf b (rus)")
+10 ("ДОХОД. Kurs to'lovi. 4-sinf a (uzbek)", 'ДОХОД', "Kurs to'lovi", '4-sinf a (uzbek)', "ДОХОД. Kurs to'lovi. 4-sinf a (uzbek)")
+11 ("ДОХОД. Kurs to'lovi. 4-sinf b (rus)", 'ДОХОД', "Kurs to'lovi", '4-sinf b (rus)', "ДОХОД. Kurs to'lovi. 4-sinf b (rus)")
+12 ("ДОХОД. Kurs to'lovi. 5-sinf a (uzbek)", 'ДОХОД', "Kurs to'lovi", '5-sinf a (uzbek)', "ДОХОД. Kurs to'lovi. 5-sinf a (uzbek)")
+13 ("ДОХОД. Kurs to'lovi. 5-sinf b (rus)", 'ДОХОД', "Kurs to'lovi", '5-sinf b (rus)', "ДОХОД. Kurs to'lovi. 5-sinf b (rus)")
+14 ("ДОХОД. Kurs to'lovi. 6-sinf a (uzbek)", 'ДОХОД', "Kurs to'lovi", '6-sinf a (uzbek)', "ДОХОД. Kurs to'lovi. 6-sinf a (uzbek)")
+15 ("ДОХОД. Kurs to'lovi. 6-sinf b (rus)", 'ДОХОД', "Kurs to'lovi", '6-sinf b (rus)', "ДОХОД. Kurs to'lovi. 6-sinf b (rus)")
+16 ("ДОХОД. Kurs to'lovi. 7-sinf a (uzbek)", 'ДОХОД', "Kurs to'lovi", '7-sinf a (uzbek)', "ДОХОД. Kurs to'lovi. 7-sinf a (uzbek)")
+17 ("ДОХОД. Kurs to'lovi. 7-sinf b (rus)", 'ДОХОД', "Kurs to'lovi", '7-sinf b (rus)', "ДОХОД. Kurs to'lovi. 7-sinf b (rus)")
+18 ("ДОХОД. Kurs to'lovi. 8-sinf a (uzbek)", 'ДОХОД', "Kurs to'lovi", '8-sinf a (uzbek)', "ДОХОД. Kurs to'lovi. 8-sinf a (uzbek)")
+19 ("ДОХОД. Kurs to'lovi. 8-sinf b (rus)", 'ДОХОД', "Kurs to'lovi", '8-sinf b (rus)', "ДОХОД. Kurs to'lovi. 8-sinf b (rus)")
+20 ("ДОХОД. Kurs to'lovi. 9-sinf a (uzbek)", 'ДОХОД', "Kurs to'lovi", '9-sinf a (uzbek)', "ДОХОД. Kurs to'lovi. 9-sinf a (uzbek)")
+21 ("ДОХОД. Kurs to'lovi. 9-sinf b (rus)", 'ДОХОД', "Kurs to'lovi", '9-sinf b (rus)', "ДОХОД. Kurs to'lovi. 9-sinf b (rus)")
+22 ("ДОХОД. Kurs to'lovi. 10-sinf a (uzbek)", 'ДОХОД', "Kurs to'lovi", '10-sinf a (uzbek)', "ДОХОД. Kurs to'lovi. 10-sinf a (uzbek)")
+23 ("ДОХОД. Kurs to'lovi. 10-sinf b (rus)", 'ДОХОД', "Kurs to'lovi", '10-sinf b (rus)', "ДОХОД. Kurs to'lovi. 10-sinf b (rus)")
+24 ("ДОХОД. Kurs to'lovi. 11-sinf a (uzbek)", 'ДОХОД', "Kurs to'lovi", '11-sinf a (uzbek)', "ДОХОД. Kurs to'lovi. 11-sinf a (uzbek)")
+25 ("ДОХОД. Kurs to'lovi. 11-sinf b (rus)", 'ДОХОД', "Kurs to'lovi", '11-sinf b (rus)', "ДОХОД. Kurs to'lovi. 11-sinf b (rus)")
+26 ("ДОХОД. Kurs to'lovi. 0-sinf b (rus)", 'ДОХОД', "Kurs to'lovi", '0-sinf b (rus)', "ДОХОД. Kurs to'lovi. 0-sinf b (rus)")
+27 ('РАСХОД. Platforma xarajatlar. Zoom/Voov meeting', 'РАСХОД', 'Platforma xarajatlar', 'Zoom/Voov meeting', 'РАСХОД. Platforma xarajatlar. Zoom/Voov meeting')
+28 ('РАСХОД. Xodimlar maoshi. Direktor (Salomov Salohiddin)', 'РАСХОД', 'Xodimlar maoshi', 'Direktor (Salomov Salohiddin)', 'РАСХОД. Xodimlar maoshi. Direktor (Salomov Salohiddin)')
+29 ('РАСХОД. Xodimlar maoshi. Tizimchi (Adhambek Azimovich)', 'РАСХОД', 'Xodimlar maoshi', 'Tizimchi (Adhambek Azimovich)', 'РАСХОД. Xodimlar maoshi. Tizimchi (Adhambek Azimovich)')
+30 ('РАСХОД. Xodimlar maoshi. Kabilbayev Umirali (qorovul)', 'РАСХОД', 'Xodimlar maoshi', 'Kabilbayev Umirali (qorovul)', 'РАСХОД. Xodimlar maoshi. Kabilbayev Umirali (qorovul)')
+31 ('РАСХОД. Xodimlar maoshi. Kabilbayeva Saragul (tozalovchi)', 'РАСХОД', 'Xodimlar maoshi', 'Kabilbayeva Saragul (tozalovchi)', 'РАСХОД. Xodimlar maoshi. Kabilbayeva Saragul (tozalovchi)')
+32 ('РАСХОД. Xodimlar maoshi. Xashimova Shoxsanam (tozalovchi)', 'РАСХОД', 'Xodimlar maoshi', 'Xashimova Shoxsanam (tozalovchi)', 'РАСХОД. Xodimlar maoshi. Xashimova Shoxsanam (tozalovchi)')
+33 ('РАСХОД. Xodimlar maoshi. Karimova Xilola Mukimovna (dir., o‘inb.)', 'РАСХОД', 'Xodimlar maoshi', 'Karimova Xilola Mukimovna (dir., o‘inb.)', 'РАСХОД. Xodimlar maoshi. Karimova Xilola Mukimovna (dir., o‘inb.)')
+34 ('РАСХОД. Xodimlar maoshi. Babayeva Kamila (ingliz tili)', 'РАСХОД', 'Xodimlar maoshi', 'Babayeva Kamila (ingliz tili)', 'РАСХОД. Xodimlar maoshi. Babayeva Kamila (ingliz tili)')
+35 ('РАСХОД. Xodimlar maoshi. Choriyev Nodir (J/T)', 'РАСХОД', 'Xodimlar maoshi', 'Choriyev Nodir (J/T)', 'РАСХОД. Xodimlar maoshi. Choriyev Nodir (J/T)')
+36 ('РАСХОД. Xodimlar maoshi. Obidova Muqaddam Hikmatovna (tasviriy san’at)', 'РАСХОД', 'Xodimlar maoshi', 'Obidova Muqaddam Hikmatovna (tasviriy san’at)', 'РАСХОД. Xodimlar maoshi. Obidova Muqaddam Hikmatovna (tasviriy san’at)')
+37 ('РАСХОД. Xodimlar maoshi. Amriddinova Mexrinigor Zafarovna (ingliz tili)', 'РАСХОД', 'Xodimlar maoshi', 'Amriddinova Mexrinigor Zafarovna (ingliz tili)', 'РАСХОД. Xodimlar maoshi. Amriddinova Mexrinigor Zafarovna (ingliz tili)')
+38 ('РАСХОД. Xodimlar maoshi. Burovina Aleksandra Vasilevna (fizika)', 'РАСХОД', 'Xodimlar maoshi', 'Burovina Aleksandra Vasilevna (fizika)', 'РАСХОД. Xodimlar maoshi. Burovina Aleksandra Vasilevna (fizika)')
+39 ('РАСХОД. Xodimlar maoshi. Abduxakimova Sanobar Zaynitdinovna (psixolog)', 'РАСХОД', 'Xodimlar maoshi', 'Abduxakimova Sanobar Zaynitdinovna (psixolog)', 'РАСХОД. Xodimlar maoshi. Abduxakimova Sanobar Zaynitdinovna (psixolog)')
+40 ('РАСХОД. Xodimlar maoshi. Jamilova Shahlo Fazliddin qizi (ingliz tili)', 'РАСХОД', 'Xodimlar maoshi', 'Jamilova Shahlo Fazliddin qizi (ingliz tili)', 'РАСХОД. Xodimlar maoshi. Jamilova Shahlo Fazliddin qizi (ingliz tili)')
+41 ('РАСХОД. Xodimlar maoshi. Orifxonova Xulkarxon Husniddin qizi (ingliz tili)', 'РАСХОД', 'Xodimlar maoshi', 'Orifxonova Xulkarxon Husniddin qizi (ingliz tili)', 'РАСХОД. Xodimlar maoshi. Orifxonova Xulkarxon Husniddin qizi (ingliz tili)')
+42 ('РАСХОД. Xodimlar maoshi. Ergasheva Feruza Abdurashidovna (boshlang‘ich sinf)', 'РАСХОД', 'Xodimlar maoshi', 'Ergasheva Feruza Abdurashidovna (boshlang‘ich sinf)', 'РАСХОД. Xodimlar maoshi. Ergasheva Feruza Abdurashidovna (boshlang‘ich sinf)')
+43 ('РАСХОД. Xodimlar maoshi. Qayumova Madinaxon Muxtorjon qizi (tarix)', 'РАСХОД', 'Xodimlar maoshi', 'Qayumova Madinaxon Muxtorjon qizi (tarix)', 'РАСХОД. Xodimlar maoshi. Qayumova Madinaxon Muxtorjon qizi (tarix)')
+44 ('РАСХОД. Xodimlar maoshi. Vinnikova Mariya Igorevna (boshlang‘ich sinf)', 'РАСХОД', 'Xodimlar maoshi', 'Vinnikova Mariya Igorevna (boshlang‘ich sinf)', 'РАСХОД. Xodimlar maoshi. Vinnikova Mariya Igorevna (boshlang‘ich sinf)')
+45 ('РАСХОД. Xodimlar maoshi. Islamkulova Omina (rus tili)', 'РАСХОД', 'Xodimlar maoshi', 'Islamkulova Omina (rus tili)', 'РАСХОД. Xodimlar maoshi. Islamkulova Omina (rus tili)')
+46 ('РАСХОД. Xodimlar maoshi. Xazratov Zufar Ixtiyarovich (matematika)', 'РАСХОД', 'Xodimlar maoshi', 'Xazratov Zufar Ixtiyarovich (matematika)', 'РАСХОД. Xodimlar maoshi. Xazratov Zufar Ixtiyarovich (matematika)')
+47 ('РАСХОД. Xodimlar maoshi. Abdukarimov Daler Azamatovich (matematika)', 'РАСХОД', 'Xodimlar maoshi', 'Abdukarimov Daler Azamatovich (matematika)', 'РАСХОД. Xodimlar maoshi. Abdukarimov Daler Azamatovich (matematika)')
+48 ('РАСХОД. Xodimlar maoshi. Shukurov Axmad (fizika)', 'РАСХОД', 'Xodimlar maoshi', 'Shukurov Axmad (fizika)', 'РАСХОД. Xodimlar maoshi. Shukurov Axmad (fizika)')
+49 ('РАСХОД. Xodimlar maoshi. Hakimova Sarvinoz Utkurovna (ingliz tili)', 'РАСХОД', 'Xodimlar maoshi', 'Hakimova Sarvinoz Utkurovna (ingliz tili)', 'РАСХОД. Xodimlar maoshi. Hakimova Sarvinoz Utkurovna (ingliz tili)')
+50 ('РАСХОД. Xodimlar maoshi. Paljanova Lyudmila Yuldashevna (boshlang‘ich sinf)', 'РАСХОД', 'Xodimlar maoshi', 'Paljanova Lyudmila Yuldashevna (boshlang‘ich sinf)', 'РАСХОД. Xodimlar maoshi. Paljanova Lyudmila Yuldashevna (boshlang‘ich sinf)')
+51 ('РАСХОД. Xodimlar maoshi. Almuxamedova Rezida Tavgatovna (boshlang‘ich sinf)', 'РАСХОД', 'Xodimlar maoshi', 'Almuxamedova Rezida Tavgatovna (boshlang‘ich sinf)', 'РАСХОД. Xodimlar maoshi. Almuxamedova Rezida Tavgatovna (boshlang‘ich sinf)')
+52 ('РАСХОД. Xodimlar maoshi. Turdieva Durdona Muxtorjon qizi (biologiya)', 'РАСХОД', 'Xodimlar maoshi', 'Turdieva Durdona Muxtorjon qizi (biologiya)', 'РАСХОД. Xodimlar maoshi. Turdieva Durdona Muxtorjon qizi (biologiya)')
+53 ('РАСХОД. Xodimlar maoshi. Shonazarova Zebo (admin)', 'РАСХОД', 'Xodimlar maoshi', 'Shonazarova Zebo (admin)', 'РАСХОД. Xodimlar maoshi. Shonazarova Zebo (admin)')
+54 ('РАСХОД. Xodimlar maoshi. Artiqova Sayyora (bibliotek)', 'РАСХОД', 'Xodimlar maoshi', 'Artiqova Sayyora (bibliotek)', 'РАСХОД. Xodimlar maoshi. Artiqova Sayyora (bibliotek)')
+55 ('РАСХОД. Xodimlar maoshi. Bo‘riyeva Zilola (admin)', 'РАСХОД', 'Xodimlar maoshi', 'Bo‘riyeva Zilola (admin)', 'РАСХОД. Xodimlar maoshi. Bo‘riyeva Zilola (admin)')
+56 ('РАСХОД. Xodimlar maoshi. Qobilboyeva Aliya (Hamshira)', 'РАСХОД', 'Xodimlar maoshi', 'Qobilboyeva Aliya (Hamshira)', 'РАСХОД. Xodimlar maoshi. Qobilboyeva Aliya (Hamshira)')
+57 ('РАСХОД. Xodimlar maoshi. Jo‘rayeva Mohinur (kimyo)', 'РАСХОД', 'Xodimlar maoshi', 'Jo‘rayeva Mohinur (kimyo)', 'РАСХОД. Xodimlar maoshi. Jo‘rayeva Mohinur (kimyo)')
+58 ('РАСХОД. Xodimlar maoshi. Amanxo‘jayev Ziyodulla (CHQBT)', 'РАСХОД', 'Xodimlar maoshi', 'Amanxo‘jayev Ziyodulla (CHQBT)', 'РАСХОД. Xodimlar maoshi. Amanxo‘jayev Ziyodulla (CHQBT)')
+59 ('РАСХОД. Xodimlar maoshi. Barotova Shaxnoza (nazoratci)', 'РАСХОД', 'Xodimlar maoshi', 'Barotova Shaxnoza (nazoratci)', 'РАСХОД. Xodimlar maoshi. Barotova Shaxnoza (nazoratci)')
+60 ('РАСХОД. Xodimlar maoshi. Informatika (informatika)', 'РАСХОД', 'Xodimlar maoshi', 'Informatika (informatika)', 'РАСХОД. Xodimlar maoshi. Informatika (informatika)')
+61 ('РАСХОД. Xodimlar maoshi. Xumoyun (matematika)', 'РАСХОД', 'Xodimlar maoshi', 'Xumoyun (matematika)', 'РАСХОД. Xodimlar maoshi. Xumoyun (matematika)')
+62 ('РАСХОД. Xodimlar maoshi. Oshpaz', 'РАСХОД', 'Xodimlar maoshi', 'Oshpaz', 'РАСХОД. Xodimlar maoshi. Oshpaz')
+63 ('РАСХОД. Oshxona. Pradukta', 'РАСХОД', 'Oshxona', 'Pradukta', 'РАСХОД. Oshxona. Pradukta')
+64 ('РАСХОД. Ofis xarajatlari. bir martalik stakan, konfet, salfetka ...', 'РАСХОД', 'Ofis xarajatlari', 'bir martalik stakan, konfet, salfetka ...', 'РАСХОД. Ofis xarajatlari. bir martalik stakan, konfet, salfetka ...')
+65 ('РАСХОД. Konstovar. Kitob', 'РАСХОД', 'Konstovar', 'Kitob', 'РАСХОД. Konstovar. Kitob')
+66 ('РАСХОД. Ofis xarajatlari. Taksi', 'РАСХОД', 'Ofis xarajatlari', 'Taksi', 'РАСХОД. Ofis xarajatlari. Taksi')
+67 ("РАСХОД. Marketing. bog'chalar uchun sovg'a", 'РАСХОД', 'Marketing', "bog'chalar uchun sovg'a", "РАСХОД. Marketing. bog'chalar uchun sovg'a")
+68 ('РАСХОД. maktab remonti. Usta', 'РАСХОД', 'maktab remonti', 'Usta', 'РАСХОД. maktab remonti. Usta')
+69 ('РАСХОД. maktab remonti', 'РАСХОД', 'maktab remonti', None, 'РАСХОД. maktab remonti')
+70 ('РАСХОД. vazvrat', 'РАСХОД', 'vazvrat', None, 'РАСХОД. vazvrat')
+71 ('РАСХОД. Xoshimova mavluda. Tozalik xodimasi', 'РАСХОД', 'Xoshimova mavluda', 'Tozalik xodimasi', 'РАСХОД. Xoshimova mavluda. Tozalik xodimasi')
+72 ('РАСХОД. Zuxra. Operator', 'РАСХОД', 'Zuxra', 'Operator', 'РАСХОД. Zuxra. Operator')
+73 ('РАСХОД. Nigora. Operator', 'РАСХОД', 'Nigora', 'Operator', 'РАСХОД. Nigora. Operator')
+74 ('РАСХОД. Suxrob. Operator', 'РАСХОД', 'Suxrob', 'Operator', 'РАСХОД. Suxrob. Operator')
+75 ('РАСХОД. Komissiya. Komissiya', 'РАСХОД', 'Komissiya', 'Komissiya', 'РАСХОД. Komissiya. Komissiya')
+76 ('РАСХОД. Marketing. Target', 'РАСХОД', 'Marketing', 'Target', 'РАСХОД. Marketing. Target')
+77 ('РАСХОД. Marketing. Banner', 'РАСХОД', 'Marketing', 'Banner', 'РАСХОД. Marketing. Banner')
+78 ('РАСХОД. Xodimlar maoshi. Durdiyev Shaxzod (matematika ustoz)', 'РАСХОД', 'Xodimlar maoshi', 'Durdiyev Shaxzod (matematika ustoz)', 'РАСХОД. Xodimlar maoshi. Durdiyev Shaxzod (matematika ustoz)')
+79 ('РАСХОД. Ofis xarajatlari. Arenda', 'РАСХОД', 'Ofis xarajatlari', 'Arenda', 'РАСХОД. Ofis xarajatlari. Arenda')
+80 ('РАСХОД. Ofis xarajatlari. Tozalik xarajatlari', 'РАСХОД', 'Ofis xarajatlari', 'Tozalik xarajatlari', 'РАСХОД. Ofis xarajatlari. Tozalik xarajatlari')
+81 ('РАСХОД. Ofis xarajatlari', 'РАСХОД', 'Ofis xarajatlari', None, 'РАСХОД. Ofis xarajatlari')
+82 ('ДОХОД. Asoschi pul kiritdi. Investitsiya', 'ДОХОД', 'Asoschi pul kiritdi', 'Investitsiya', 'ДОХОД. Asoschi pul kiritdi. Investitsiya')
+83 ('РАСХОД. Marketing. Maosh', 'РАСХОД', 'Marketing', 'Maosh', 'РАСХОД. Marketing. Maosh')
+84 ("РАСХОД. Marketing. Flayer/Banner/E'lon", 'РАСХОД', 'Marketing', "Flayer/Banner/E'lon", "РАСХОД. Marketing. Flayer/Banner/E'lon")
+85 ('РАСХОД. Marketing. Ishga taklif eloni', 'РАСХОД', 'Marketing', 'Ishga taklif eloni', 'РАСХОД. Marketing. Ishga taklif eloni')
+86 ('РАСХОД. Platforma xarajatlar. LC', 'РАСХОД', 'Platforma xarajatlar', 'LC', 'РАСХОД. Platforma xarajatlar. LC')
+87 ('РАСХОД. Platforma xarajatlar. Unicraft', 'РАСХОД', 'Platforma xarajatlar', 'Unicraft', 'РАСХОД. Platforma xarajatlar. Unicraft')
+88 ('РАСХОД. Nalog. Nalog', 'РАСХОД', 'Nalog', 'Nalog', 'РАСХОД. Nalog. Nalog')
+89 ('РАСХОД. Ofis xarajatlari. WIFI', 'РАСХОД', 'Ofis xarajatlari', 'WIFI', 'РАСХОД. Ofis xarajatlari. WIFI')
+90 ('РАСХОД. Ofis xarajatlari. Kanstovar', 'РАСХОД', 'Ofis xarajatlari', 'Kanstovar', 'РАСХОД. Ofis xarajatlari. Kanstovar')
+91 ('РАСХОД. Ofis xarajatlari. Telefon', 'РАСХОД', 'Ofis xarajatlari', 'Telefon', 'РАСХОД. Ofis xarajatlari. Telefon')
+92 ('РАСХОД. Ofis xarajatlari. Investitsiya', 'РАСХОД', 'Ofis xarajatlari', 'Investitsiya', 'РАСХОД. Ofis xarajatlari. Investitsiya')
+93 ('РАСХОД. Ofis xarajatlari. Har xil kutilmagan', 'РАСХОД', 'Ofis xarajatlari', 'Har xil kutilmagan', 'РАСХОД. Ofis xarajatlari. Har xil kutilmagan')
+94 ('РАСХОД. Ofis xarajatlari. Xozmag', 'РАСХОД', 'Ofis xarajatlari', 'Xozmag', 'РАСХОД. Ofis xarajatlari. Xozmag')
+95 ('РАСХОД. Ofis xarajatlari. Kitob', 'РАСХОД', 'Ofis xarajatlari', 'Kitob', 'РАСХОД. Ofis xarajatlari. Kitob')
+96 ('РАСХОД. Ofis xarajatlari. Kitob yandeks', 'РАСХОД', 'Ofis xarajatlari', 'Kitob yandeks', 'РАСХОД. Ofis xarajatlari. Kitob yandeks')
+97 ('РАСХОД. Ofis xarajatlari. cofebreak', 'РАСХОД', 'Ofis xarajatlari', 'cofebreak', 'РАСХОД. Ofis xarajatlari. cofebreak')
+98 ('РАСХОД. Ofis xarajatlari. speakingclub', 'РАСХОД', 'Ofis xarajatlari', 'speakingclub', 'РАСХОД. Ofis xarajatlari. speakingclub')
+99 ('РАСХОД. Kamunal. Svet', 'РАСХОД', 'Kamunal', 'Svet', 'РАСХОД. Kamunal. Svet')
+100 ('РАСХОД. Kamunal. Suv', 'РАСХОД', 'Kamunal', 'Suv', 'РАСХОД. Kamunal. Suv')
+101 ('РАСХОД. ', 'РАСХОД', None, None, 'РАСХОД. ')
+102 ('РАСХОД. ', 'РАСХОД', None, None, 'РАСХОД. ')
+103 ('ПЕРЕВОД.  → ', None, None, None, '')
+104 ('ПЕРЕВОД.  → ', None, None, None, '')
+I count 102
+
+=== Kurs ===
+rows 782 with value 80 first [(datetime.datetime(2025, 2, 17, 0, 0), 11800.0, None), (datetime.datetime(2025, 9, 17, 0, 0), 11800.0, None), (datetime.datetime(2026, 9, 17, 0, 0), 11800.0, None)] last [(datetime.datetime(2026, 12, 1, 0, 0), 11800.0, None), (datetime.datetime(2026, 12, 2, 0, 0), 11800.0, None), (datetime.datetime(2026, 12, 3, 0, 0), 11800.0, None)]
+
+=== Cash flow ===
+rows 660
+accounts Counter({'Naqd': 419, 'Bank hisobi': 173, 'Click': 45, None: 23})
+types Counter({'РАСХОД': 359, 'None': 170, 'ДОХОД': 131})
+pnl months Counter({None: 149, 'АВГУСТ 2026': 114, 'МАЙ 2026': 90, 'ИЮЛЬ 2026': 81, 'ИЮНЬ 2026': 79, 'ОКТЯБРЬ 2026': 67, 'СЕНТЯБРЬ 2026': 47, 'АПРЕЛЬ 2026': 12, 'НОЯБРЬ 2026': 4, 'МАРТ 2026': 2, 'ДЕКАБРЬ 2026': 2, 'ЯНВАРЬ 2027': 2, 'ФЕВРАЛЬ 2027': 2, 'МАРТ 2027': 2, 'АПРЕЛЬ 2027': 2, 'Май 2027': 2, 'Июнь 2027': 2, 'АВГУСТ 2025': 1})
+usd rows 27
+min date 2026-06-01 00:00:00 max 2026-10-07 00:00:00
+projects [('Academiya Xarajatlar', 519), (None, 10), ('Baxtiyorova Jasmina', 10), ('Baxtiyorov Islombek', 10), ('Ibragimova Iroda', 4), ('Burxonova Sofiya+', 3), ('Ibragimov Islom', 3), ('Qodirqulov Yusuf', 2), ('Xalimqulov Ibrohim+', 2), ('Narzullayev Abduvohid +', 2), ('Sobirov Muhammadamir +', 2), ("Abbasov Umarxo'ja", 2), ('Usmonov Farrux', 2), ('Shuxratov Samir+', 2), ('Abdullayeva Xadichabonu', 2)]
+transfers sample []
+non-date A []
+non-numeric G 48 [(datetime.datetime(2026, 8, 8, 0, 0), 'АВГУСТ 2026', 'РАСХОД. Xodimlar maoshi. Direktor (Salomov Salohiddin)', 'Naqd', 500.0, None, None, 'Academiya Xarajatlar', None), (datetime.datetime(2026, 8, 11, 0, 0), 'АВГУСТ 2026', 'РАСХОД. Marketing . Target', 'Naqd', 500.0, 12000.0, None, 'Academiya Xarajatlar', None), (datetime.datetime(2026, 6, 2, 0, 0), 'АПРЕЛЬ 2026', None, 'Naqd', 500.0, 12000.0, None, 'Academiya Xarajatlar', 'Ziyamuhammedov Abdumalik'), (datetime.datetime(2026, 6, 5, 0, 0), 'МАЙ 2026', None, 'Bank hisobi', None, None, '343.13', 'Academiya Xarajatlar', '00111 BC 05.06.2026 погашение Дебет айланма(банкаро) -343.13 от суммы 343125.00 от 05.06.2026'), (datetime.datetime(2026, 6, 5, 0, 0), None, 'РАСХОД. Xodimlar maoshi. Choriyev Nodir (J/T)', 'Bank hisobi', None, None, '343 125, 00', 'Academiya Xarajatlar', '00634 (5614688955890834 BAKAYEVA AZIZA ALMATOVNA) kartasiga Choriyev Nodirning ish haqqidan 50% ushlab qolingan xolda aliment to`lovi to`lab berilmoqda.')]
+
+=== P&L ===
+rows 309
+(None, 'Academiya Xarajatlar', None, None, None, None, None, None, 0.0, 0.0, 601046500.0, -601046500.0, '-', None, 1.0, '')
+(None, "O'quvchi to'lovlari", None, None, "Kurs To'lovi", None, 'в работе', datetime.datetime(2026, 1, 1, 0, 0), 0.0, 0.0, 1600000.0, -1600000.0, '-', None, 1.0, 'ошибка')
+(None, 'Solmaz Ibroxim Omer', '0-sinf b (rus)', None, "Kurs To'lovi", 40000000.0, None, None, 1200000.0, 38800000.0, 0.0, 40000000.0, 1.0, None, 1.0, '')
+(None, "Jo'raqo'ziyeva Shabbona", '0-sinf b (rus)', None, "Kurs To'lovi", 37000000.0, None, None, 7400000.0, 29600000.0, 0.0, 37000000.0, 1.0, None, 1.0, '')
+(None, 'Qodirqulov Yusuf', '0-sinf b (rus)', None, "Kurs To'lovi", 39000000.0, None, None, 4400000.0, 34600000.0, 0.0, 39000000.0, 1.0, None, 1.0, '')
+(None, 'Davirbekov Muhammadaziz', '0-sinf b (rus)', None, "Kurs To'lovi", 38000000.0, None, None, 3800000.0, 34200000.0, 0.0, 38000000.0, 1.0, None, 1.0, '')
+(None, 'Shamsiddinov Abdurahmon', '0-sinf b (rus)', None, "Kurs To'lovi", 35000000.0, None, None, 0.0, 35000000.0, 0.0, 35000000.0, 1.0, None, 1.0, '')
+(None, 'Ozodov Ibrohim', '0-sinf b (rus)', None, "Kurs To'lovi", 35000000.0, None, None, 0.0, 35000000.0, 0.0, 35000000.0, 1.0, None, 1.0, '')
+(None, "To'xtayeva Jasmina", '0-sinf b (rus)', None, "Kurs To'lovi", 40000000.0, None, None, 0.0, 40000000.0, 0.0, 40000000.0, 1.0, None, 1.0, '')
+(None, 'Xalimenova Jasmina', '0-sinf b (rus)', 'shartnoma yoq ', "Kurs To'lovi", None, None, None, 0.0, 0.0, 0.0, 0.0, '-', None, 1.0, '')
+(None, 'Adilov Diyorbek+', '1-sinf b (rus)', None, "Kurs To'lovi", 38000000.0, None, None, 7600000.0, 30400000.0, 0.0, 38000000.0, 1.0, None, 1.0, '')
+(None, "Abdug'afforov Azizbek+", '1-sinf b (rus)', None, "Kurs To'lovi", 38000000.0, None, None, 3800000.0, 34200000.0, 0.0, 38000000.0, 1.0, None, 1.0, '')
+(None, 'Musurmanov Muzaffar+', '1-sinf b (rus)', None, "Kurs To'lovi", 35000000.0, None, None, 3500000.0, 31500000.0, 0.0, 35000000.0, 1.0, None, 1.0, '')
+(None, 'Xalimqulov Ibrohim+', '1-sinf b (rus)', None, "Kurs To'lovi", 42000000.0, None, None, 4700000.0, 37300000.0, 0.0, 42000000.0, 1.0, None, 1.0, '')
+(None, 'Saidov Adisjon+', '1-sinf b (rus)', None, "Kurs To'lovi", 31000000.0, None, None, 0.0, 31000000.0, 0.0, 31000000.0, 1.0, None, 1.0, '')
+status Counter({None: 307, 'в работе': 1, 'новый': 1})
+
+=== P&L Reja ===
+rows 0 []
+
+=== Back-end ===
+rows 0 []

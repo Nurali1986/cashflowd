@@ -1,0 +1,1234 @@
+==========================================================================================
+P&L oylik 1 12
+  A1: '!!!\nне удалять столбцы,\nони специально скрыты'
+  D1: 'ВСЕ ОПЕРАЦИИ'
+  E1: 2026.0
+  F1: 'План'
+  G1: F='ARRAY{G1} =\'настройки\'!$B3&" "&$E$1' V='ЯНВАРЬ 2026'
+  H1: 'План'
+  I1: F='ARRAY{I1} =\'настройки\'!$B4&" "&$E$1' V='ФЕВРАЛЬ 2026'
+  J1: 'План'
+  K1: F='ARRAY{K1} =\'настройки\'!$B5&" "&$E$1' V='МАРТ 2026'
+  L1: 'План'
+  M1: F='ARRAY{M1} =\'настройки\'!$B6&" "&$E$1' V='АПРЕЛЬ 2026'
+  N1: 'План'
+  O1: F='ARRAY{O1} =\'настройки\'!$B7&" "&$E$1' V='МАЙ 2026'
+  P1: 'План'
+  Q1: F='ARRAY{Q1} =\'настройки\'!$B8&" "&$E$1' V='ИЮНЬ 2026'
+  R1: 'План'
+  S1: F='ARRAY{S1} =\'настройки\'!$B9&" "&$E$1' V='ИЮЛЬ 2026'
+  T1: 'План'
+  U1: F='ARRAY{U1} =\'настройки\'!$B10&" "&$E$1' V='АВГУСТ 2026'
+  V1: 'План'
+  W1: F='ARRAY{W1} =\'настройки\'!$B11&" "&$E$1' V='СЕНТЯБРЬ 2026'
+  X1: 'План'
+  Y1: F='ARRAY{Y1} =\'настройки\'!$B12&" "&$E$1' V='ОКТЯБРЬ 2026'
+  Z1: 'План'
+  AA1: F='ARRAY{AA1} =\'настройки\'!$B13&" "&$E$1' V='НОЯБРЬ 2026'
+  AB1: 'План'
+  AC1: F='ARRAY{AC1} =\'настройки\'!$B14&" "&$E$1' V='ДЕКАБРЬ 2026'
+  D3: 'ДОХОДЫ'
+  E3: F='=SUM(G3:AC3)' V=1263550200
+  F3: F='=SUMIFS(F6:F301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  G3: F='=SUMIFS(G6:G301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  H3: F='=SUMIFS(H6:H301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  I3: F='=SUMIFS(I6:I301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  J3: F='=SUMIFS(J6:J301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  K3: F='=SUMIFS(K6:K301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  L3: F='=SUMIFS(L6:L301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  M3: F='=SUMIFS(M6:M301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  N3: F='=SUMIFS(N6:N301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  O3: F='=SUMIFS(O6:O301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  P3: F='=SUMIFS(P6:P301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  Q3: F='=SUMIFS(Q6:Q301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  R3: F='=SUMIFS(R6:R301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  S3: F='=SUMIFS(S6:S301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  T3: F='=SUMIFS(T6:T301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  U3: F='=SUMIFS(U6:U301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  V3: F='=SUMIFS(V6:V301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  W3: F='=SUMIFS(W6:W301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=762505000
+  X3: F='=SUMIFS(X6:X301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  Y3: F='=SUMIFS(Y6:Y301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=350645200
+  Z3: F='=SUMIFS(Z6:Z301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  AA3: F='=SUMIFS(AA6:AA301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=81400000
+  AB3: F='=SUMIFS(AB6:AB301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=0
+  AC3: F='=SUMIFS(AC6:AC301,$A$6:$A301,">0",$B$6:$B301,"доход")' V=69000000
+  D4: 'РАСХОДЫ'
+  E4: F='=SUM(G4:AC4)' V=445203500
+  F4: F='=SUMIFS(F6:F301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  G4: F='=SUMIFS(G6:G301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  H4: F='=SUMIFS(H6:H301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  I4: F='=SUMIFS(I6:I301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  J4: F='=SUMIFS(J6:J301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  K4: F='=SUMIFS(K6:K301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=1133000
+  L4: F='=SUMIFS(L6:L301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  M4: F='=SUMIFS(M6:M301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=12758500
+  N4: F='=SUMIFS(N6:N301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  O4: F='=SUMIFS(O6:O301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=130758000
+  P4: F='=SUMIFS(P6:P301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  Q4: F='=SUMIFS(Q6:Q301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=96820000
+  R4: F='=SUMIFS(R6:R301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  S4: F='=SUMIFS(S6:S301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=32657000
+  T4: F='=SUMIFS(T6:T301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  U4: F='=SUMIFS(U6:U301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=156077000
+  V4: F='=SUMIFS(V6:V301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  W4: F='=SUMIFS(W6:W301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=15000000
+  X4: F='=SUMIFS(X6:X301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  Y4: F='=SUMIFS(Y6:Y301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  Z4: F='=SUMIFS(Z6:Z301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  AA4: F='=SUMIFS(AA6:AA301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  AB4: F='=SUMIFS(AB6:AB301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  AC4: F='=SUMIFS(AC6:AC301,$A$6:$A301,">0",$B$6:$B301,"расход")' V=0
+  D5: 'ЧИСТАЯ ПРИБЫЛЬ'
+  E5: F='=SUM(G5:AC5)' V=818346700
+  F5: F='=F3-F4' V=0
+  G5: F='=G3-G4' V=0
+  H5: F='=H3-H4' V=0
+  I5: F='=I3-I4' V=0
+  J5: F='=J3-J4' V=0
+  K5: F='=K3-K4' V=-1133000
+  L5: F='=L3-L4' V=0
+  M5: F='=M3-M4' V=-12758500
+  N5: F='=N3-N4' V=0
+  O5: F='=O3-O4' V=-130758000
+  P5: F='=P3-P4' V=0
+  Q5: F='=Q3-Q4' V=-96820000
+  R5: F='=R3-R4' V=0
+  S5: F='=S3-S4' V=-32657000
+  T5: F='=T3-T4' V=0
+  U5: F='=U3-U4' V=-156077000
+  V5: F='=V3-V4' V=0
+  W5: F='=W3-W4' V=747505000
+  X5: F='=X3-X4' V=0
+  Y5: F='=Y3-Y4' V=350645200
+  Z5: F='=Z3-Z4' V=0
+  AA5: F='=AA3-AA4' V=81400000
+  AB5: F='=AB3-AB4' V=0
+  AC5: F='=AC3-AC4' V=69000000
+  E6: F='ARRAY{E6:E301} =IF($D$6:$D301="","",G6:G301+S6:S301+T6:T301+U6:U301+V6:V301+W6:W301+X6:X301+Y6:Y301+Z6:Z301+AA6:AA301+AB6:AB301+AC6:AC301)' V=None
+  F6: F='ARRAY{F6:F301} =IF($D$6:$D301="","",IF(G$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'P&L Reja\'!$N:$N&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&G$1&"+",\'P&L Reja\'!$G:$G),SUMIF(\'P&L Reja\'!$C:$C&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&G$1&"+",\'P&L Reja\'!$G:$G)),0)))' V=None
+  G6: F='ARRAY{G6:G301} =IF($D$6:$D301="","",IF(G$1="","",IFERROR(IF($A$6:$A301=1,SUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&G$1&"+",\'Cash flow\'!$G:$G),SUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&G$1&"+",\'Cash flow\'!$G:$G)),0)))' V=None
+  H6: F='ARRAY{H6:H301} =IF($D$6:$D301="","",IF(I$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'P&L Reja\'!$N:$N&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&I$1&"+",\'P&L Reja\'!$G:$G),SUMIF(\'P&L Reja\'!$C:$C&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&I$1&"+",\'P&L Reja\'!$G:$G)),0)))' V=None
+  I6: F='ARRAY{I6:I301} =IF($D$6:$D301="","",IF(I$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&I$1&"+",\'Cash flow\'!$G:$G),SUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&I$1&"+",\'Cash flow\'!$G:$G)),0)))' V=None
+  J6: F='ARRAY{J6:J301} =IF($D$6:$D301="","",IF(K$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'P&L Reja\'!$N:$N&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&K$1&"+",\'P&L Reja\'!$G:$G),SUMIF(\'P&L Reja\'!$C:$C&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&K$1&"+",\'P&L Reja\'!$G:$G)),0)))' V=None
+  K6: F='ARRAY{K6:K301} =IF($D$6:$D301="","",IF(K$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&K$1&"+",\'Cash flow\'!$G:$G),SUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&K$1&"+",\'Cash flow\'!$G:$G)),0)))' V=None
+  L6: F='ARRAY{L6:L301} =IF($D$6:$D301="","",IF(M$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'P&L Reja\'!$N:$N&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&M$1&"+",\'P&L Reja\'!$G:$G),SUMIF(\'P&L Reja\'!$C:$C&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&M$1&"+",\'P&L Reja\'!$G:$G)),0)))' V=None
+  M6: F='ARRAY{M6:M301} =IF($D$6:$D301="","",IF(M$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&M$1&"+",\'Cash flow\'!$G:$G),SUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&M$1&"+",\'Cash flow\'!$G:$G)),0)))' V=None
+  N6: F='ARRAY{N6:N301} =IF($D$6:$D301="","",IF(O$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'P&L Reja\'!$N:$N&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&O$1&"+",\'P&L Reja\'!$G:$G),SUMIF(\'P&L Reja\'!$C:$C&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&O$1&"+",\'P&L Reja\'!$G:$G)),0)))' V=None
+  O6: F='ARRAY{O6:O301} =IF($D$6:$D301="","",IF(O$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&O$1&"+",\'Cash flow\'!$G:$G),SUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&O$1&"+",\'Cash flow\'!$G:$G)),0)))' V=None
+  P6: F='ARRAY{P6:P301} =IF($D$6:$D301="","",IF(Q$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'P&L Reja\'!$N:$N&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&Q$1&"+",\'P&L Reja\'!$G:$G),SUMIF(\'P&L Reja\'!$C:$C&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&Q$1&"+",\'P&L Reja\'!$G:$G)),0)))' V=None
+  Q6: F='ARRAY{Q6:Q301} =IF($D$6:$D301="","",IF(Q$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&Q$1&"+",\'Cash flow\'!$G:$G),SUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&Q$1&"+",\'Cash flow\'!$G:$G)),0)))' V=None
+  R6: F='ARRAY{R6:R301} =IF($D$6:$D301="","",IF(S$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'P&L Reja\'!$N:$N&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&S$1&"+",\'P&L Reja\'!$G:$G),SUMIF(\'P&L Reja\'!$C:$C&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&S$1&"+",\'P&L Reja\'!$G:$G)),0)))' V=None
+  S6: F='ARRAY{S6:S301} =IF($D$6:$D301="","",IF(S$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&S$1&"+",\'Cash flow\'!$G:$G),SUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&S$1&"+",\'Cash flow\'!$G:$G)),0)))' V=None
+  T6: F='ARRAY{T6:T301} =IF($D$6:$D301="","",IF(U$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'P&L Reja\'!$N:$N&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&U$1&"+",\'P&L Reja\'!$G:$G),SUMIF(\'P&L Reja\'!$C:$C&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&U$1&"+",\'P&L Reja\'!$G:$G)),0)))' V=None
+  U6: F='ARRAY{U6:U301} =IF($D$6:$D301="","",IF(U$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&U$1&"+",\'Cash flow\'!$G:$G),SUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&U$1&"+",\'Cash flow\'!$G:$G)),0)))' V=None
+  V6: F='ARRAY{V6:V301} =IF($D$6:$D301="","",IF(W$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'P&L Reja\'!$N:$N&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&W$1&"+",\'P&L Reja\'!$G:$G),SUMIF(\'P&L Reja\'!$C:$C&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&W$1&"+",\'P&L Reja\'!$G:$G)),0)))' V=None
+  W6: F='ARRAY{W6:W301} =IF($D$6:$D301="","",IF(W$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&W$1&"+",\'Cash flow\'!$G:$G),SUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&W$1&"+",\'Cash flow\'!$G:$G)),0)))' V=None
+  X6: F='ARRAY{X6:X301} =IF($D$6:$D301="","",IF(Y$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'P&L Reja\'!$N:$N&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&Y$1&"+",\'P&L Reja\'!$G:$G),SUMIF(\'P&L Reja\'!$C:$C&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&Y$1&"+",\'P&L Reja\'!$G:$G)),0)))' V=None
+  Y6: F='ARRAY{Y6:Y301} =IF($D$6:$D301="","",IF(Y$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&Y$1&"+",\'Cash flow\'!$G:$G),SUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&Y$1&"+",\'Cash flow\'!$G:$G)),0)))' V=None
+  Z6: F='ARRAY{Z6:Z301} =IF($D$6:$D301="","",IF(AA$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'P&L Reja\'!$N:$N&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&AA$1&"+",\'P&L Reja\'!$G:$G),SUMIF(\'P&L Reja\'!$C:$C&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&AA$1&"+",\'P&L Reja\'!$G:$G)),0)))' V=None
+  AA6: F='ARRAY{AA6:AA301} =IF($D$6:$D301="","",IF(AA$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&AA$1&"+",\'Cash flow\'!$G:$G),SUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&AA$1&"+",\'Cash flow\'!$G:$G)),0)))' V=None
+  AB6: F='ARRAY{AB6:AB301} =IF($D$6:$D301="","",IF(AC$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'P&L Reja\'!$N:$N&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&AC$1&"+",\'P&L Reja\'!$G:$G),SUMIF(\'P&L Reja\'!$C:$C&\'P&L Reja\'!$L:$L&\'P&L Reja\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&AC$1&"+",\'P&L Reja\'!$G:$G)),0)))' V=None
+  AC6: F='ARRAY{AC6:AC301} =IF($D$6:$D301="","",IF(AC$1="","",\nIFERROR(IF($A$6:$A301=1,SUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$D$6:$D301&AC$1&"+",\'Cash flow\'!$G:$G),SUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L&\'Cash flow\'!$Y:$Y,$B$6:$B301&". "&$C$6:$C301&". "&$D$6:$D301&AC$1&"+",\'Cash flow\'!$G:$G)),0)))' V=None
+  E7: ''
+  F7: ''
+  G7: ''
+  H7: ''
+  I7: ''
+  J7: ''
+  K7: ''
+  L7: ''
+  M7: ''
+  N7: ''
+  O7: ''
+  P7: ''
+  Q7: ''
+  R7: ''
+  S7: ''
+  T7: ''
+  U7: ''
+  V7: ''
+  W7: ''
+  X7: ''
+  Y7: ''
+  Z7: ''
+  AA7: ''
+  AB7: ''
+  AC7: ''
+  A8: F="ARRAY{A8:D4001} ='настройки'!AA4:AD301" V=1
+  B8: 'ДОХОД'
+  D8: "Kurs to'lovi"
+  E8: 1263550200.0
+  F8: 0.0
+  G8: 0.0
+  H8: 0.0
+  I8: 0.0
+  J8: 0.0
+  K8: 0.0
+  L8: 0.0
+  M8: 0.0
+  N8: 0.0
+  O8: 0.0
+  P8: 0.0
+  Q8: 0.0
+  R8: 0.0
+  S8: 0.0
+  T8: 0.0
+  U8: 0.0
+  V8: 0.0
+  W8: 762505000.0
+  X8: 0.0
+  Y8: 350645200.0
+  Z8: 0.0
+  AA8: 81400000.0
+  AB8: 0.0
+  AC8: 69000000.0
+  B9: 'ДОХОД'
+  C9: "Kurs to'lovi"
+  D9: '1-sinf a (uzbek)'
+  E9: 41500000.0
+  F9: 0.0
+  G9: 0.0
+  H9: 0.0
+  I9: 0.0
+  J9: 0.0
+  K9: 0.0
+  L9: 0.0
+  M9: 0.0
+  N9: 0.0
+  O9: 0.0
+  P9: 0.0
+  Q9: 0.0
+  R9: 0.0
+  S9: 0.0
+  T9: 0.0
+  U9: 0.0
+  V9: 0.0
+  W9: 17600000.0
+  X9: 0.0
+  Y9: 10900000.0
+  Z9: 0.0
+  AA9: 6500000.0
+  AB9: 0.0
+  AC9: 6500000.0
+  B10: 'ДОХОД'
+  C10: "Kurs to'lovi"
+  D10: '1-sinf b (rus)'
+  E10: 113350000.0
+  F10: 0.0
+  G10: 0.0
+  H10: 0.0
+  I10: 0.0
+  J10: 0.0
+  K10: 0.0
+  L10: 0.0
+  M10: 0.0
+  N10: 0.0
+  O10: 0.0
+  P10: 0.0
+  Q10: 0.0
+  R10: 0.0
+  S10: 0.0
+  T10: 0.0
+  U10: 0.0
+  V10: 0.0
+  W10: 71950000.0
+  X10: 0.0
+  Y10: 33400000.0
+  Z10: 0.0
+  AA10: 4000000.0
+  AB10: 0.0
+  AC10: 4000000.0
+  B11: 'ДОХОД'
+  C11: "Kurs to'lovi"
+  D11: '2-sinf a (uzbek)'
+  E11: 3500000.0
+  F11: 0.0
+  G11: 0.0
+  H11: 0.0
+  I11: 0.0
+  J11: 0.0
+  K11: 0.0
+  L11: 0.0
+  M11: 0.0
+  N11: 0.0
+  O11: 0.0
+  P11: 0.0
+  Q11: 0.0
+  R11: 0.0
+  S11: 0.0
+  T11: 0.0
+  U11: 0.0
+  V11: 0.0
+  W11: 0.0
+  X11: 0.0
+  Y11: 3500000.0
+  Z11: 0.0
+  AA11: 0.0
+  AB11: 0.0
+  AC11: 0.0
+  B12: 'ДОХОД'
+  C12: "Kurs to'lovi"
+  D12: '2-sinf b (rus)'
+  E12: 134150000.0
+  F12: 0.0
+  G12: 0.0
+  H12: 0.0
+  I12: 0.0
+  J12: 0.0
+  K12: 0.0
+  L12: 0.0
+  M12: 0.0
+  N12: 0.0
+  O12: 0.0
+  P12: 0.0
+  Q12: 0.0
+  R12: 0.0
+  S12: 0.0
+  T12: 0.0
+  U12: 0.0
+  V12: 0.0
+  W12: 105400000.0
+  X12: 0.0
+  Y12: 28750000.0
+  Z12: 0.0
+  AA12: 0.0
+  AB12: 0.0
+  AC12: 0.0
+==========================================================================================
+Cash flow oylik 1 14
+  A1: '!!!\nне удалять столбцы,\nони специально скрыты'
+  D1: 'ВСЕ СЧЕТА'
+  E1: 2026.0
+  F1: F="ARRAY{F1:Q1} =TRANSPOSE('настройки'!$B$3:$B$14)" V='ЯНВАРЬ'
+  G1: 'ФЕВРАЛЬ'
+  H1: 'МАРТ'
+  I1: 'АПРЕЛЬ'
+  J1: 'МАЙ'
+  K1: 'ИЮНЬ'
+  L1: 'ИЮЛЬ'
+  M1: 'АВГУСТ'
+  N1: 'СЕНТЯБРЬ'
+  O1: 'ОКТЯБРЬ'
+  P1: 'НОЯБРЬ'
+  Q1: 'ДЕКАБРЬ'
+  D2: 'ВСЕ ОПЕРАЦИИ'
+  F3: F="=DATE($E$1,VLOOKUP(F$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 1, 1, 0, 0)
+  G3: F="=DATE($E$1,VLOOKUP(G1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 2, 1, 0, 0)
+  H3: F="=DATE($E$1,VLOOKUP(H1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 3, 1, 0, 0)
+  I3: F="=DATE($E$1,VLOOKUP(I1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 4, 1, 0, 0)
+  J3: F="=DATE($E$1,VLOOKUP(J1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 5, 1, 0, 0)
+  K3: F="=DATE($E$1,VLOOKUP(K1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 6, 1, 0, 0)
+  L3: F="=DATE($E$1,VLOOKUP(L1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 7, 1, 0, 0)
+  M3: F="=DATE($E$1,VLOOKUP(M1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 8, 1, 0, 0)
+  N3: F="=DATE($E$1,VLOOKUP(N1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 9, 1, 0, 0)
+  O3: F="=DATE($E$1,VLOOKUP(O1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 10, 1, 0, 0)
+  P3: F="=DATE($E$1,VLOOKUP(P1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 11, 1, 0, 0)
+  Q3: F="=DATE($E$1,VLOOKUP(Q1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 12, 1, 0, 0)
+  F4: F='=EOMONTH(F$3,0)' V=datetime.datetime(2026, 1, 31, 0, 0)
+  G4: F='=EOMONTH(G$3,0)' V=datetime.datetime(2026, 2, 28, 0, 0)
+  H4: F='=EOMONTH(H$3,0)' V=datetime.datetime(2026, 3, 31, 0, 0)
+  I4: F='=EOMONTH(I$3,0)' V=datetime.datetime(2026, 4, 30, 0, 0)
+  J4: F='=EOMONTH(J$3,0)' V=datetime.datetime(2026, 5, 31, 0, 0)
+  K4: F='=EOMONTH(K$3,0)' V=datetime.datetime(2026, 6, 30, 0, 0)
+  L4: F='=EOMONTH(L$3,0)' V=datetime.datetime(2026, 7, 31, 0, 0)
+  M4: F='=EOMONTH(M$3,0)' V=datetime.datetime(2026, 8, 31, 0, 0)
+  N4: F='=EOMONTH(N$3,0)' V=datetime.datetime(2026, 9, 30, 0, 0)
+  O4: F='=EOMONTH(O$3,0)' V=datetime.datetime(2026, 10, 31, 0, 0)
+  P4: F='=EOMONTH(P$3,0)' V=datetime.datetime(2026, 11, 30, 0, 0)
+  Q4: F='=EOMONTH(Q$3,0)' V=datetime.datetime(2026, 12, 31, 0, 0)
+  D5: 'САЛЬДО НАЧАЛЬНОЕ'
+  E5: F='=IFERROR(__xludf.DUMMYFUNCTION("IFERROR(IF($D$2<>\'настройки\'!$AL$3,""-"",INDEX(filter(\'Cash flow oylik\'!$F$5:$Q$5,\'Cash flow oylik\'!$F$5:$Q$5<>""-""),1,1)),""-"")"),0.0)' V=0
+  F5: F='=IF(OR(F$3>TODAY(),F$4<\'справочник\'!$A$2,$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(F$4)=MONTH(\'справочник\'!$A$2),$E$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0),\nVLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0)+\nIF($D$1="ВСЕ СЧЕТА",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$A:$A,"<"&F$3, \'Cash flow\'!$A:$A,">="&\'справочник\'!$A$2,\'Cash flow\'!$M:$M,"ДОХОД")-\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$A:$A,"<"&F$3,\'Cash flow\'!$A:$A,">="&\'справочник\'!$A$2,\'Cash flow\'!$M:$M,"РАСХОД"),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$A:$A,"<"&F$3,\'Cash flow\'!$A:$A,">="&\'справочник\'!$A$2,\'Cash flow\'!$D:$D,$D$1,\'Cash flow\'!$M:$M,"ДОХОД")-\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$A:$A,"<"&F$3,\'Cash flow\'!$...' V=0
+  G5: F='=IF(OR(G$3>TODAY(),G$4<\'справочник\'!$A$2,$D$2<>\'настройки\'!$AL$3),"-",\nIF(AND(MONTH(G$4)=MONTH(\'справочник\'!$A$2),$E$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0),F$6))' V=0
+  H5: F='=IF(OR(H$3>TODAY(),H$4<\'справочник\'!$A$2,$D$2<>\'настройки\'!$AL$3),"-",\nIF(AND(MONTH(H$4)=MONTH(\'справочник\'!$A$2),$E$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0),G$6))' V=0
+  I5: F='=IF(OR(I$3>TODAY(),I$4<\'справочник\'!$A$2,$D$2<>\'настройки\'!$AL$3),"-",\nIF(AND(MONTH(I$4)=MONTH(\'справочник\'!$A$2),$E$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0),H$6))' V=0
+  J5: F='=IF(OR(J$3>TODAY(),J$4<\'справочник\'!$A$2,$D$2<>\'настройки\'!$AL$3),"-",\nIF(AND(MONTH(J$4)=MONTH(\'справочник\'!$A$2),$E$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0),I$6))' V=0
+  K5: F='=IF(OR(K$3>TODAY(),K$4<\'справочник\'!$A$2,$D$2<>\'настройки\'!$AL$3),"-",\nIF(AND(MONTH(K$4)=MONTH(\'справочник\'!$A$2),$E$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0),J$6))' V=0
+  L5: F='=IF(OR(L$3>TODAY(),L$4<\'справочник\'!$A$2,$D$2<>\'настройки\'!$AL$3),"-",\nIF(AND(MONTH(L$4)=MONTH(\'справочник\'!$A$2),$E$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0),K$6))' V=-153189500
+  M5: F='=IF(OR(M$3>TODAY(),M$4<\'справочник\'!$A$2,$D$2<>\'настройки\'!$AL$3),"-",\nIF(AND(MONTH(M$4)=MONTH(\'справочник\'!$A$2),$E$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0),L$6))' V=-210359500
+  N5: F='=IF(OR(N$3>TODAY(),N$4<\'справочник\'!$A$2,$D$2<>\'настройки\'!$AL$3),"-",\nIF(AND(MONTH(N$4)=MONTH(\'справочник\'!$A$2),$E$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0),M$6))' V=-378622500
+  O5: F='=IF(OR(O$3>TODAY(),O$4<\'справочник\'!$A$2,$D$2<>\'настройки\'!$AL$3),"-",\nIF(AND(MONTH(O$4)=MONTH(\'справочник\'!$A$2),$E$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0),N$6))' V=-187862500
+  P5: F='=IF(OR(P$3>TODAY(),P$4<\'справочник\'!$A$2,$D$2<>\'настройки\'!$AL$3),"-",\nIF(AND(MONTH(P$4)=MONTH(\'справочник\'!$A$2),$E$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0),O$6))' V='-'
+  Q5: F='=IF(OR(Q$3>TODAY(),Q$4<\'справочник\'!$A$2,$D$2<>\'настройки\'!$AL$3),"-",\nIF(AND(MONTH(Q$4)=MONTH(\'справочник\'!$A$2),$E$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($D$1,\'настройки\'!$X$7:$Y4506,2,0),P$6))' V='-'
+  D6: 'САЛЬДО КОНЕЧНОЕ'
+  E6: F='=IFERROR(__xludf.DUMMYFUNCTION("IF(OR($D$2<>\'настройки\'!$AL$3,$E$5=""-""),""-"",INDEX(filter(\'Cash flow oylik\'!$F$6:$Q$6,\'Cash flow oylik\'!$F$6:$Q$6<>""-""),1,COUNTA(filter(\'Cash flow oylik\'!$F$6:$Q$6,\'Cash flow oylik\'!$F$6:$Q$6<>""-""))))"),8762500.0)' V=8762500
+  F6: F='=IF(OR(F$5="-",$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(F$3)>MONTH(TODAY()),$E$1>YEAR(TODAY())),"-",F$5+F$7-F$8+F$10))' V=0
+  G6: F='=IF(OR(G$5="-",$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(G$3)>MONTH(TODAY()),$E$1>YEAR(TODAY())),"-",G$5+G$7-G$8+G$10))' V=0
+  H6: F='=IF(OR(H$5="-",$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(H$3)>MONTH(TODAY()),$E$1>YEAR(TODAY())),"-",H$5+H$7-H$8+H$10))' V=0
+  I6: F='=IF(OR(I$5="-",$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(I$3)>MONTH(TODAY()),$E$1>YEAR(TODAY())),"-",I$5+I$7-I$8+I$10))' V=0
+  J6: F='=IF(OR(J$5="-",$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(J$3)>MONTH(TODAY()),$E$1>YEAR(TODAY())),"-",J$5+J$7-J$8+J$10))' V=0
+  K6: F='=IF(OR(K$5="-",$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(K$3)>MONTH(TODAY()),$E$1>YEAR(TODAY())),"-",K$5+K$7-K$8+K$10))' V=-153189500
+  L6: F='=IF(OR(L$5="-",$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(L$3)>MONTH(TODAY()),$E$1>YEAR(TODAY())),"-",L$5+L$7-L$8+L$10))' V=-210359500
+  M6: F='=IF(OR(M$5="-",$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(M$3)>MONTH(TODAY()),$E$1>YEAR(TODAY())),"-",M$5+M$7-M$8+M$10))' V=-378622500
+  N6: F='=IF(OR(N$5="-",$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(N$3)>MONTH(TODAY()),$E$1>YEAR(TODAY())),"-",N$5+N$7-N$8+N$10))' V=-187862500
+  O6: F='=IF(OR(O$5="-",$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(O$3)>MONTH(TODAY()),$E$1>YEAR(TODAY())),"-",O$5+O$7-O$8+O$10))' V=8762500
+  P6: F='=IF(OR(P$5="-",$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(P$3)>MONTH(TODAY()),$E$1>YEAR(TODAY())),"-",P$5+P$7-P$8+P$10))' V='-'
+  Q6: F='=IF(OR(Q$5="-",$D$2<>\'настройки\'!$AL$3),"-", IF(AND(MONTH(Q$3)>MONTH(TODAY()),$E$1>YEAR(TODAY())),"-",Q$5+Q$7-Q$8+Q$10))' V='-'
+  D7: 'ДОХОДЫ'
+  E7: F='=SUM(F7:Q7)' V=490785000
+  F7: F='=SUMIFS(F11:F4506,$A$11:$A4506,">0",$B$11:$B4506,"доход")' V=0
+  G7: F='=SUMIFS(G11:G4506,$A$11:$A4506,">0",$B$11:$B4506,"доход")' V=0
+  H7: F='=SUMIFS(H11:H4506,$A$11:$A4506,">0",$B$11:$B4506,"доход")' V=0
+  I7: F='=SUMIFS(I11:I4506,$A$11:$A4506,">0",$B$11:$B4506,"доход")' V=0
+  J7: F='=SUMIFS(J11:J4506,$A$11:$A4506,">0",$B$11:$B4506,"доход")' V=0
+  K7: F='=SUMIFS(K11:K4506,$A$11:$A4506,">0",$B$11:$B4506,"доход")' V=9500000
+  L7: F='=SUMIFS(L11:L4506,$A$11:$A4506,">0",$B$11:$B4506,"доход")' V=41600000
+  M7: F='=SUMIFS(M11:M4506,$A$11:$A4506,">0",$B$11:$B4506,"доход")' V=52300000
+  N7: F='=SUMIFS(N11:N4506,$A$11:$A4506,">0",$B$11:$B4506,"доход")' V=190760000
+  O7: F='=SUMIFS(O11:O4506,$A$11:$A4506,">0",$B$11:$B4506,"доход")' V=196625000
+  P7: F='=SUMIFS(P11:P4506,$A$11:$A4506,">0",$B$11:$B4506,"доход")' V=0
+  Q7: F='=SUMIFS(Q11:Q4506,$A$11:$A4506,">0",$B$11:$B4506,"доход")' V=0
+  D8: 'РАСХОДЫ'
+  E8: F='=SUM(F8:Q8)' V=482022500
+  F8: F='=SUMIFS(F11:F4506,$A$11:$A4506,">0",$B$11:$B4506,"расход")' V=0
+  G8: F='=SUMIFS(G11:G4506,$A$11:$A4506,">0",$B$11:$B4506,"расход")' V=0
+  H8: F='=SUMIFS(H11:H4506,$A$11:$A4506,">0",$B$11:$B4506,"расход")' V=0
+  I8: F='=SUMIFS(I11:I4506,$A$11:$A4506,">0",$B$11:$B4506,"расход")' V=0
+  J8: F='=SUMIFS(J11:J4506,$A$11:$A4506,">0",$B$11:$B4506,"расход")' V=0
+  K8: F='=SUMIFS(K11:K4506,$A$11:$A4506,">0",$B$11:$B4506,"расход")' V=162689500
+  L8: F='=SUMIFS(L11:L4506,$A$11:$A4506,">0",$B$11:$B4506,"расход")' V=98770000
+  M8: F='=SUMIFS(M11:M4506,$A$11:$A4506,">0",$B$11:$B4506,"расход")' V=220563000
+  N8: F='=SUMIFS(N11:N4506,$A$11:$A4506,">0",$B$11:$B4506,"расход")' V=0
+  O8: F='=SUMIFS(O11:O4506,$A$11:$A4506,">0",$B$11:$B4506,"расход")' V=0
+  P8: F='=SUMIFS(P11:P4506,$A$11:$A4506,">0",$B$11:$B4506,"расход")' V=0
+  Q8: F='=SUMIFS(Q11:Q4506,$A$11:$A4506,">0",$B$11:$B4506,"расход")' V=0
+  D9: 'ДОХОДЫ-РАСХОДЫ'
+  E9: F='=SUM(F9:AB9)' V=8762500
+  F9: F='=F7-F8' V=0
+  G9: F='=G7-G8' V=0
+  H9: F='=H7-H8' V=0
+  I9: F='=I7-I8' V=0
+  J9: F='=J7-J8' V=0
+  K9: F='=K7-K8' V=-153189500
+  L9: F='=L7-L8' V=-57170000
+  M9: F='=M7-M8' V=-168263000
+  N9: F='=N7-N8' V=190760000
+  O9: F='=O7-O8' V=196625000
+  P9: F='=P7-P8' V=0
+  Q9: F='=Q7-Q8' V=0
+  D10: 'ПЕРЕВОДЫ'
+  E10: F='=SUM(F10:AB10)' V=0
+  F10: F='=IF($D$1="ВСЕ СЧЕТА",0,SUMIFS(F13:F4506,$A$13:$A4506,1,$C$13:$C4506,$D$1))' V=0
+  G10: F='=IF($D$1="ВСЕ СЧЕТА",0,SUMIFS(G13:G4506,$A$13:$A4506,1,$C$13:$C4506,$D$1))' V=0
+  H10: F='=IF($D$1="ВСЕ СЧЕТА",0,SUMIFS(H13:H4506,$A$13:$A4506,1,$C$13:$C4506,$D$1))' V=0
+  I10: F='=IF($D$1="ВСЕ СЧЕТА",0,SUMIFS(I13:I4506,$A$13:$A4506,1,$C$13:$C4506,$D$1))' V=0
+  J10: F='=IF($D$1="ВСЕ СЧЕТА",0,SUMIFS(J13:J4506,$A$13:$A4506,1,$C$13:$C4506,$D$1))' V=0
+  K10: F='=IF($D$1="ВСЕ СЧЕТА",0,SUMIFS(K13:K4506,$A$13:$A4506,1,$C$13:$C4506,$D$1))' V=0
+  L10: F='=IF($D$1="ВСЕ СЧЕТА",0,SUMIFS(L13:L4506,$A$13:$A4506,1,$C$13:$C4506,$D$1))' V=0
+  M10: F='=IF($D$1="ВСЕ СЧЕТА",0,SUMIFS(M13:M4506,$A$13:$A4506,1,$C$13:$C4506,$D$1))' V=0
+  N10: F='=IF($D$1="ВСЕ СЧЕТА",0,SUMIFS(N13:N4506,$A$13:$A4506,1,$C$13:$C4506,$D$1))' V=0
+  O10: F='=IF($D$1="ВСЕ СЧЕТА",0,SUMIFS(O13:O4506,$A$13:$A4506,1,$C$13:$C4506,$D$1))' V=0
+  P10: F='=IF($D$1="ВСЕ СЧЕТА",0,SUMIFS(P13:P4506,$A$13:$A4506,1,$C$13:$C4506,$D$1))' V=0
+  Q10: F='=IF($D$1="ВСЕ СЧЕТА",0,SUMIFS(Q13:Q4506,$A$13:$A4506,1,$C$13:$C4506,$D$1))' V=0
+  E11: F='ARRAY{E11:E4506} =IF($D$11:$D4506="","",F11:F4506+G11:G4506+H11:H4506+I11:I4506+J11:J4506+K11:K4506+L11:L4506+M11:M4506+N11:N4506+O11:O4506+P11:P4506+Q11:Q4506)' V=None
+  F11: F='ARRAY{F11:F4506} =IF($D$11:$D4506="","",IF(F$1="","",\nIFERROR(\nIF($B$11:$B4506="ПЕРЕВОД",IF($D$1="все счета",IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&F$1&$E$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&F$1&$E$1&"+",\'Cash flow\'!$G:$G),IF($D$11:$D4506="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&F$1&$E$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&F$1&$E$1&"+",\'Cash flow\'!$G:$G))),IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cas...' V=None
+  G11: F='ARRAY{G11:G4506} =IF($D$11:$D4506="","",IF(G$1="","",\nIFERROR(\nIF($B$11:$B4506="ПЕРЕВОД",IF($D$1="все счета",IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&G$1&$E$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&G$1&$E$1&"+",\'Cash flow\'!$G:$G),IF($D$11:$D4506="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&G$1&$E$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&G$1&$E$1&"+",\'Cash flow\'!$G:$G))),IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cas...' V=None
+  H11: F='ARRAY{H11:H4506} =IF($D$11:$D4506="","",IF(H$1="","",\nIFERROR(\nIF($B$11:$B4506="ПЕРЕВОД",IF($D$1="все счета",IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&H$1&$E$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&H$1&$E$1&"+",\'Cash flow\'!$G:$G),IF($D$11:$D4506="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&H$1&$E$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&H$1&$E$1&"+",\'Cash flow\'!$G:$G))),IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cas...' V=None
+  I11: F='ARRAY{I11:I4506} =IF($D$11:$D4506="","",IF(I$1="","",\nIFERROR(\nIF($B$11:$B4506="ПЕРЕВОД",IF($D$1="все счета",IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&I$1&$E$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&I$1&$E$1&"+",\'Cash flow\'!$G:$G),IF($D$11:$D4506="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&I$1&$E$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&I$1&$E$1&"+",\'Cash flow\'!$G:$G))),IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cas...' V=None
+  J11: F='ARRAY{J11:J4506} =IF($D$11:$D4506="","",IF(J$1="","",\nIFERROR(\nIF($B$11:$B4506="ПЕРЕВОД",IF($D$1="все счета",IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&J$1&$E$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&J$1&$E$1&"+",\'Cash flow\'!$G:$G),IF($D$11:$D4506="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&J$1&$E$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&J$1&$E$1&"+",\'Cash flow\'!$G:$G))),IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cas...' V=None
+  K11: F='ARRAY{K11:K4506} =IF($D$11:$D4506="","",IF(K$1="","",\nIFERROR(\nIF($B$11:$B4506="ПЕРЕВОД",IF($D$1="все счета",IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&K$1&$E$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&K$1&$E$1&"+",\'Cash flow\'!$G:$G),IF($D$11:$D4506="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&K$1&$E$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&K$1&$E$1&"+",\'Cash flow\'!$G:$G))),IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cas...' V=None
+  L11: F='ARRAY{L11:L4506} =IF($D$11:$D4506="","",IF(L$1="","",\nIFERROR(\nIF($B$11:$B4506="ПЕРЕВОД",IF($D$1="все счета",IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&L$1&$E$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&L$1&$E$1&"+",\'Cash flow\'!$G:$G),IF($D$11:$D4506="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&L$1&$E$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&L$1&$E$1&"+",\'Cash flow\'!$G:$G))),IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cas...' V=None
+  M11: F='ARRAY{M11:M4506} =IF($D$11:$D4506="","",IF(M$1="","",\nIFERROR(\nIF($B$11:$B4506="ПЕРЕВОД",IF($D$1="все счета",IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&M$1&$E$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&M$1&$E$1&"+",\'Cash flow\'!$G:$G),IF($D$11:$D4506="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&M$1&$E$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&M$1&$E$1&"+",\'Cash flow\'!$G:$G))),IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cas...' V=None
+  N11: F='ARRAY{N11:N4506} =IF($D$11:$D4506="","",IF(N$1="","",\nIFERROR(\nIF($B$11:$B4506="ПЕРЕВОД",IF($D$1="все счета",IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&N$1&$E$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&N$1&$E$1&"+",\'Cash flow\'!$G:$G),IF($D$11:$D4506="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&N$1&$E$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&N$1&$E$1&"+",\'Cash flow\'!$G:$G))),IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cas...' V=None
+  O11: F='ARRAY{O11:O4506} =IF($D$11:$D4506="","",IF(O$1="","",\nIFERROR(\nIF($B$11:$B4506="ПЕРЕВОД",IF($D$1="все счета",IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&O$1&$E$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&O$1&$E$1&"+",\'Cash flow\'!$G:$G),IF($D$11:$D4506="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&O$1&$E$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&O$1&$E$1&"+",\'Cash flow\'!$G:$G))),IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cas...' V=None
+  P11: F='ARRAY{P11:P4506} =IF($D$11:$D4506="","",IF(P$1="","",\nIFERROR(\nIF($B$11:$B4506="ПЕРЕВОД",IF($D$1="все счета",IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&P$1&$E$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&P$1&$E$1&"+",\'Cash flow\'!$G:$G),IF($D$11:$D4506="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&P$1&$E$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&P$1&$E$1&"+",\'Cash flow\'!$G:$G))),IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cas...' V=None
+  Q11: F='ARRAY{Q11:Q4506} =IF($D$11:$D4506="","",IF(Q$1="","",\nIFERROR(\nIF($B$11:$B4506="ПЕРЕВОД",IF($D$1="все счета",IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&Q$1&$E$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&Q$1&$E$1&"+",\'Cash flow\'!$G:$G),IF($D$11:$D4506="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&Q$1&$E$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K&\'Cash flow\'!$X:$X,$C$11:$C4506&Q$1&$E$1&"+",\'Cash flow\'!$G:$G))),IF($A$11:$A4506=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cas...' V=None
+  E12: ''
+  F12: ''
+  G12: ''
+  H12: ''
+  I12: ''
+  J12: ''
+  K12: ''
+  L12: ''
+  M12: ''
+  N12: ''
+  O12: ''
+  P12: ''
+  Q12: ''
+  A13: F="ARRAY{A13:D4006} ='настройки'!N4:Q4506" V=1
+  B13: 'ДОХОД'
+  D13: "Kurs to'lovi"
+  E13: 490785000.0
+  F13: 0.0
+  G13: 0.0
+  H13: 0.0
+  I13: 0.0
+  J13: 0.0
+  K13: 9500000.0
+  L13: 41600000.0
+  M13: 52300000.0
+  N13: 190760000.0
+  O13: 196625000.0
+  P13: 0.0
+  Q13: 0.0
+  B14: 'ДОХОД'
+  C14: "Kurs to'lovi"
+  D14: '1-sinf a (uzbek)'
+  E14: 4400000.0
+  F14: 0.0
+  G14: 0.0
+  H14: 0.0
+  I14: 0.0
+  J14: 0.0
+  K14: 0.0
+  L14: 0.0
+  M14: 0.0
+  N14: 0.0
+  O14: 4400000.0
+  P14: 0.0
+  Q14: 0.0
+==========================================================================================
+Cash flow kunlik 1 2
+  A1: '!!!\nне удалять столбцы,\nони специально скрыты'
+  D1: 'ВСЕ СЧЕТА'
+  E1: 'АВГУСТ 2026'
+  F1: F='=IFERROR(__xludf.DUMMYFUNCTION("TRANSPOSE(FILTER( \'настройки\'!$AH:$AH,\'настройки\'!$AI:$AI=$E$1))"),46235.0)' V=datetime.datetime(2026, 8, 1, 0, 0)
+  G1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46236.0)' V=datetime.datetime(2026, 8, 2, 0, 0)
+  H1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46237.0)' V=datetime.datetime(2026, 8, 3, 0, 0)
+  I1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46238.0)' V=datetime.datetime(2026, 8, 4, 0, 0)
+  J1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46239.0)' V=datetime.datetime(2026, 8, 5, 0, 0)
+  K1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46240.0)' V=datetime.datetime(2026, 8, 6, 0, 0)
+  L1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46241.0)' V=datetime.datetime(2026, 8, 7, 0, 0)
+  M1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46242.0)' V=datetime.datetime(2026, 8, 8, 0, 0)
+  N1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46243.0)' V=datetime.datetime(2026, 8, 9, 0, 0)
+  O1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46244.0)' V=datetime.datetime(2026, 8, 10, 0, 0)
+  P1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46245.0)' V=datetime.datetime(2026, 8, 11, 0, 0)
+  Q1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46246.0)' V=datetime.datetime(2026, 8, 12, 0, 0)
+  R1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46247.0)' V=datetime.datetime(2026, 8, 13, 0, 0)
+  S1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46248.0)' V=datetime.datetime(2026, 8, 14, 0, 0)
+  T1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46249.0)' V=datetime.datetime(2026, 8, 15, 0, 0)
+  U1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46250.0)' V=datetime.datetime(2026, 8, 16, 0, 0)
+  V1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46251.0)' V=datetime.datetime(2026, 8, 17, 0, 0)
+  W1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46252.0)' V=datetime.datetime(2026, 8, 18, 0, 0)
+  X1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46253.0)' V=datetime.datetime(2026, 8, 19, 0, 0)
+  Y1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46254.0)' V=datetime.datetime(2026, 8, 20, 0, 0)
+  Z1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46255.0)' V=datetime.datetime(2026, 8, 21, 0, 0)
+  AA1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46256.0)' V=datetime.datetime(2026, 8, 22, 0, 0)
+  AB1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46257.0)' V=datetime.datetime(2026, 8, 23, 0, 0)
+  AC1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46258.0)' V=datetime.datetime(2026, 8, 24, 0, 0)
+  AD1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46259.0)' V=datetime.datetime(2026, 8, 25, 0, 0)
+  AE1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46260.0)' V=datetime.datetime(2026, 8, 26, 0, 0)
+  AF1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46261.0)' V=datetime.datetime(2026, 8, 27, 0, 0)
+  AG1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46262.0)' V=datetime.datetime(2026, 8, 28, 0, 0)
+  AH1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46263.0)' V=datetime.datetime(2026, 8, 29, 0, 0)
+  AI1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46264.0)' V=datetime.datetime(2026, 8, 30, 0, 0)
+  AJ1: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),46265.0)' V=datetime.datetime(2026, 8, 31, 0, 0)
+  D2: 'ВСЕ ОПЕРАЦИИ'
+==========================================================================================
+Cash flow kunlik 9 14
+  E9: F='ARRAY{E9:E4504} =IF($D$9:$D4504="","",F9:F4504+G9:G4504+H9:H4504+I9:I4504+J9:J4504+K9:K4504+L9:L4504+M9:M4504+N9:N4504+O9:O4504+P9:P4504+Q9:Q4504+R9:R4504+S9:S4504+T9:T4504+U9:U4504+V9:V4504+W9:W4504+X9:X4504+Y9:Y4504+Z9:Z4504+AA9:AA4504+AB9:AB4504+AC9:AC4504+AD9:AD4504+AE9:AE4504+AF9:AF4504+AG9:AG4504+AH9:AH4504+AI9:AI4504+AJ9:AJ4504)' V=None
+  F9: F='ARRAY{F9:F4504} =IF($D$9:$D4504="","",IF(F$1="","",\nIFERROR(\nIF($B$9:$B4504="ПЕРЕВОД",\nIF($D$1="все счета",\nIF($A$9:$A4504=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$A:$A&\'Cash flow\'!$W:$W,$C$9:$C4504&F$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$A:$A&\'Cash flow\'!$W:$W,$C$9:$C4504&F$1&"+",\'Cash flow\'!$G:$G),IF($D$9:$D4504="на счет (+)", SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$A:$A&\'Cash flow\'!$W:$W,$C$9:$C4504&F$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$A:$A&\'Cash flow\'!$W:$W,$C$9:$C4504&F$1&"+",\'Cash flow\'!$G:$G))),\nIF($A$9:$A4504=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$A:$A&\'Cash flow\'!$O:$O&\'Cash flow\'!$W:$W,$C$9:$C4504&F$1&$D$1&"+",\'Cash flow\'!$G:$G)+SUMI...' V=None
+  G9: F='ARRAY{G9:G4504} =IF($D$9:$D4504="","",IF(G$1="","",\nIFERROR(\nIF($B$9:$B4504="ПЕРЕВОД",IF($D$1="все счета",IF($A$9:$A4504=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$A:$A&\'Cash flow\'!$W:$W,$C$9:$C4504&G$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$A:$A&\'Cash flow\'!$W:$W,$C$9:$C4504&G$1&"+",\'Cash flow\'!$G:$G),IF($D$9:$D4504="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$A:$A&\'Cash flow\'!$W:$W,$C$9:$C4504&G$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$A:$A&\'Cash flow\'!$W:$W,$C$9:$C4504&G$1&"+",\'Cash flow\'!$G:$G))),IF($A$9:$A4504=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$A:$A&\'Cash flow\'!$O:$O&\'Cash flow\'!$W:$W,$C$9:$C4504&G$1&$D$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'C...' V=None
+  H9: F='ARRAY{H9:H4504} =IF($D$9:$D4504="","",IF(H$1="","",\nIFERROR(\nIF($B$9:$B4504="ПЕРЕВОД",IF($D$1="все счета",IF($A$9:$A4504=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$A:$A&\'Cash flow\'!$W:$W,$C$9:$C4504&H$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$A:$A&\'Cash flow\'!$W:$W,$C$9:$C4504&H$1&"+",\'Cash flow\'!$G:$G),IF($D$9:$D4504="на счет (+)",SUMIF(\'Cash flow\'!$P:$P&\'Cash flow\'!$A:$A&\'Cash flow\'!$W:$W,$C$9:$C4504&H$1&"+",\'Cash flow\'!$G:$G),-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$A:$A&\'Cash flow\'!$W:$W,$C$9:$C4504&H$1&"+",\'Cash flow\'!$G:$G))),IF($A$9:$A4504=1,-SUMIF(\'Cash flow\'!$O:$O&\'Cash flow\'!$A:$A&\'Cash flow\'!$O:$O&\'Cash flow\'!$W:$W,$C$9:$C4504&H$1&$D$1&"+",\'Cash flow\'!$G:$G)+SUMIF(\'C...' V=None
+  E10: ''
+  F10: ''
+  G10: ''
+  H10: ''
+  A11: F="ARRAY{A11:D4004} ='настройки'!N4:Q4504" V=1
+  B11: 'ДОХОД'
+  D11: "Kurs to'lovi"
+  E11: 52300000.0
+  F11: 0.0
+  G11: 0.0
+  H11: 0.0
+  B12: 'ДОХОД'
+  C12: "Kurs to'lovi"
+  D12: '1-sinf a (uzbek)'
+  E12: 0.0
+  F12: 0.0
+  G12: 0.0
+  H12: 0.0
+  B13: 'ДОХОД'
+  C13: "Kurs to'lovi"
+  D13: '1-sinf b (rus)'
+  E13: 0.0
+  F13: 0.0
+  G13: 0.0
+  H13: 0.0
+  B14: 'ДОХОД'
+  C14: "Kurs to'lovi"
+  D14: '2-sinf a (uzbek)'
+  E14: 0.0
+  F14: 0.0
+  G14: 0.0
+  H14: 0.0
+==========================================================================================
+Dashboard P&L 1 126
+  C3: 'БАЛАНС ДЕНЕЖНЫХ СРЕДСТВ'
+  C5: 'РАСПРЕДЕЛЕНИЕ ДЕНЕЖНЫХ СРЕДСТВ\nПО СЧЕТАМ'
+  N5: 'СЕГОДНЯ'
+  V5: 'РАСПРЕДЕЛЕНИЕ ДЕНЕЖНЫХ СРЕДСТВ\nПО МЕСЯЦАМ (сальдо конечное)'
+  N7: F='=TODAY()' V=datetime.datetime(2026, 10, 7, 0, 0)
+  X7: 'ВСЕ СЧЕТА'
+  AB7: 2026.0
+  N11: 'ТЕКУЩИЙ ОСТАТОК\nДЕНЕЖНЫХ СРЕДСТВ'
+  N13: F="='настройки(дашбордОПУ)'!C1" V='-278\xa0803\xa0500 сум'
+  B22: 'ОБЩИЕ ПОКАЗАТЕЛИ'
+  N24: 'СЕНТЯБРЬ'
+  S24: 2026.0
+  C26: 'ДОХОДЫ'
+  M26: 'РАСХОДЫ'
+  W26: 'ПРИБЫЛЬ'
+  C28: F="='настройки(дашбордОПУ)'!G2" V='788\xa0805\xa0000 сум'
+  M28: F="='настройки(дашбордОПУ)'!G3" V='15\xa0000\xa0000 сум'
+  W28: F="='настройки(дашбордОПУ)'!G4" V='773\xa0805\xa0000 сум'
+  C30: F="='настройки(дашбордОПУ)'!J7" V='#REF!'
+  M30: F="='настройки(дашбордОПУ)'!J8" V='#REF!'
+  W30: F="='настройки(дашбордОПУ)'!J9" V='#REF!'
+  C31: F="='настройки(дашбордОПУ)'!J6" V='#REF!'
+  M31: F="='настройки(дашбордОПУ)'!J6" V='#REF!'
+  W31: F="='настройки(дашбордОПУ)'!J6" V='#REF!'
+  B34: 'РАСПРЕДЕЛЕНИЕ ПО КАТЕГОРИЯМ'
+  L36: 'детализация:'
+  M36: 'категории'
+  R36: True
+  S36: 'отобразить нулевые категории'
+  C38: '- ДОХОДЫ -'
+  S38: '- РАСХОДЫ -'
+  B61: 'РАСПРЕДЕЛЕНИЕ ПО МЕСЯЦАМ'
+  O63: True
+  P63: 'отобразить значения'
+  M65: True
+  N65: 'ДОХОД'
+  P65: True
+  Q65: 'РАСХОД'
+  S65: True
+  T65: 'ПРИБЫЛЬ'
+  B90: 'ПОКАЗАТЕЛИ ПО КАТЕГОРИИ'
+  J92: "ДОХОД. Kurs to'lovi. HSK1"
+  C93: '- ПОКАЗАТЕЛИ ЗА ГОД -'
+  C94: F="=COUNTIF('Cash flow'!$C:$C,J92)" V=0
+  N94: '-РАСПРЕДЕЛЕНИЕ ПО МЕСЯЦАМ -'
+  D95: F="='настройки(дашбордОПУ)'!AD14" V='#N/A'
+  E101: F="='настройки(дашбордОПУ)'!AF14" V=0
+  E103: F='="ОТ ГОДОВОГО "&\'настройки(дашбордОПУ)\'!AD1&"А"' V='#N/A'
+  B115: 'ПОКАЗАТЕЛИ ПО КАТЕГОРИИ'
+  J117: "ДОХОД. Kurs to'lovi. HSK1"
+  C118: '- ПОКАЗАТЕЛИ ЗА ГОД -'
+  C119: F="=COUNTIF('Cash flow'!$C:$C,J117)" V=0
+  N119: '-РАСПРЕДЕЛЕНИЕ ПО МЕСЯЦАМ -'
+  D120: F="='настройки(дашбордОПУ)'!AD39" V=None
+  D124: 'ДОЛГ'
+  D126: F="='P&L'!J2" V='#VALUE!'
+==========================================================================================
+Dashboard Cash flow 1 103
+  C3: 'БАЛАНС ДЕНЕЖНЫХ СРЕДСТВ'
+  C5: 'РАСПРЕДЕЛЕНИЕ ДЕНЕЖНЫХ СРЕДСТВ\nПО СЧЕТАМ'
+  N5: 'СЕГОДНЯ'
+  V5: 'РАСПРЕДЕЛЕНИЕ ДЕНЕЖНЫХ СРЕДСТВ\nПО МЕСЯЦАМ (сальдо конечное)'
+  N7: F='=TODAY()' V=datetime.datetime(2026, 10, 7, 0, 0)
+  X7: 'Naqd'
+  AB7: 2026.0
+  N11: 'ТЕКУЩИЙ ОСТАТОК\nДЕНЕЖНЫХ СРЕДСТВ'
+  N13: F="='настройки(дашбордДДС)'!C1" V='-278\xa0803\xa0500 сум'
+  B22: 'ОБЩИЕ ПОКАЗАТЕЛИ'
+  N24: 'СЕНТЯБРЬ'
+  S24: 2026.0
+  C26: 'ДОХОДЫ'
+  M26: 'РАСХОДЫ'
+  W26: 'ПРИБЫЛЬ (по кассе)'
+  C28: F="='настройки(дашбордДДС)'!G2" V='190\xa0760\xa0000 сум'
+  M28: F="='настройки(дашбордДДС)'!G3" V='0 сум'
+  W28: F="='настройки(дашбордДДС)'!G4" V='190\xa0760\xa0000 сум'
+  C30: F="='настройки(дашбордДДС)'!J7" V='#REF!'
+  M30: F="='настройки(дашбордДДС)'!J8" V='#REF!'
+  W30: F="='настройки(дашбордДДС)'!J9" V='#REF!'
+  C31: F="='настройки(дашбордДДС)'!J6" V='#REF!'
+  M31: F="='настройки(дашбордДДС)'!J6" V='#REF!'
+  W31: F="='настройки(дашбордДДС)'!J6" V='#REF!'
+  B34: 'РАСПРЕДЕЛЕНИЕ ПО КАТЕГОРИЯМ'
+  L36: 'детализация:'
+  M36: 'подкатегории'
+  R36: True
+  S36: 'отобразить нулевые категории'
+  C38: '- ДОХОДЫ -'
+  S38: '- РАСХОДЫ -'
+  B61: 'РАСПРЕДЕЛЕНИЕ ПО МЕСЯЦАМ'
+  O63: True
+  P63: 'отобразить значения'
+  M65: True
+  N65: 'ДОХОД'
+  P65: True
+  Q65: 'РАСХОД'
+  S65: True
+  T65: 'ПРИБЫЛЬ'
+  B90: 'ПОКАЗАТЕЛИ ПО КАТЕГОРИИ'
+  J92: "ДОХОД. Kurs to'lovi. HSK3"
+  C94: '- ПОКАЗАТЕЛИ ЗА ГОД -'
+  N94: '-РАСПРЕДЕЛЕНИЕ ПО МЕСЯЦАМ -'
+  D95: F="='настройки(дашбордДДС)'!AD14" V='#N/A'
+  E101: F="='настройки(дашбордДДС)'!AF14" V='#N/A'
+  E103: F='="ОТ ГОДОВОГО "&\'настройки(дашбордДДС)\'!AD1&"А"' V='#N/A'
+==========================================================================================
+настройки(дашбордДДС) 1 16
+  A1: 'БАЛАНС'
+  B1: F='=SUM(B2:B476)' V=-278803500
+  C1: F='ARRAY{C1:C476} =IF($B$1:$B476="","",TEXT($B$1:$B476,"#,##0")&" сум")' V='-278\xa0803\xa0500 сум'
+  D1: F="='Dashboard Cash flow'!S24" V=2026
+  E1: F="='Dashboard Cash flow'!N24" V='СЕНТЯБРЬ'
+  F1: F="=MATCH(E1,'Cash flow oylik'!1:1,0)" V=14
+  H1: F="='Dashboard Cash flow'!N24" V='СЕНТЯБРЬ'
+  V1: F='=D1' V=2026
+  W1: 'ДОХОД'
+  X1: 'РАСХОД'
+  Y1: 'ПРИБЫЛЬ'
+  Z1: 'подпись1'
+  AA1: 'подпись2'
+  AB1: 'подпись3'
+  AD1: F="=VLOOKUP(AE1,'настройки'!$AP:$AR,3,0)" V='#N/A'
+  AE1: F="='Dashboard Cash flow'!J92" V="ДОХОД. Kurs to'lovi. HSK3"
+  AF1: F="=VLOOKUP(AE1,'настройки'!AP:AQ,2,0)" V='#N/A'
+  AI1: 'САЛЬДО КОНЕЧНОЕ'
+  AJ1: 'САЛЬДО КОНЕЧНОЕ'
+  AL1: F="='Dashboard Cash flow'!X7" V='Naqd'
+  AM1: F="='Dashboard Cash flow'!AB7" V=2026
+  AN1: F="ARRAY{AN1:AY1} =TRANSPOSE('настройки'!$B$3:$B$14)" V='ЯНВАРЬ'
+  AO1: 'ФЕВРАЛЬ'
+  AP1: 'МАРТ'
+  AQ1: 'АПРЕЛЬ'
+  AR1: 'МАЙ'
+  AS1: 'ИЮНЬ'
+  AT1: 'ИЮЛЬ'
+  AU1: 'АВГУСТ'
+  AV1: 'СЕНТЯБРЬ'
+  AW1: 'ОКТЯБРЬ'
+  AX1: 'НОЯБРЬ'
+  AY1: 'ДЕКАБРЬ'
+  A2: F='=IFERROR(__xludf.DUMMYFUNCTION("ArrayFormula(SORT(FILTER(Kassa!A3:B476,NOT(ISBLANK(Kassa!A3:A476))),2,FALSE))"),"Click")' V='Click'
+  B2: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),1.65475E8)' V=165475000
+  C2: '165\xa0475\xa0000 сум'
+  E2: 'ДОХОД'
+  F2: F='=IF($E$1="год",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$M:$M,$E2,\'Cash flow\'!$Q:$Q,TRUE,\'Cash flow\'!$K:$K,$D$1), SUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$M:$M,$E2,\'Cash flow\'!$U:$U,$E$1&" "&$D$1,\'Cash flow\'!$K:$K,$D$1))' V=190760000
+  G2: F='=TEXT($F2,"#,##0")&" сум"' V='190\xa0760\xa0000 сум'
+  V2: 'ЯНВАРЬ'
+  W2: F='ARRAY{W2} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V2&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  X2: F='ARRAY{X2} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V2&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Y2: F='ARRAY{Y2} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V2&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V2&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Z2: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(W$15=TRUE,W2,""),"")' V=0
+  AA2: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(X$15=TRUE,X2,""),"")' V=0
+  AB2: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(Y$15=TRUE,Y2,""),"")' V=0
+  AC2: 0.0
+  AD2: 'ЯНВАРЬ'
+  AE2: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD2&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD2&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH2: 'ЯНВАРЬ'
+  AI2: F='=HLOOKUP($V2,$AN$1:$AY$9,5,0)' V=0
+  AJ2: F='=IF(AI2="-","",AI2)' V=0
+  AN2: F="=DATE($AM$1,VLOOKUP(AN$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 1, 1, 0, 0)
+  AO2: F="=DATE($AM$1,VLOOKUP(AO$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 2, 1, 0, 0)
+  AP2: F="=DATE($AM$1,VLOOKUP(AP$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 3, 1, 0, 0)
+  AQ2: F="=DATE($AM$1,VLOOKUP(AQ$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 4, 1, 0, 0)
+  AR2: F="=DATE($AM$1,VLOOKUP(AR$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 5, 1, 0, 0)
+  AS2: F="=DATE($AM$1,VLOOKUP(AS$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 6, 1, 0, 0)
+  AT2: F="=DATE($AM$1,VLOOKUP(AT$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 7, 1, 0, 0)
+  AU2: F="=DATE($AM$1,VLOOKUP(AU$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 8, 1, 0, 0)
+  AV2: F="=DATE($AM$1,VLOOKUP(AV$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 9, 1, 0, 0)
+  AW2: F="=DATE($AM$1,VLOOKUP(AW$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 10, 1, 0, 0)
+  AX2: F="=DATE($AM$1,VLOOKUP(AX$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 11, 1, 0, 0)
+  AY2: F="=DATE($AM$1,VLOOKUP(AY$1,'настройки'!$B$3:$E$14,4,0),1)" V=datetime.datetime(2026, 12, 1, 0, 0)
+  A3: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Bank hisobi")' V='Bank hisobi'
+  B3: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),2.06E7)' V=20600000
+  C3: '20\xa0600\xa0000 сум'
+  E3: 'РАСХОД'
+  F3: F='=IF($E$1="год",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$M:$M,$E3,\'Cash flow\'!$Q:$Q,TRUE,\'Cash flow\'!$K:$K,$D$1), SUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$M:$M,$E3,\'Cash flow\'!$U:$U,$E$1&" "&$D$1,\'Cash flow\'!$K:$K,$D$1))' V=0
+  G3: F='=TEXT($F3,"#,##0")&" сум"' V='0 сум'
+  V3: 'ФЕВРАЛЬ'
+  W3: F='ARRAY{W3} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V3&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  X3: F='ARRAY{X3} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V3&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Y3: F='ARRAY{Y3} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V3&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V3&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Z3: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(W$15=TRUE,W3,""),"")' V=0
+  AA3: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(X$15=TRUE,X3,""),"")' V=0
+  AB3: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(Y$15=TRUE,Y3,""),"")' V=0
+  AC3: 0.0
+  AD3: 'ФЕВРАЛЬ'
+  AE3: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD3&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD3&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH3: 'ФЕВРАЛЬ'
+  AI3: F='=HLOOKUP($V3,$AN$1:$AY$9,5,0)' V=0
+  AJ3: F='=IF(AI3="-","",AI3)' V=0
+  AN3: F='=EOMONTH(AN$2,0)' V=datetime.datetime(2026, 1, 31, 0, 0)
+  AO3: F='=EOMONTH(AO$2,0)' V=datetime.datetime(2026, 2, 28, 0, 0)
+  AP3: F='=EOMONTH(AP$2,0)' V=datetime.datetime(2026, 3, 31, 0, 0)
+  AQ3: F='=EOMONTH(AQ$2,0)' V=datetime.datetime(2026, 4, 30, 0, 0)
+  AR3: F='=EOMONTH(AR$2,0)' V=datetime.datetime(2026, 5, 31, 0, 0)
+  AS3: F='=EOMONTH(AS$2,0)' V=datetime.datetime(2026, 6, 30, 0, 0)
+  AT3: F='=EOMONTH(AT$2,0)' V=datetime.datetime(2026, 7, 31, 0, 0)
+  AU3: F='=EOMONTH(AU$2,0)' V=datetime.datetime(2026, 8, 31, 0, 0)
+  AV3: F='=EOMONTH(AV$2,0)' V=datetime.datetime(2026, 9, 30, 0, 0)
+  AW3: F='=EOMONTH(AW$2,0)' V=datetime.datetime(2026, 10, 31, 0, 0)
+  AX3: F='=EOMONTH(AX$2,0)' V=datetime.datetime(2026, 11, 30, 0, 0)
+  AY3: F='=EOMONTH(AY$2,0)' V=datetime.datetime(2026, 12, 31, 0, 0)
+  A4: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Naqd")' V='Naqd'
+  B4: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),-4.648785E8)' V=-464878500
+  C4: '-464\xa0878\xa0500 сум'
+  E4: 'ПРИБЫЛЬ (КАССОВАЯ)'
+  F4: F='=F2-F3' V=190760000
+  G4: F='=TEXT($F4,"#,##0")&" сум"' V='190\xa0760\xa0000 сум'
+  V4: 'МАРТ'
+  W4: F='ARRAY{W4} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V4&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  X4: F='ARRAY{X4} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V4&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Y4: F='ARRAY{Y4} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V4&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V4&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Z4: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(W$15=TRUE,W4,""),"")' V=0
+  AA4: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(X$15=TRUE,X4,""),"")' V=0
+  AB4: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(Y$15=TRUE,Y4,""),"")' V=0
+  AC4: 0.0
+  AD4: 'МАРТ'
+  AE4: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD4&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD4&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH4: 'МАРТ'
+  AI4: F='=HLOOKUP($V4,$AN$1:$AY$9,5,0)' V=0
+  AJ4: F='=IF(AI4="-","",AI4)' V=0
+  AL4: 'САЛЬДО НАЧАЛЬНОЕ'
+  AN4: F='=IF(OR(AN$2>TODAY(),AN$3<\'справочник\'!$A$2),"-", IF(AND(MONTH(AN$3)=MONTH(\'справочник\'!$A$2),$AM$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0),\nVLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0)+\nIF($AL$1="ВСЕ СЧЕТА",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$A:$A,"<"&AN$2,\'Cash flow\'!$A:$A,">="&\'справочник\'!$A$2,\'Cash flow\'!$M:$M,"ДОХОД")-\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$A:$A,"<"&AN$2,\'Cash flow\'!$A:$A,">="&\'справочник\'!$A$2,\'Cash flow\'!$M:$M,"РАСХОД"),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$A:$A,"<"&AN$2,\'Cash flow\'!$A:$A,">="&\'справочник\'!$A$2,\'Cash flow\'!$D:$D,$AL$1,\'Cash flow\'!$M:$M,"ДОХОД")-\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$A:$A,"<"&AN$2,\'Cash flow\'!$A:$A,">="&\'спра...' V=0
+  AO4: F='=IF(OR(AO$2>TODAY(),AO$3<\'справочник\'!$A$2),"-",\nIF(AND(MONTH(AO$3)=MONTH(\'справочник\'!$A$2),$AM$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0),AN$5))' V=0
+  AP4: F='=IF(OR(AP$2>TODAY(),AP$3<\'справочник\'!$A$2),"-",\nIF(AND(MONTH(AP$3)=MONTH(\'справочник\'!$A$2),$AM$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0),AO$5))' V=0
+  AQ4: F='=IF(OR(AQ$2>TODAY(),AQ$3<\'справочник\'!$A$2),"-",\nIF(AND(MONTH(AQ$3)=MONTH(\'справочник\'!$A$2),$AM$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0),AP$5))' V=0
+  AR4: F='=IF(OR(AR$2>TODAY(),AR$3<\'справочник\'!$A$2),"-",\nIF(AND(MONTH(AR$3)=MONTH(\'справочник\'!$A$2),$AM$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0),AQ$5))' V=0
+  AS4: F='=IF(OR(AS$2>TODAY(),AS$3<\'справочник\'!$A$2),"-",\nIF(AND(MONTH(AS$3)=MONTH(\'справочник\'!$A$2),$AM$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0),AR$5))' V=0
+  AT4: F='=IF(OR(AT$2>TODAY(),AT$3<\'справочник\'!$A$2),"-",\nIF(AND(MONTH(AT$3)=MONTH(\'справочник\'!$A$2),$AM$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0),AS$5))' V=-161031500
+  AU4: F='=IF(OR(AU$2>TODAY(),AU$3<\'справочник\'!$A$2),"-",\nIF(AND(MONTH(AU$3)=MONTH(\'справочник\'!$A$2),$AM$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0),AT$5))' V=-275298500
+  AV4: F='=IF(OR(AV$2>TODAY(),AV$3<\'справочник\'!$A$2),"-",\nIF(AND(MONTH(AV$3)=MONTH(\'справочник\'!$A$2),$AM$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0),AU$5))' V=-655558500
+  AW4: F='=IF(OR(AW$2>TODAY(),AW$3<\'справочник\'!$A$2),"-",\nIF(AND(MONTH(AW$3)=MONTH(\'справочник\'!$A$2),$AM$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0),AV$5))' V=-535128500
+  AX4: F='=IF(OR(AX$2>TODAY(),AX$3<\'справочник\'!$A$2),"-",\nIF(AND(MONTH(AX$3)=MONTH(\'справочник\'!$A$2),$AM$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0),AW$5))' V='-'
+  AY4: F='=IF(OR(AY$2>TODAY(),AY$3<\'справочник\'!$A$2),"-",\nIF(AND(MONTH(AY$3)=MONTH(\'справочник\'!$A$2),$AM$1=YEAR(\'справочник\'!$A$2)),VLOOKUP($AL$1,\'настройки\'!$X$7:$Y476,2,0),AX$5))' V='-'
+  C5: ''
+  J5: F='=IF(E1="год","нет данных за прошлый год",IF(E1="январь","нет данных за прошлый месяц",""))' V=None
+  V5: 'АПРЕЛЬ'
+  W5: F='ARRAY{W5} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V5&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  X5: F='ARRAY{X5} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V5&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Y5: F='ARRAY{Y5} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V5&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V5&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Z5: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(W$15=TRUE,W5,""),"")' V=0
+  AA5: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(X$15=TRUE,X5,""),"")' V=0
+  AB5: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(Y$15=TRUE,Y5,""),"")' V=0
+  AC5: 0.0
+  AD5: 'АПРЕЛЬ'
+  AE5: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD5&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD5&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH5: 'АПРЕЛЬ'
+  AI5: F='=HLOOKUP($V5,$AN$1:$AY$9,5,0)' V=0
+  AJ5: F='=IF(AI5="-","",AI5)' V=0
+  AL5: 'САЛЬДО КОНЕЧНОЕ'
+  AN5: F='=IF(AN$4="-","-", IF(AND(MONTH(AN$2)>MONTH(TODAY()),$AM$1>YEAR(TODAY())),"-",AN$4+AN$6-AN$7+AN$9))' V=0
+  AO5: F='=IF(AO$4="-","-", IF(AND(MONTH(AO$2)>MONTH(TODAY()),$AM$1>YEAR(TODAY())),"-",AO$4+AO$6-AO$7+AO$9))' V=0
+  AP5: F='=IF(AP$4="-","-", IF(AND(MONTH(AP$2)>MONTH(TODAY()),$AM$1>YEAR(TODAY())),"-",AP$4+AP$6-AP$7+AP$9))' V=0
+  AQ5: F='=IF(AQ$4="-","-", IF(AND(MONTH(AQ$2)>MONTH(TODAY()),$AM$1>YEAR(TODAY())),"-",AQ$4+AQ$6-AQ$7+AQ$9))' V=0
+  AR5: F='=IF(AR$4="-","-", IF(AND(MONTH(AR$2)>MONTH(TODAY()),$AM$1>YEAR(TODAY())),"-",AR$4+AR$6-AR$7+AR$9))' V=0
+  AS5: F='=IF(AS$4="-","-", IF(AND(MONTH(AS$2)>MONTH(TODAY()),$AM$1>YEAR(TODAY())),"-",AS$4+AS$6-AS$7+AS$9))' V=-161031500
+  AT5: F='=IF(AT$4="-","-", IF(AND(MONTH(AT$2)>MONTH(TODAY()),$AM$1>YEAR(TODAY())),"-",AT$4+AT$6-AT$7+AT$9))' V=-275298500
+  AU5: F='=IF(AU$4="-","-", IF(AND(MONTH(AU$2)>MONTH(TODAY()),$AM$1>YEAR(TODAY())),"-",AU$4+AU$6-AU$7+AU$9))' V=-655558500
+  AV5: F='=IF(AV$4="-","-", IF(AND(MONTH(AV$2)>MONTH(TODAY()),$AM$1>YEAR(TODAY())),"-",AV$4+AV$6-AV$7+AV$9))' V=-535128500
+  AW5: F='=IF(AW$4="-","-", IF(AND(MONTH(AW$2)>MONTH(TODAY()),$AM$1>YEAR(TODAY())),"-",AW$4+AW$6-AW$7+AW$9))' V=-464878500
+  AX5: F='=IF(AX$4="-","-", IF(AND(MONTH(AX$2)>MONTH(TODAY()),$AM$1>YEAR(TODAY())),"-",AX$4+AX$6-AX$7+AX$9))' V='-'
+  AY5: F='=IF(AY$4="-","-", IF(AND(MONTH(AY$2)>MONTH(TODAY()),$AM$1>YEAR(TODAY())),"-",AY$4+AY$6-AY$7+AY$9))' V='-'
+  C6: ''
+  D6: F='=IF(OR(E1="ГОД",E1="ЯНВАРЬ"),D1-1,D1)' V=2026
+  E6: F='ARRAY{E6} =IF($D$6<YEAR(\'справочник\'!$A$2),"-",IF(E1="ГОД","ГОД",IF(E1="ЯНВАРЬ","ДЕКАБРЬ", INDIRECT(ADDRESS(1,F1-1,,,"ДДС месяц")))))' V='#REF!'
+  F6: F="=MATCH(E6,'Cash flow oylik'!1:1,0)" V='#REF!'
+  H6: 'РАЗНИЦА'
+  J6: F='=IF(E6="-","","в сравнении с предыдущим месяцем")' V='#REF!'
+  V6: 'МАЙ'
+  W6: F='ARRAY{W6} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V6&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  X6: F='ARRAY{X6} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V6&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Y6: F='ARRAY{Y6} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V6&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V6&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Z6: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(W$15=TRUE,W6,""),"")' V=0
+  AA6: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(X$15=TRUE,X6,""),"")' V=0
+  AB6: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(Y$15=TRUE,Y6,""),"")' V=0
+  AC6: 0.0
+  AD6: 'МАЙ'
+  AE6: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD6&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD6&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH6: 'МАЙ'
+  AI6: F='=HLOOKUP($V6,$AN$1:$AY$9,5,0)' V=0
+  AJ6: F='=IF(AI6="-","",AI6)' V=0
+  AL6: 'ДОХОД'
+  AM6: F='=SUM(AN6:AY6)' V=190680000
+  AN6: F='ARRAY{AN6} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL6&AN$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL6&AN$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AO6: F='ARRAY{AO6} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL6&AO$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL6&AO$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AP6: F='ARRAY{AP6} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL6&AP$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL6&AP$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AQ6: F='ARRAY{AQ6} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL6&AQ$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL6&AQ$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AR6: F='ARRAY{AR6} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL6&AR$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL6&AR$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AS6: F='ARRAY{AS6} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL6&AS$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL6&AS$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AT6: F='ARRAY{AT6} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL6&AT$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL6&AT$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AU6: F='ARRAY{AU6} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL6&AU$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL6&AU$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AV6: F='ARRAY{AV6} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL6&AV$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL6&AV$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=120430000
+  AW6: F='ARRAY{AW6} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL6&AW$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL6&AW$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=70250000
+  AX6: F='ARRAY{AX6} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL6&AX$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL6&AX$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AY6: F='ARRAY{AY6} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL6&AY$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL6&AY$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  C7: ''
+  E7: 'ДОХОД'
+  F7: F='=IF($E$1="год",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$M:$M,$E7,\'Cash flow\'!$Q:$Q,TRUE,\'Cash flow\'!$K:$K,$D$6), SUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$M:$M,$E7,\'Cash flow\'!$L:$L,$E$6&" "&$D$6,\'Cash flow\'!$K:$K,$D$6))' V=0
+  G7: F='=TEXT($F7,"#,##0")&" сум"' V='0 сум'
+  H7: F='=F2-F7' V=190760000
+  I7: F='=IF(F7=0,1, H7/F7)' V=1
+  J7: F='=IF(E6="-",J5,"доходы "&IF(H7=0,"не изменились",IF(H7>0,"увеличились на ","уменьшились на ")&TEXT(abs(I7),"0%")&" (на "&TEXT(abs(H7),"#,##0")&" сум)"))' V='#REF!'
+  V7: 'ИЮНЬ'
+  W7: F='ARRAY{W7} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V7&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=9500000
+  X7: F='ARRAY{X7} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V7&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=166531500
+  Y7: F='ARRAY{Y7} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V7&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V7&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=-157031500
+  Z7: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(W$15=TRUE,W7,""),"")' V=9500000
+  AA7: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(X$15=TRUE,X7,""),"")' V=166531500
+  AB7: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(Y$15=TRUE,Y7,""),"")' V=-157031500
+  AC7: 0.0
+  AD7: 'ИЮНЬ'
+  AE7: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD7&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD7&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH7: 'ИЮНЬ'
+  AI7: F='=HLOOKUP($V7,$AN$1:$AY$9,5,0)' V=-161031500
+  AJ7: F='=IF(AI7="-","",AI7)' V=-161031500
+  AL7: 'РАСХОД'
+  AM7: F='=SUM(AN7:AY7)' V=655558500
+  AN7: F='ARRAY{AN7} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL7&AN$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL7&AN$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AO7: F='ARRAY{AO7} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL7&AO$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL7&AO$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AP7: F='ARRAY{AP7} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL7&AP$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL7&AP$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AQ7: F='ARRAY{AQ7} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL7&AQ$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL7&AQ$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AR7: F='ARRAY{AR7} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL7&AR$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL7&AR$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AS7: F='ARRAY{AS7} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL7&AS$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL7&AS$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=161031500
+  AT7: F='ARRAY{AT7} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL7&AT$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL7&AT$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=114267000
+  AU7: F='ARRAY{AU7} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL7&AU$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL7&AU$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=380260000
+  AV7: F='ARRAY{AV7} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL7&AV$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL7&AV$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AW7: F='ARRAY{AW7} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL7&AW$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL7&AW$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AX7: F='ARRAY{AX7} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL7&AX$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL7&AX$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AY7: F='ARRAY{AY7} =IF($AL$1="ВСЕ СЧЕТА",\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$K:$K,$AL7&AY$1&$AM$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$D:$D&\'Cash flow\'!$K:$K,$AL7&AY$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  C8: ''
+  E8: 'РАСХОД'
+  F8: F='=IF($E$1="год",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$M:$M,$E8,\'Cash flow\'!$Q:$Q,TRUE,\'Cash flow\'!$K:$K,$D$6), SUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$M:$M,$E8,\'Cash flow\'!$L:$L,$E$6&" "&$D$6,\'Cash flow\'!$K:$K,$D$6))' V=0
+  G8: F='=TEXT($F8,"#,##0")&" сум"' V='0 сум'
+  H8: F='=F3-F8' V=0
+  I8: F='=IF(F8=0,1, H8/F8)' V=1
+  J8: F='=IF(E6="-",J5,"расходы "&IF(H8=0,"не изменились",IF(H8>0,"увеличились на ","уменьшились на ")&TEXT(abs(I8),"0%")&" (на "&TEXT(abs(H8),"#,##0")&" сум)"))' V='#REF!'
+  V8: 'ИЮЛЬ'
+  W8: F='ARRAY{W8} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V8&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=41600000
+  X8: F='ARRAY{X8} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V8&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=115767000
+  Y8: F='ARRAY{Y8} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V8&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V8&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=-74167000
+  Z8: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(W$15=TRUE,W8,""),"")' V=41600000
+  AA8: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(X$15=TRUE,X8,""),"")' V=115767000
+  AB8: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(Y$15=TRUE,Y8,""),"")' V=-74167000
+  AC8: 0.0
+  AD8: 'ИЮЛЬ'
+  AE8: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD8&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD8&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH8: 'ИЮЛЬ'
+  AI8: F='=HLOOKUP($V8,$AN$1:$AY$9,5,0)' V=-275298500
+  AJ8: F='=IF(AI8="-","",AI8)' V=-275298500
+  AL8: 'ПРИБЫЛЬ (по кассе)'
+  AM8: F='=SUM(AN8:AY8)' V=-464878500
+  AN8: F='=AN6-AN7' V=0
+  AO8: F='=AO6-AO7' V=0
+  AP8: F='=AP6-AP7' V=0
+  AQ8: F='=AQ6-AQ7' V=0
+  AR8: F='=AR6-AR7' V=0
+  AS8: F='=AS6-AS7' V=-161031500
+  AT8: F='=AT6-AT7' V=-114267000
+  AU8: F='=AU6-AU7' V=-380260000
+  AV8: F='=AV6-AV7' V=120430000
+  AW8: F='=AW6-AW7' V=70250000
+  AX8: F='=AX6-AX7' V=0
+  AY8: F='=AY6-AY7' V=0
+  C9: ''
+  E9: 'ПРИБЫЛЬ (КАССОВАЯ)'
+  F9: F='=F7-F8' V=0
+  G9: F='=TEXT($F9,"#,##0")&" сум"' V='0 сум'
+  H9: F='=F4-F9' V=190760000
+  I9: F='=IF(F9=0,1, H9/F9)' V=1
+  J9: F='=IF(E6="-",J5,"прибыль "&IF(H9=0,"не изменилась",IF(H9>0,"увеличилась на ","уменьшилась на ")&TEXT(abs(I9),"0%")&" (на "&TEXT(abs(H9),"#,##0")&" сум)"))' V='#REF!'
+  V9: 'АВГУСТ'
+  W9: F='ARRAY{W9} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V9&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=52300000
+  X9: F='ARRAY{X9} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V9&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=390260000
+  Y9: F='ARRAY{Y9} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V9&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V9&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=-337960000
+  Z9: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(W$15=TRUE,W9,""),"")' V=52300000
+  AA9: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(X$15=TRUE,X9,""),"")' V=390260000
+  AB9: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(Y$15=TRUE,Y9,""),"")' V=-337960000
+  AC9: 0.0
+  AD9: 'АВГУСТ'
+  AE9: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD9&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD9&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH9: 'АВГУСТ'
+  AI9: F='=HLOOKUP($V9,$AN$1:$AY$9,5,0)' V=-655558500
+  AJ9: F='=IF(AI9="-","",AI9)' V=-655558500
+  AL9: 'ПЕРЕВОДЫ'
+  AM9: F='=SUM(AN9:AY9)' V=0
+  AN9: F='ARRAY{AN9} =IF($AL$1="ВСЕ СЧЕТА",0,-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$O:$O&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AN$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$P:$P&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AN$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AO9: F='ARRAY{AO9} =IF($AL$1="ВСЕ СЧЕТА",0,-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$O:$O&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AO$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$P:$P&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AO$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AP9: F='ARRAY{AP9} =IF($AL$1="ВСЕ СЧЕТА",0,-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$O:$O&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AP$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$P:$P&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AP$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AQ9: F='ARRAY{AQ9} =IF($AL$1="ВСЕ СЧЕТА",0,-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$O:$O&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AQ$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$P:$P&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AQ$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AR9: F='ARRAY{AR9} =IF($AL$1="ВСЕ СЧЕТА",0,-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$O:$O&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AR$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$P:$P&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AR$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AS9: F='ARRAY{AS9} =IF($AL$1="ВСЕ СЧЕТА",0,-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$O:$O&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AS$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$P:$P&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AS$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AT9: F='ARRAY{AT9} =IF($AL$1="ВСЕ СЧЕТА",0,-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$O:$O&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AT$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$P:$P&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AT$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AU9: F='ARRAY{AU9} =IF($AL$1="ВСЕ СЧЕТА",0,-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$O:$O&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AU$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$P:$P&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AU$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AV9: F='ARRAY{AV9} =IF($AL$1="ВСЕ СЧЕТА",0,-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$O:$O&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AV$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$P:$P&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AV$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AW9: F='ARRAY{AW9} =IF($AL$1="ВСЕ СЧЕТА",0,-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$O:$O&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AW$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$P:$P&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AW$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AX9: F='ARRAY{AX9} =IF($AL$1="ВСЕ СЧЕТА",0,-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$O:$O&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AX$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$P:$P&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AX$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  AY9: F='ARRAY{AY9} =IF($AL$1="ВСЕ СЧЕТА",0,-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$O:$O&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AY$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G)+SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$J:$J&\'Cash flow\'!$P:$P&\'Cash flow\'!$K:$K,"ПЕРЕВОД"& AY$1&$AL$1&$AM$1,\'Cash flow\'!$G:$G))' V=0
+  C10: ''
+  V10: 'СЕНТЯБРЬ'
+  W10: F='ARRAY{W10} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V10&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=190760000
+  X10: F='ARRAY{X10} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V10&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Y10: F='ARRAY{Y10} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V10&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V10&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=190760000
+  Z10: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(W$15=TRUE,W10,""),"")' V=190760000
+  AA10: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(X$15=TRUE,X10,""),"")' V=0
+  AB10: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(Y$15=TRUE,Y10,""),"")' V=190760000
+  AC10: 0.0
+  AD10: 'СЕНТЯБРЬ'
+  AE10: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD10&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD10&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH10: 'СЕНТЯБРЬ'
+  AI10: F='=HLOOKUP($V10,$AN$1:$AY$9,5,0)' V=-535128500
+  AJ10: F='=IF(AI10="-","",AI10)' V=-535128500
+  C11: ''
+  E11: F="='Dashboard Cash flow'!M36" V='подкатегории'
+  F11: F="='Dashboard Cash flow'!R36" V=True
+  V11: 'ОКТЯБРЬ'
+  W11: F='ARRAY{W11} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V11&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=196625000
+  X11: F='ARRAY{X11} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V11&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Y11: F='ARRAY{Y11} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V11&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V11&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=196625000
+  Z11: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(W$15=TRUE,W11,""),"")' V=196625000
+  AA11: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(X$15=TRUE,X11,""),"")' V=0
+  AB11: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(Y$15=TRUE,Y11,""),"")' V=196625000
+  AC11: 0.0
+  AD11: 'ОКТЯБРЬ'
+  AE11: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD11&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD11&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH11: 'ОКТЯБРЬ'
+  AI11: F='=HLOOKUP($V11,$AN$1:$AY$9,5,0)' V=-464878500
+  AJ11: F='=IF(AI11="-","",AI11)' V=-464878500
+  C12: ''
+  E12: 'ДОХОД'
+  I12: 'СОРТИРОВКА ДОХОДЫ'
+  M12: 'РАСХОД'
+  Q12: 'СОРТИРОВКА РАСХОДЫ'
+  V12: 'НОЯБРЬ'
+  W12: F='ARRAY{W12} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V12&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  X12: F='ARRAY{X12} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V12&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Y12: F='ARRAY{Y12} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V12&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V12&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Z12: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(W$15=TRUE,W12,""),"")' V=0
+  AA12: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(X$15=TRUE,X12,""),"")' V=0
+  AB12: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(Y$15=TRUE,Y12,""),"")' V=0
+  AC12: 0.0
+  AD12: 'НОЯБРЬ'
+  AE12: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD12&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD12&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH12: 'НОЯБРЬ'
+  AI12: F='=HLOOKUP($V12,$AN$1:$AY$9,5,0)' V='-'
+  AJ12: F='=IF(AI12="-","",AI12)' V=None
+  C13: ''
+  E13: F='=IFERROR(__xludf.DUMMYFUNCTION("ArrayFormula(IF($E$11=""КАТЕГОРИИ"",\'справочник\'!$C$2:$C476,\nfilter({FILTER(\'настройки\'!$K:$K&"". ""&\'настройки\'!$L:$L,\'настройки\'!$J:$J=""доход"",\'настройки\'!$L:$L<>"""");\nFILTER(\'настройки\'!$K:$K,\'настройки\'!$J:$J=""доход"",\'настройки\'!$L:$L="""")},\nLEN"&"({FILTER(\'настройки\'!$K:$K&"". ""&\'настройки\'!$L:$L,\'настройки\'!$J:$J=""доход"",\'настройки\'!$L:$L<>"""");\nFILTER(\'настройки\'!$K:$K,\'настройки\'!$J:$J=""доход"",\'настройки\'!$L:$L="""")}))))"),"Kurs to\'lovi. 1-sinf a (uzbek)")' V="Kurs to'lovi. 1-sinf a (uzbek)"
+  F13: F='ARRAY{F13:F476} =IF($E$13:$E476="","",\nIF($E$1="год",\nIF($E$11="КАТЕГОРИИ",\nSUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$K:$K,"ДОХОД. "&E$13:E476&$D$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$K:$K,"ДОХОД. "&E$13:E476&$D$1,\'Cash flow\'!$G:$G)), IF($E$11="КАТЕГОРИИ",\nSUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$U:$U,"ДОХОД. "&E$13:E476&$E$1&" "&$D$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$U:$U,"ДОХОД. "&E$13:E476&$E$1&" "&$D$1,\'Cash flow\'!$G:$G))))' V=0
+  G13: F='ARRAY{G13:G476} =IF(E13:E476="","",IFERROR(F13:F476/$F$2,0))' V=0
+  H13: F='ARRAY{H13:H476} =IF(E13:E476="","",TEXT(F13:F476,"#,##0")&" сум ("&TEXT(G13:G476,"0%")&")")' V='0 сум (0%)'
+  I13: F='=IFERROR(__xludf.DUMMYFUNCTION("IF(F11=FALSE,SORT(FILTER(E13:H476,NOT(ISBLANK(E13:E476)),F13:F476>0),2,FALSE), SORT(FILTER(E13:H476,NOT(ISBLANK(E13:E476))),2,FALSE))"),"Kurs to\'lovi. 8-sinf b (rus)")' V="Kurs to'lovi. 8-sinf b (rus)"
+  J13: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),5.9835E7)' V=59835000
+  K13: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.31366638708324596)' V=0.3136663871
+  L13: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"59\xa0835\xa0000 сум (31%)")' V='59\xa0835\xa0000 сум (31%)'
+  M13: F='=IFERROR(__xludf.DUMMYFUNCTION("ArrayFormula(IF($E$11=""КАТЕГОРИИ"",\'справочник\'!$G$2:$G476,\nfilter({FILTER(\'настройки\'!$K:$K&"". ""&\'настройки\'!$L:$L,\'настройки\'!$J:$J=""расход"",\'настройки\'!$L:$L<>"""");\nFILTER(\'настройки\'!$K:$K,\'настройки\'!$J:$J=""расход"",\'настройки\'!$L:$L="""")},\nL"&"EN({FILTER(\'настройки\'!$K:$K&"". ""&\'настройки\'!$L:$L,\'настройки\'!$J:$J=""расход"",\'настройки\'!$L:$L<>"""");\nFILTER(\'настройки\'!$K:$K,\'настройки\'!$J:$J=""расход"",\'настройки\'!$L:$L="""")}))))"),"Platforma xarajatlar. Zoom/Voov meeting")' V='Platforma xarajatlar. Zoom/Voov meeting'
+  N13: F='ARRAY{N13:N476} =IF($M$13:$M476="","",\nIF($E$1="год",\nIF($E$11="КАТЕГОРИИ",\nSUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$K:$K,"РАСХОД. "&$M$13:$M476&$D$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$K:$K,"РАСХОД. "&$M$13:$M476&$D$1,\'Cash flow\'!$G:$G)), IF($E$11="КАТЕГОРИИ",\nSUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$U:$U,"РАСХОД. "&$M$13:$M476&$E$1&" "&$D$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$U:$U,"РАСХОД. "&$M$13:$M476&$E$1&" "&$D$1,\'Cash flow\'!$G:$G))))' V=0
+  O13: F='ARRAY{O13:O476} =IF(M13:M476="","",IFERROR(N13:N476/$F$3,0))' V=0
+  P13: F='ARRAY{P13:P476} =IF(M13:M476="","",TEXT(N13:N476,"#,##0")&" сум ("&TEXT(O13:O476,"0%")&")")' V='0 сум (0%)'
+  Q13: F='=IFERROR(__xludf.DUMMYFUNCTION("IF(F11=FALSE,SORT(FILTER(M13:P476,NOT(ISBLANK(M13:M476)),N13:N476>0),2,FALSE), SORT(FILTER(M13:P476,NOT(ISBLANK(M13:M476))),2,FALSE))"),"Platforma xarajatlar. Zoom/Voov meeting")' V='Platforma xarajatlar. Zoom/Voov meeting'
+  R13: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  S13: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  T13: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"0 сум (0%)")' V='0 сум (0%)'
+  V13: 'ДЕКАБРЬ'
+  W13: F='ARRAY{W13} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V13&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  X13: F='ARRAY{X13} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V13&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Y13: F='ARRAY{Y13} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,W$1&$V13&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$U:$U,X$1&$V13&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Z13: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(W$15=TRUE,W13,""),"")' V=0
+  AA13: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(X$15=TRUE,X13,""),"")' V=0
+  AB13: F='=IF(\'Dashboard Cash flow\'!$O$63=TRUE,IF(Y$15=TRUE,Y13,""),"")' V=0
+  AC13: 0.0
+  AD13: 'ДЕКАБРЬ'
+  AE13: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD13&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$U:$U,$AD13&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH13: 'ДЕКАБРЬ'
+  AI13: F='=HLOOKUP($V13,$AN$1:$AY$9,5,0)' V='-'
+  AJ13: F='=IF(AI13="-","",AI13)' V=None
+  C14: ''
+  E14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Kurs to\'lovi. 1-sinf b (rus)")' V="Kurs to'lovi. 1-sinf b (rus)"
+  F14: 10400000.0
+  G14: 0.054518767037114696
+  H14: '10\xa0400\xa0000 сум (5%)'
+  I14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Kurs to\'lovi. 6-sinf b (rus)")' V="Kurs to'lovi. 6-sinf b (rus)"
+  J14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),4.1475E7)' V=41475000
+  K14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.2174197945061858)' V=0.2174197945
+  L14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"41\xa0475\xa0000 сум (22%)")' V='41\xa0475\xa0000 сум (22%)'
+  M14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Xodimlar maoshi. Direktor (Salomov Salohiddin)")' V='Xodimlar maoshi. Direktor (Salomov Salohiddin)'
+  N14: 0.0
+  O14: 0.0
+  P14: '0 сум (0%)'
+  Q14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Xodimlar maoshi. Direktor (Salomov Salohiddin)")' V='Xodimlar maoshi. Direktor (Salomov Salohiddin)'
+  R14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  S14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  T14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"0 сум (0%)")' V='0 сум (0%)'
+  W14: F='=SUM(W2:W13)' V=490785000
+  X14: F='=SUM(X2:X13)' V=672558500
+  Y14: F='=SUM(Y2:Y13)' V=-181773500
+  AD14: F='=TEXT(AE14,"#,##0")&" сум"' V='#N/A'
+  AE14: F='=SUM(AE2:AE13)' V='#N/A'
+  AF14: F="ARRAY{AF14} =AE14/SUMIF('Cash flow'!$M:$M&'Cash flow'!$K:$K,$AD$1&$D$1,'Cash flow'!$G:$G)" V='#N/A'
+  AG14: F='=1-AF14' V='#N/A'
+  C15: ''
+  E15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Kurs to\'lovi. 2-sinf a (uzbek)")' V="Kurs to'lovi. 2-sinf a (uzbek)"
+  F15: 0.0
+  G15: 0.0
+  H15: '0 сум (0%)'
+  I15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Kurs to\'lovi. 1-sinf b (rus)")' V="Kurs to'lovi. 1-sinf b (rus)"
+  J15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),1.04E7)' V=10400000
+  K15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.054518767037114696)' V=0.05451876704
+  L15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"10\xa0400\xa0000 сум (5%)")' V='10\xa0400\xa0000 сум (5%)'
+  M15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Xodimlar maoshi. Tizimchi (Adhambek Azimovich)")' V='Xodimlar maoshi. Tizimchi (Adhambek Azimovich)'
+  N15: 0.0
+  O15: 0.0
+  P15: '0 сум (0%)'
+  Q15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Xodimlar maoshi. Tizimchi (Adhambek Azimovich)")' V='Xodimlar maoshi. Tizimchi (Adhambek Azimovich)'
+  R15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  S15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  T15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"0 сум (0%)")' V='0 сум (0%)'
+  W15: F="='Dashboard Cash flow'!M65" V=True
+  X15: F="='Dashboard Cash flow'!P65" V=True
+  Y15: F="='Dashboard Cash flow'!S65" V=True
+  C16: ''
+  E16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Kurs to\'lovi. 2-sinf b (rus)")' V="Kurs to'lovi. 2-sinf b (rus)"
+  F16: 7150000.0
+  G16: 0.037481652338016355
+  H16: '7\xa0150\xa0000 сум (4%)'
+  I16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Kurs to\'lovi. 9-sinf b (rus)")' V="Kurs to'lovi. 9-sinf b (rus)"
+  J16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),9600000.0)' V=9600000
+  K16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.05032501572656741)' V=0.05032501573
+  L16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"9\xa0600\xa0000 сум (5%)")' V='9\xa0600\xa0000 сум (5%)'
+  M16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Xodimlar maoshi. Kabilbayev Umirali (qorovul)")' V='Xodimlar maoshi. Kabilbayev Umirali (qorovul)'
+  N16: 0.0
+  O16: 0.0
+  P16: '0 сум (0%)'
+  Q16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Xodimlar maoshi. Kabilbayev Umirali (qorovul)")' V='Xodimlar maoshi. Kabilbayev Umirali (qorovul)'
+  R16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  S16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  T16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"0 сум (0%)")' V='0 сум (0%)'
+==========================================================================================
+настройки(дашбордОПУ) 10 16
+  C10: ''
+  V10: 'СЕНТЯБРЬ'
+  W10: F='ARRAY{W10} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,W$1&$V10&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=788805000
+  X10: F='ARRAY{X10} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,X$1&$V10&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=15000000
+  Y10: F='ARRAY{Y10} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,W$1&$V10&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,X$1&$V10&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=773805000
+  Z10: F='=IF(\'Dashboard P&L\'!$O$63=TRUE,IF(W$15=TRUE,W10,""),"")' V=788805000
+  AA10: F='=IF(\'Dashboard P&L\'!$O$63=TRUE,IF(X$15=TRUE,X10,""),"")' V=15000000
+  AB10: F='=IF(\'Dashboard P&L\'!$O$63=TRUE,IF(Y$15=TRUE,Y10,""),"")' V=773805000
+  AC10: 0.0
+  AD10: 'СЕНТЯБРЬ'
+  AE10: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$L:$L,$AD10&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$L:$L,$AD10&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH10: 'СЕНТЯБРЬ'
+  AI10: F='=HLOOKUP($V10,$AN$1:$AY$9,5,0)' V=-378398500
+  AJ10: F='=IF(AI10="-","",AI10)' V=-378398500
+  BA10: 'СЕНТЯБРЬ'
+  BB10: F='=COUNTIFS(\'Cash flow\'!$C:$C,$BB$1,\'Cash flow\'!$L:$L,BA10&" "&$V$1)' V=0
+  C11: ''
+  E11: F="='Dashboard P&L'!M36" V='категории'
+  F11: F="='Dashboard P&L'!R36" V=True
+  V11: 'ОКТЯБРЬ'
+  W11: F='ARRAY{W11} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,W$1&$V11&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=354545200
+  X11: F='ARRAY{X11} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,X$1&$V11&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Y11: F='ARRAY{Y11} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,W$1&$V11&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,X$1&$V11&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=354545200
+  Z11: F='=IF(\'Dashboard P&L\'!$O$63=TRUE,IF(W$15=TRUE,W11,""),"")' V=354545200
+  AA11: F='=IF(\'Dashboard P&L\'!$O$63=TRUE,IF(X$15=TRUE,X11,""),"")' V=0
+  AB11: F='=IF(\'Dashboard P&L\'!$O$63=TRUE,IF(Y$15=TRUE,Y11,""),"")' V=354545200
+  AC11: 0.0
+  AD11: 'ОКТЯБРЬ'
+  AE11: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$L:$L,$AD11&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$L:$L,$AD11&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH11: 'ОКТЯБРЬ'
+  AI11: F='=HLOOKUP($V11,$AN$1:$AY$9,5,0)' V=-181773500
+  AJ11: F='=IF(AI11="-","",AI11)' V=-181773500
+  BA11: 'ОКТЯБРЬ'
+  BB11: F='=COUNTIFS(\'Cash flow\'!$C:$C,$BB$1,\'Cash flow\'!$L:$L,BA11&" "&$V$1)' V=0
+  C12: ''
+  E12: 'ДОХОД'
+  I12: 'СОРТИРОВКА ДОХОДЫ'
+  M12: 'РАСХОД'
+  Q12: 'СОРТИРОВКА РАСХОДЫ'
+  V12: 'НОЯБРЬ'
+  W12: F='ARRAY{W12} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,W$1&$V12&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=84900000
+  X12: F='ARRAY{X12} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,X$1&$V12&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Y12: F='ARRAY{Y12} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,W$1&$V12&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,X$1&$V12&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=84900000
+  Z12: F='=IF(\'Dashboard P&L\'!$O$63=TRUE,IF(W$15=TRUE,W12,""),"")' V=84900000
+  AA12: F='=IF(\'Dashboard P&L\'!$O$63=TRUE,IF(X$15=TRUE,X12,""),"")' V=0
+  AB12: F='=IF(\'Dashboard P&L\'!$O$63=TRUE,IF(Y$15=TRUE,Y12,""),"")' V=84900000
+  AC12: 0.0
+  AD12: 'НОЯБРЬ'
+  AE12: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$L:$L,$AD12&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$L:$L,$AD12&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH12: 'НОЯБРЬ'
+  AI12: F='=HLOOKUP($V12,$AN$1:$AY$9,5,0)' V='-'
+  AJ12: F='=IF(AI12="-","",AI12)' V=None
+  BA12: 'НОЯБРЬ'
+  BB12: F='=COUNTIFS(\'Cash flow\'!$C:$C,$BB$1,\'Cash flow\'!$L:$L,BA12&" "&$V$1)' V=0
+  C13: ''
+  E13: F='=IFERROR(__xludf.DUMMYFUNCTION("ArrayFormula(IF($E$11=""КАТЕГОРИИ"",\'справочник\'!$C$2:$C476,\nfilter({FILTER(\'настройки\'!$K:$K&"". ""&\'настройки\'!$L:$L,\'настройки\'!$J:$J=""доход"",\'настройки\'!$L:$L<>"""");\nFILTER(\'настройки\'!$K:$K,\'настройки\'!$J:$J=""доход"",\'настройки\'!$L:$L="""")},\nLEN"&"({FILTER(\'настройки\'!$K:$K&"". ""&\'настройки\'!$L:$L,\'настройки\'!$J:$J=""доход"",\'настройки\'!$L:$L<>"""");\nFILTER(\'настройки\'!$K:$K,\'настройки\'!$J:$J=""доход"",\'настройки\'!$L:$L="""")}))))"),"Maktab to\'lovi")' V="Maktab to'lovi"
+  F13: F='ARRAY{F13:F476} =IF($E$13:$E476="","",\nIF($E$1="год",\nIF($E$11="КАТЕГОРИИ",\nSUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$T:$T,"ДОХОД. "&E$13:E476&$D$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$T:$T,"ДОХОД. "&E$13:E476&$D$1,\'Cash flow\'!$G:$G)), IF($E$11="КАТЕГОРИИ",\nSUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L,"ДОХОД. "&E$13:E476&$E$1&" "&$D$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L,"ДОХОД. "&E$13:E476&$E$1&" "&$D$1,\'Cash flow\'!$G:$G))))' V=0
+  G13: F='ARRAY{G13:G476} =IF(E13:E476="","",IFERROR(F13:F476/$F$2,0))' V=0
+  H13: F='ARRAY{H13:H476} =IF(E13:E476="","",TEXT(F13:F476,"#,##0")&" сум ("&TEXT(G13:G476,"0%")&")")' V='0 сум (0%)'
+  I13: F='=IFERROR(__xludf.DUMMYFUNCTION("IF(F11=FALSE,SORT(FILTER(E13:H476,NOT(ISBLANK(E13:E476)),F13:F476>0),2,FALSE), SORT(FILTER(E13:H476,NOT(ISBLANK(E13:E476))),2,FALSE))"),"Maktab to\'lovi")' V="Maktab to'lovi"
+  J13: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  K13: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  L13: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"0 сум (0%)")' V='0 сум (0%)'
+  M13: F='=IFERROR(__xludf.DUMMYFUNCTION("ArrayFormula(IF($E$11=""КАТЕГОРИИ"",\'справочник\'!$G$2:$G476,\nfilter({FILTER(\'настройки\'!$K:$K&"". ""&\'настройки\'!$L:$L,\'настройки\'!$J:$J=""расход"",\'настройки\'!$L:$L<>"""");\nFILTER(\'настройки\'!$K:$K,\'настройки\'!$J:$J=""расход"",\'настройки\'!$L:$L="""")},\nL"&"EN({FILTER(\'настройки\'!$K:$K&"". ""&\'настройки\'!$L:$L,\'настройки\'!$J:$J=""расход"",\'настройки\'!$L:$L<>"""");\nFILTER(\'настройки\'!$K:$K,\'настройки\'!$J:$J=""расход"",\'настройки\'!$L:$L="""")}))))"),"Marketing")' V='Marketing'
+  N13: F='ARRAY{N13:N476} =IF($M$13:$M476="","",\nIF($E$1="год",\nIF($E$11="КАТЕГОРИИ",\nSUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$T:$T,"РАСХОД. "&$M$13:$M476&$D$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$T:$T,"РАСХОД. "&$M$13:$M476&$D$1,\'Cash flow\'!$G:$G)), IF($E$11="КАТЕГОРИИ",\nSUMIF(\'Cash flow\'!$N:$N&\'Cash flow\'!$L:$L,"РАСХОД. "&$M$13:$M476&$E$1&" "&$D$1,\'Cash flow\'!$G:$G),\nSUMIF(\'Cash flow\'!$C:$C&\'Cash flow\'!$L:$L,"РАСХОД. "&$M$13:$M476&$E$1&" "&$D$1,\'Cash flow\'!$G:$G))))' V=0
+  O13: F='ARRAY{O13:O476} =IF(M13:M476="","",IFERROR(N13:N476/$F$3,0))' V=0
+  P13: F='ARRAY{P13:P476} =IF(M13:M476="","",TEXT(N13:N476,"#,##0")&" сум ("&TEXT(O13:O476,"0%")&")")' V='0 сум (0%)'
+  Q13: F='=IFERROR(__xludf.DUMMYFUNCTION("IF(F11=FALSE,SORT(FILTER(M13:P476,NOT(ISBLANK(M13:M476)),N13:N476>0),2,FALSE), SORT(FILTER(M13:P476,NOT(ISBLANK(M13:M476))),2,FALSE))"),"Xodimlar maoshi")' V='Xodimlar maoshi'
+  R13: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),1.5E7)' V=15000000
+  S13: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),1.0)' V=1
+  T13: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"15\xa0000\xa0000 сум (100%)")' V='15\xa0000\xa0000 сум (100%)'
+  V13: 'ДЕКАБРЬ'
+  W13: F='ARRAY{W13} =IF(W$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,W$1&$V13&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=72500000
+  X13: F='ARRAY{X13} =IF(X$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,X$1&$V13&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=0
+  Y13: F='ARRAY{Y13} =IF(Y$15=TRUE, SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,W$1&$V13&" "&$V$1,\'Cash flow\'!$G:$G)-SUMIF(\'Cash flow\'!$M:$M&\'Cash flow\'!$L:$L,X$1&$V13&" "&$V$1,\'Cash flow\'!$G:$G),0)' V=72500000
+  Z13: F='=IF(\'Dashboard P&L\'!$O$63=TRUE,IF(W$15=TRUE,W13,""),"")' V=72500000
+  AA13: F='=IF(\'Dashboard P&L\'!$O$63=TRUE,IF(X$15=TRUE,X13,""),"")' V=0
+  AB13: F='=IF(\'Dashboard P&L\'!$O$63=TRUE,IF(Y$15=TRUE,Y13,""),"")' V=72500000
+  AC13: 0.0
+  AD13: 'ДЕКАБРЬ'
+  AE13: F='=IF($AF$1="подкатегория",\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$L:$L,$AD13&" "&$V$1,\'Cash flow\'!$C:$C,AE$1),\nSUMIFS(\'Cash flow\'!$G:$G,\'Cash flow\'!$L:$L,$AD13&" "&$V$1,\'Cash flow\'!$N:$N,AE$1))' V='#N/A'
+  AH13: 'ДЕКАБРЬ'
+  AI13: F='=HLOOKUP($V13,$AN$1:$AY$9,5,0)' V='-'
+  AJ13: F='=IF(AI13="-","",AI13)' V=None
+  BA13: 'ДЕКАБРЬ'
+  BB13: F='=COUNTIFS(\'Cash flow\'!$C:$C,$BB$1,\'Cash flow\'!$L:$L,BA13&" "&$V$1)' V=0
+  C14: ''
+  E14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Asoschi pul kiritdi")' V='Asoschi pul kiritdi'
+  F14: 0.0
+  G14: 0.0
+  H14: '0 сум (0%)'
+  I14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Asoschi pul kiritdi")' V='Asoschi pul kiritdi'
+  J14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  K14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  L14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"0 сум (0%)")' V='0 сум (0%)'
+  M14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Platforma xarajatlar")' V='Platforma xarajatlar'
+  N14: 0.0
+  O14: 0.0
+  P14: '0 сум (0%)'
+  Q14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Marketing")' V='Marketing'
+  R14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  S14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  T14: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"0 сум (0%)")' V='0 сум (0%)'
+  W14: F='=SUM(W2:W13)' V=1300750200
+  X14: F='=SUM(X2:X13)' V=635739500
+  Y14: F='=SUM(Y2:Y13)' V=665010700
+  AD14: F='=TEXT(AE14,"#,##0")&" сум"' V='#N/A'
+  AE14: F='=SUM(AE2:AE13)' V='#N/A'
+  AF14: F="ARRAY{AF14} =IFERROR(AE14/SUMIF('Cash flow'!$M:$M&'Cash flow'!$T:$T,$AD$1&$D$1,'Cash flow'!$G:$G),0)" V=0
+  AG14: F='=1-AF14' V=1
+  BB14: F='=SUM(BB2:BB13)' V=0
+  C15: ''
+  F15: ''
+  G15: ''
+  H15: ''
+  M15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Xodimlar maoshi")' V='Xodimlar maoshi'
+  N15: 15000000.0
+  O15: 1.0
+  P15: '15\xa0000\xa0000 сум (100%)'
+  Q15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Platforma xarajatlar")' V='Platforma xarajatlar'
+  R15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  S15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  T15: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"0 сум (0%)")' V='0 сум (0%)'
+  W15: F="='Dashboard P&L'!M65" V=True
+  X15: F="='Dashboard P&L'!P65" V=True
+  Y15: F="='Dashboard P&L'!S65" V=True
+  C16: ''
+  F16: ''
+  G16: ''
+  H16: ''
+  M16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Vazvrat")' V='Vazvrat'
+  N16: 0.0
+  O16: 0.0
+  P16: '0 сум (0%)'
+  Q16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"Vazvrat")' V='Vazvrat'
+  R16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  S16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),0.0)' V=0
+  T16: F='=IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),"0 сум (0%)")' V='0 сум (0%)'
