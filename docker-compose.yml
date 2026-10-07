@@ -9,6 +9,11 @@ services:
       - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d cashflow"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
 
   backend:
     build: ./backend
@@ -20,7 +25,8 @@ services:
     environment:
       - DATABASE_URL=postgresql://postgres:password@db:5432/cashflow
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     restart: on-failure
 
   frontend:

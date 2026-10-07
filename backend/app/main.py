@@ -12,7 +12,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from . import logic, models, schemas
-from .database import BASE_DIR, Base, SessionLocal, engine, get_db
+from .database import BASE_DIR, Base, SessionLocal, engine, get_db, wait_for_database
 from .exporter import export_workbook
 from .importer import import_workbook
 from .models import EXPENSE, INCOME, TRANSFER
@@ -20,6 +20,7 @@ from .models import EXPENSE, INCOME, TRANSFER
 SEED_WORKBOOK = os.path.join(BASE_DIR, "data_source.xlsx")
 FRONTEND_DIST = os.getenv("FRONTEND_DIST", os.path.join(os.path.dirname(BASE_DIR), "frontend", "dist"))
 
+wait_for_database()
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Pifagor Cash flow & P&L")
