@@ -252,7 +252,7 @@ def import_workbook(db: Session, source) -> dict:
     if missing:
         raise ValueError(f"Faylda varaqlar topilmadi: {', '.join(sorted(missing))}")
 
-    for table in (models.Transaction, models.Project, models.Article, models.Account,
+    for table in (models.Receipt, models.Transaction, models.Project, models.Article, models.Account,
                   models.ExchangeRate, models.DirectoryItem):
         db.execute(delete(table))
     db.flush()

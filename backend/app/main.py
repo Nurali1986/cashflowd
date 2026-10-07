@@ -1,6 +1,7 @@
 import io
 import os
-from datetime import date
+import uuid
+from datetime import date, datetime
 from typing import Optional
 
 from fastapi import Depends, FastAPI, File, HTTPException, Query, UploadFile
@@ -12,16 +13,22 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from . import logic, models, schemas
-from .database import BASE_DIR, Base, SessionLocal, engine, get_db, wait_for_database
+from .database import BASE_DIR, Base, SessionLocal, add_missing_columns, engine, get_db, wait_for_database
 from .exporter import export_workbook
 from .importer import import_workbook
 from .models import EXPENSE, INCOME, TRANSFER
 
 SEED_WORKBOOK = os.path.join(BASE_DIR, "data_source.xlsx")
+# Receipt photos/PDFs; in docker-compose this is inside the mounted ./backend folder, so files survive rebuilds.
+UPLOAD_DIR = os.getenv("UPLOAD_DIR", os.path.join(BASE_DIR, "uploads"))
+MAX_UPLOAD = 15 * 1024 * 1024
+ALLOWED_TYPES = {"image/jpeg": ".jpg", "image/png": ".png", "image/webp": ".webp", "image/heic": ".heic",
+                 "image/heif": ".heif", "image/gif": ".gif", "application/pdf": ".pdf"}
 FRONTEND_DIST = os.getenv("FRONTEND_DIST", os.path.join(os.path.dirname(BASE_DIR), "frontend", "dist"))
 
 wait_for_database()
 Base.metadata.create_all(bind=engine)
+add_missing_columns()
 
 app = FastAPI(title="Pifagor Cash flow & P&L")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
@@ -74,14 +81,16 @@ def meta(db: Session = Depends(get_db)):
             for a in logic.ordered_articles(db)
         ],
         "projects": [
-            {"id": p.id, "name": p.name, "customer": p.customer, "close_date": p.close_date}
+            {"id": p.id, "name": p.name, "customer": p.customer, "close_date": p.close_date, "status": p.status,
+             "active": p.status not in models.INACTIVE_STATUSES}
             for p in db.scalars(select(models.Project).order_by(models.Project.name))
         ],
         "directory": [
             schemas.DirectoryOut.model_validate(d).model_dump()
             for d in db.scalars(select(models.DirectoryItem).order_by(models.DirectoryItem.kind, models.DirectoryItem.sort))
         ],
-        "statuses": models.PROJECT_STATUSES,
+        "statuses": logic.project_statuses(settings),
+        "inactive_statuses": models.INACTIVE_STATUSES,
     }
 
 
@@ -92,6 +101,11 @@ def update_settings(values: dict[str, Optional[str]], db: Session = Depends(get_
             raise HTTPException(400, f"Noma'lum sozlama: {key}")
         if key == "start_date":
             date.fromisoformat(value)
+        if key == "project_statuses":
+            removed = set(logic.project_statuses(logic.get_settings(db))) - set(logic.project_statuses({key: value}))
+            used = db.scalars(select(models.Project.status).where(models.Project.status.in_(removed))).first() if removed else None
+            if used:
+                raise HTTPException(409, f"«{used}» statusi loyihalarda ishlatilgan — o'chirib bo'lmaydi")
         db.merge(models.Setting(key=key, value=value))
     db.commit()
     return logic.get_settings(db)
@@ -126,6 +140,8 @@ def _tx_out(t: models.Transaction, settings: dict) -> schemas.TransactionOut:
         project_close_date=t.project.close_date if t.project else None,
         comment=t.comment,
         import_warning=t.import_warning,
+        receipts=[schemas.ReceiptOut.model_validate(r) for r in t.receipts],
+        verified_at=t.verified_at,
     )
 
 
@@ -143,6 +159,7 @@ def list_transactions(
     q: Optional[str] = None,
     warnings_only: bool = False,
     cash: Optional[str] = None,
+    receipt: Optional[str] = None,
     sort: str = "date_desc",
     limit: int = Query(200, le=5000),
     offset: int = 0,
@@ -175,6 +192,14 @@ def list_transactions(
         stmt = stmt.where(models.Transaction.import_warning.is_not(None))
 
     rows = list(db.scalars(stmt).unique())
+    if receipt == "with":
+        rows = [t for t in rows if t.receipts]
+    elif receipt == "without":
+        rows = [t for t in rows if not t.receipts]
+    elif receipt == "unverified":
+        rows = [t for t in rows if t.verified_at is None]
+    elif receipt == "verified":
+        rows = [t for t in rows if t.verified_at is not None]
     if q:
         needle = q.strip().lower()
         rows = [t for t in rows if needle in " ".join(filter(None, [
@@ -197,6 +222,7 @@ def list_transactions(
 
 
 def _apply_tx(db: Session, t: models.Transaction, data: schemas.TransactionIn):
+    before = (t.amount, t.date, t.account_id, t.article_id)
     t.is_plan = data.is_plan
     t.date = data.date
     t.pnl_month = data.pnl_month or (data.date.replace(day=1) if data.date else None)
@@ -249,6 +275,9 @@ def _apply_tx(db: Session, t: models.Transaction, data: schemas.TransactionIn):
         t.project_id = None
     # The row was reviewed by a person, so import warnings no longer apply.
     t.import_warning = None
+    # A changed amount/date/account/article no longer matches the receipt that was checked.
+    if t.id is not None and before != (t.amount, t.date, t.account_id, t.article_id):
+        t.verified_at = None
 
 
 @app.post("/api/transactions", response_model=schemas.TransactionOut)
@@ -259,6 +288,11 @@ def create_transaction(data: schemas.TransactionIn, db: Session = Depends(get_db
     db.commit()
     db.refresh(t)
     return _tx_out(t, logic.get_settings(db))
+
+
+@app.get("/api/transactions/{tx_id}", response_model=schemas.TransactionOut)
+def get_transaction(tx_id: int, db: Session = Depends(get_db)):
+    return _tx_out(_get(db, models.Transaction, tx_id), logic.get_settings(db))
 
 
 @app.put("/api/transactions/{tx_id}", response_model=schemas.TransactionOut)
@@ -272,9 +306,89 @@ def update_transaction(tx_id: int, data: schemas.TransactionIn, db: Session = De
 
 @app.delete("/api/transactions/{tx_id}")
 def delete_transaction(tx_id: int, db: Session = Depends(get_db)):
-    db.delete(_get(db, models.Transaction, tx_id))
+    t = _get(db, models.Transaction, tx_id)
+    files = [r.stored_name for r in t.receipts if r.stored_name]
+    db.delete(t)
     db.commit()
+    for name in files:
+        _remove_file(name)
     return {"ok": True}
+
+
+# ---------------------------------------------------------------- receipts (chek: photo / PDF / link)
+
+def _remove_file(stored_name: str):
+    try:
+        os.remove(os.path.join(UPLOAD_DIR, stored_name))
+    except FileNotFoundError:
+        pass
+
+
+@app.post("/api/transactions/{tx_id}/receipts", response_model=schemas.ReceiptOut)
+async def upload_receipt(tx_id: int, file: UploadFile = File(...), db: Session = Depends(get_db)):
+    t = _get(db, models.Transaction, tx_id)
+    content_type = (file.content_type or "").lower()
+    if content_type not in ALLOWED_TYPES:
+        raise HTTPException(400, "Faqat rasm (JPG, PNG, WEBP, HEIC) yoki PDF yuklash mumkin")
+    content = await file.read()
+    if len(content) > MAX_UPLOAD:
+        raise HTTPException(400, "Fayl juda katta (15 MB dan oshmasin)")
+    if not content:
+        raise HTTPException(400, "Fayl bo'sh")
+    os.makedirs(UPLOAD_DIR, exist_ok=True)
+    stored_name = f"{uuid.uuid4().hex}{ALLOWED_TYPES[content_type]}"
+    with open(os.path.join(UPLOAD_DIR, stored_name), "wb") as fh:
+        fh.write(content)
+    r = models.Receipt(transaction_id=t.id, kind="file", filename=os.path.basename(file.filename or "chek")[:255],
+                       stored_name=stored_name, content_type=content_type, size=len(content))
+    db.add(r)
+    db.commit()
+    return r
+
+
+@app.post("/api/transactions/{tx_id}/receipts/link", response_model=schemas.ReceiptOut)
+def add_receipt_link(tx_id: int, data: schemas.LinkIn, db: Session = Depends(get_db)):
+    t = _get(db, models.Transaction, tx_id)
+    url = data.url.strip()
+    if not url.lower().startswith(("http://", "https://")):
+        raise HTTPException(400, "Link http:// yoki https:// bilan boshlanishi kerak")
+    r = models.Receipt(transaction_id=t.id, kind="link", url=url)
+    db.add(r)
+    db.commit()
+    return r
+
+
+@app.get("/api/receipts/{receipt_id}/file")
+def receipt_file(receipt_id: int, db: Session = Depends(get_db)):
+    r = _get(db, models.Receipt, receipt_id)
+    if r.kind != "file" or not r.stored_name:
+        raise HTTPException(404, "Fayl yo'q")
+    path = os.path.join(UPLOAD_DIR, r.stored_name)
+    if not os.path.isfile(path):
+        raise HTTPException(404, "Fayl serverda topilmadi")
+    # inline so the reviewer sees the photo/PDF in the browser instead of downloading it
+    return FileResponse(path, media_type=r.content_type, filename=r.filename,
+                        content_disposition_type="inline")
+
+
+@app.delete("/api/receipts/{receipt_id}")
+def delete_receipt(receipt_id: int, db: Session = Depends(get_db)):
+    r = _get(db, models.Receipt, receipt_id)
+    stored = r.stored_name
+    db.delete(r)
+    db.commit()
+    if stored:
+        _remove_file(stored)
+    return {"ok": True}
+
+
+@app.put("/api/transactions/{tx_id}/verified", response_model=schemas.TransactionOut)
+def set_verified(tx_id: int, verified: bool, db: Session = Depends(get_db)):
+    t = _get(db, models.Transaction, tx_id)
+    t.verified_at = datetime.now() if verified else None
+    db.commit()
+    db.refresh(t)
+    return _tx_out(t, logic.get_settings(db))
 
 
 # ---------------------------------------------------------------- projects (P&L)
@@ -298,11 +412,11 @@ def get_project(project_id: int, db: Session = Depends(get_db)):
     return _project_out(_get(db, models.Project, project_id), logic.project_figures(db))
 
 
-def _apply_project(p: models.Project, data: schemas.ProjectIn):
+def _apply_project(p: models.Project, data: schemas.ProjectIn, statuses: list[str]):
     name = " ".join(data.name.split())
     if not name:
         raise HTTPException(400, "Loyiha nomini kiriting")
-    if data.status and data.status not in models.PROJECT_STATUSES:
+    if data.status and data.status not in statuses:
         raise HTTPException(400, "Noto'g'ri status")
     for key, value in data.model_dump().items():
         if isinstance(value, str):
@@ -314,7 +428,7 @@ def _apply_project(p: models.Project, data: schemas.ProjectIn):
 @app.post("/api/projects", response_model=schemas.ProjectOut)
 def create_project(data: schemas.ProjectIn, db: Session = Depends(get_db)):
     p = models.Project(sort=(db.scalar(select(func.max(models.Project.sort))) or 0) + 1)
-    _apply_project(p, data)
+    _apply_project(p, data, logic.project_statuses(logic.get_settings(db)))
     db.add(p)
     _commit(db, "Bu nomli loyiha")
     return _project_out(p, logic.project_figures(db))
@@ -323,7 +437,7 @@ def create_project(data: schemas.ProjectIn, db: Session = Depends(get_db)):
 @app.put("/api/projects/{project_id}", response_model=schemas.ProjectOut)
 def update_project(project_id: int, data: schemas.ProjectIn, db: Session = Depends(get_db)):
     p = _get(db, models.Project, project_id)
-    _apply_project(p, data)
+    _apply_project(p, data, logic.project_statuses(logic.get_settings(db)))
     _commit(db, "Bu nomli loyiha")
     return _project_out(p, logic.project_figures(db))
 
@@ -411,10 +525,32 @@ def create_article(data: schemas.ArticleIn, db: Session = Depends(get_db)):
     return schemas.ArticleOut.model_validate(a)
 
 
+@app.post("/api/articles/reorder")
+def reorder_articles(ids: list[int], db: Session = Depends(get_db)):
+    """Set the order of the настройки tree: ids in the new order (categories follow their first article)."""
+    by_id = {a.id: a for a in db.scalars(select(models.Article))}
+    rest = [a for a in logic.ordered_articles(db) if a.id not in ids]
+    for i, a in enumerate([by_id[x] for x in ids if x in by_id] + rest):
+        a.sort = i
+    db.commit()
+    return {"ok": True}
+
+
 @app.put("/api/articles/{article_id}", response_model=schemas.ArticleOut)
 def update_article(article_id: int, data: schemas.ArticleIn, db: Session = Depends(get_db)):
     a = _get(db, models.Article, article_id)
     _apply_article(a, data)
+    # Renaming/moving onto an existing article merges the two: its operations move over and this one goes.
+    target = db.scalar(select(models.Article).where(
+        models.Article.id != a.id, models.Article.type == a.type, models.Article.category == a.category,
+        models.Article.subcategory.is_(None) if a.subcategory is None else models.Article.subcategory == a.subcategory))
+    if target is not None:
+        db.expire(a)
+        for t in db.scalars(select(models.Transaction).where(models.Transaction.article_id == article_id)):
+            t.article_id, t.kind = target.id, target.type
+        db.delete(db.get(models.Article, article_id))
+        db.commit()
+        return schemas.ArticleOut.model_validate(target)
     for t in db.scalars(select(models.Transaction).where(models.Transaction.article_id == a.id)):
         t.kind = a.type
     _commit(db, "Bu статья")

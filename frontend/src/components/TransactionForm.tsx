@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type FormEvent } from 'react'
 import { ArrowLeftRight, Plus, Save, X } from 'lucide-react'
-import { api, type Transaction, type TransactionInput } from '../api'
+import { api, type Receipt, type Transaction, type TransactionInput } from '../api'
+import { ReceiptPicker, addReceiptLink, uploadReceipt } from './Receipts'
 import { monthIso, todayIso } from '../format'
 import { useMeta } from '../meta'
 import { Button, ErrorBox, Field, Input, NumberInput, Select, Toggle } from '../ui'
@@ -70,9 +71,15 @@ export default function TransactionForm({ isPlan, editing, copyFrom, onSaved, on
   const [draft, setDraft] = useState<Draft>(() => emptyDraft(transferOnly))
   const [error, setError] = useState<string | null>(null)
   const [saving, setSaving] = useState(false)
+  const [files, setFiles] = useState<File[]>([])
+  const [links, setLinks] = useState<string[]>([])
+  const [existing, setExisting] = useState<Receipt[]>([])
 
   useEffect(() => {
     if (editing) setDraft(fromTransaction(editing))
+    setExisting(editing?.receipts ?? [])
+    setFiles([])
+    setLinks([])
   }, [editing])
   useEffect(() => {
     if (copyFrom) setDraft({ ...fromTransaction(copyFrom), date: copyFrom.date ? todayIso() : '', amountTouched: true })
@@ -127,6 +134,14 @@ export default function TransactionForm({ isPlan, editing, copyFrom, onSaved, on
       const saved = editing
         ? await api.put<Transaction>(`/api/transactions/${editing.id}`, body)
         : await api.post<Transaction>('/api/transactions', body)
+      try {
+        for (const f of files) await uploadReceipt(saved.id, f)
+        for (const l of links) await addReceiptLink(saved.id, l)
+      } catch (err) {
+        setError(`Operatsiya saqlandi, lekin chek yuklanmadi: ${(err as Error).message}. Jadvaldagi 📎 orqali qayta qo'shing.`)
+      }
+      setFiles([])
+      setLinks([])
       onSaved(saved, !editing)
       if (!editing) setDraft(emptyDraft(draft.transfer || transferOnly, draft))
     } catch (err) {
@@ -212,13 +227,21 @@ export default function TransactionForm({ isPlan, editing, copyFrom, onSaved, on
         <Field label="Kim uchun to'lov (o'quvchi F.I.Sh / proyekt)" className="col-span-2">
           <Input list="project-options" value={draft.project} onChange={e => set('project', e.target.value)} placeholder="Ixtiyoriy" />
           <datalist id="project-options">
-            {meta.projects.map(p => <option key={p.id} value={p.name}>{p.customer ?? ''}</option>)}
+            {meta.projects.filter(p => p.active).map(p => <option key={p.id} value={p.name}>{p.customer ?? ''}</option>)}
           </datalist>
           {!projectExists && <span className="text-xs text-amber-600">Yangi loyiha sifatida P&L ro'yxatiga qo'shiladi</span>}
         </Field>
-        <Field label="КОММЕНТАРИЙ / Check linki" className="col-span-2 md:col-span-4 xl:col-span-4">
+        <Field label="КОММЕНТАРИЙ" className="col-span-2 md:col-span-4 xl:col-span-4">
           <Input value={draft.comment} onChange={e => set('comment', e.target.value)} />
         </Field>
+        <div className="col-span-2 md:col-span-4 xl:col-span-8">
+          <span className="mb-1 block text-xs font-medium text-slate-500">Chek (rasm, PDF yoki link) — tekshiruvchi to'lovni shu bilan solishtiradi</span>
+          <ReceiptPicker files={files} links={links} existing={existing} onFiles={setFiles} onLinks={setLinks}
+            onRemoveExisting={async r => {
+              if (!confirm("Chek o'chirilsinmi?")) return
+              try { await api.del(`/api/receipts/${r.id}`); setExisting(x => x.filter(y => y.id !== r.id)) } catch (err) { setError((err as Error).message) }
+            }} />
+        </div>
         <div className="col-span-2 flex items-end gap-2">
           <Button type="submit" variant="primary" disabled={saving}>
             {editing ? <Save className="h-4 w-4" /> : draft.transfer ? <ArrowLeftRight className="h-4 w-4" /> : <Plus className="h-4 w-4" />}

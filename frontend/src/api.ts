@@ -2,10 +2,10 @@ export type Kind = 'ДОХОД' | 'РАСХОД' | 'ПЕРЕВОД'
 
 export interface Account { id: number; name: string; opening_balance: number; sort: number }
 export interface Article { id: number; type: Kind; category: string; subcategory: string | null; full_name: string; sort?: number; usage?: number }
-export interface ProjectRef { id: number; name: string; customer: string | null; close_date: string | null }
+export interface ProjectRef { id: number; name: string; customer: string | null; close_date: string | null; status: string | null; active: boolean }
 export interface DirectoryItem { id: number; kind: 'customer' | 'order_category'; name: string; sort: number }
 
-export interface Settings { start_date: string; pnl_use_close_date: string; company_name: string }
+export interface Settings { start_date: string; pnl_use_close_date: string; company_name: string; project_statuses: string }
 
 export interface Meta {
   settings: Settings
@@ -17,6 +17,16 @@ export interface Meta {
   projects: ProjectRef[]
   directory: DirectoryItem[]
   statuses: string[]
+  inactive_statuses: string[]
+}
+
+export interface Receipt {
+  id: number
+  kind: 'file' | 'link'
+  url: string | null
+  filename: string | null
+  content_type: string | null
+  size: number | null
 }
 
 export interface Transaction {
@@ -43,6 +53,8 @@ export interface Transaction {
   project_close_date: string | null
   comment: string | null
   import_warning: string | null
+  receipts: Receipt[]
+  verified_at: string | null
 }
 
 export interface TransactionInput {
