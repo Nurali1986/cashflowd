@@ -1,295 +1,180 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { LayoutDashboard, Receipt, Settings } from 'lucide-react';
+import { useRef, useState } from 'react'
+import { NavLink, Navigate, Route, Routes } from 'react-router-dom'
+import {
+  ArrowLeftRight, BarChart3, BookOpen, CalendarDays, CalendarRange, DollarSign, Download, FileSpreadsheet,
+  FolderKanban, Gauge, Landmark, LineChart, ListTree, Menu, NotebookPen, PieChart, Settings, Table2, Upload, Wallet, X,
+} from 'lucide-react'
+import { api } from './api'
+import { useMeta } from './meta'
+import { ErrorBox, Spinner } from './ui'
+import CashFlowPage from './pages/CashFlowPage'
+import ProjectsPage from './pages/ProjectsPage'
+import KassaPage from './pages/KassaPage'
+import KursPage from './pages/KursPage'
+import CashflowDailyPage from './pages/CashflowDailyPage'
+import CashflowMonthlyPage from './pages/CashflowMonthlyPage'
+import PnlMonthlyPage from './pages/PnlMonthlyPage'
+import ProjectReportPage from './pages/ProjectReportPage'
+import DashboardPage from './pages/DashboardPage'
+import SettingsPage from './pages/SettingsPage'
+import DirectoryPage from './pages/DirectoryPage'
+import TransfersPage from './pages/TransfersPage'
+import BackendPage from './pages/BackendPage'
+import DashboardDataPage from './pages/DashboardDataPage'
 
-const API_URL = 'http://localhost:8000';
+interface SheetLink { to: string; label: string; icon: typeof Table2; hint: string }
 
-function App() {
-  const [activeTab, setActiveTab] = useState('dashboard');
-  const [summary, setSummary] = useState(null);
-  const [transactions, setTransactions] = useState([]);
+// One page per sheet of «Pifagor - Cash flow - P&L.xlsx».
+const GROUPS: { title: string; links: SheetLink[] }[] = [
+  {
+    title: 'Kiritish',
+    links: [
+      { to: '/cash-flow', label: 'Cash flow', icon: Table2, hint: 'Barcha pul operatsiyalari' },
+      { to: '/pnl', label: 'P&L', icon: FolderKanban, hint: "Loyihalar / o'quvchilar" },
+      { to: '/pnl-reja', label: 'P&L Reja', icon: NotebookPen, hint: 'Rejalashtirilgan operatsiyalar' },
+      { to: '/kurs', label: 'Kurs', icon: DollarSign, hint: 'Dollar kursi' },
+      { to: '/perevodlar', label: 'Perevodlar', icon: ArrowLeftRight, hint: "Hisoblar o'rtasida o'tkazmalar" },
+    ],
+  },
+  {
+    title: 'Hisobotlar',
+    links: [
+      { to: '/kassa', label: 'Kassa', icon: Wallet, hint: 'Hisoblar qoldig\'i' },
+      { to: '/cash-flow-kunlik', label: 'Cash flow kunlik', icon: CalendarDays, hint: 'Kunlik ДДС' },
+      { to: '/cash-flow-oylik', label: 'Cash flow oylik', icon: CalendarRange, hint: 'Oylik ДДС' },
+      { to: '/pnl-oylik', label: 'P&L oylik', icon: BarChart3, hint: 'Oylik ОПУ (fakt / reja)' },
+      { to: '/otchet', label: 'ОТЧЕТ по проекту', icon: BookOpen, hint: 'Bitta loyiha hisoboti' },
+      { to: '/dashboard-pnl', label: 'Dashboard P&L', icon: PieChart, hint: 'ОПУ dashboard' },
+      { to: '/dashboard-cash-flow', label: 'Dashboard Cash flow', icon: LineChart, hint: 'ДДС dashboard' },
+    ],
+  },
+  {
+    title: 'Sozlamalar',
+    links: [
+      { to: '/spravochnik', label: 'справочник', icon: Landmark, hint: 'Hisoblar, статьялар, ro\'yxatlar' },
+      { to: '/nastroyki', label: 'настройки', icon: Settings, hint: 'Hisoblangan ro\'yxatlar' },
+      { to: '/back-end', label: 'Back-end', icon: ListTree, hint: 'Davr bo\'yicha filtr' },
+      { to: '/nastroyki-dashboard-opu', label: 'настройки(дашбордОПУ)', icon: Gauge, hint: 'Dashboard P&L ma\'lumotlari' },
+      { to: '/nastroyki-dashboard-dds', label: 'настройки(дашбордДДС)', icon: Gauge, hint: 'Dashboard Cash flow ma\'lumotlari' },
+    ],
+  },
+]
 
-  useEffect(() => {
-    fetchSummary();
-    fetchTransactions();
-  }, []);
+function ImportExport() {
+  const { touch } = useMeta()
+  const fileRef = useRef<HTMLInputElement>(null)
+  const [busy, setBusy] = useState(false)
+  const [message, setMessage] = useState<string | null>(null)
 
-  const fetchSummary = async () => {
+  async function upload(file: File) {
+    if (!confirm(`«${file.name}» faylidan import qilinsinmi?\n\nDIQQAT: platformadagi BARCHA joriy ma'lumotlar Excel fayldagi ma'lumotlar bilan almashtiriladi.`)) return
+    setBusy(true)
+    setMessage(null)
     try {
-      const response = await axios.get(`${API_URL}/dashboard/summary/`);
-      setSummary(response.data);
-    } catch (error) {
-      console.error('Error fetching summary:', error);
+      const form = new FormData()
+      form.append('file', file)
+      const s = await api.post<Record<string, number>>('/api/import', form)
+      setMessage(`Import tugadi: ${s.transactions} operatsiya, ${s.projects} loyiha, ${s.plan} reja, ${s.rates} kurs. Tekshirish kerak: ${s.warnings} qator.`)
+      touch()
+    } catch (e) {
+      setMessage(`Xatolik: ${(e as Error).message}`)
+    } finally {
+      setBusy(false)
+      if (fileRef.current) fileRef.current.value = ''
     }
-  };
-
-  const fetchTransactions = async () => {
-    try {
-      const response = await axios.get(`${API_URL}/transactions/`);
-      setTransactions(response.data);
-    } catch (error) {
-      console.error('Error fetching transactions:', error);
-    }
-  };
-
-  const handleFileUpload = async (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
-
-    const formData = new FormData();
-    formData.append('file', file);
-
-    try {
-      await axios.post(`${API_URL}/upload-csv/`, formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      });
-      fetchSummary();
-      fetchTransactions();
-      alert('Upload successful');
-    } catch (error) {
-      console.error('Error uploading file:', error);
-      alert('Upload failed');
-    }
-  };
-
-  const chartData = summary?.monthly_data.reduce((acc, curr) => {
-    const monthName = new Date(curr.year, curr.month - 1).toLocaleString('default', { month: 'short' });
-    const existing = acc.find(item => item.name === `${monthName} ${curr.year}`);
-    
-    if (existing) {
-      if (curr.type === 'ДОХОД') existing.Income = curr.total;
-      if (curr.type === 'РАСХОД') existing.Expense = curr.total;
-    } else {
-      acc.push({
-        name: `${monthName} ${curr.year}`,
-        Income: curr.type === 'ДОХОД' ? curr.total : 0,
-        Expense: curr.type === 'РАСХОД' ? curr.total : 0
-      });
-    }
-    return acc;
-  }, []) || [];
+  }
 
   return (
-    <div className="flex h-screen bg-gray-100">
-      {/* Sidebar */}
-      <div className="w-64 bg-white shadow-lg">
-        <div className="p-6">
-          <h1 className="text-2xl font-bold text-gray-800">Cashflow P&L</h1>
-        </div>
-        <nav className="mt-6">
-          <a
-            onClick={() => setActiveTab('dashboard')}
-            className={`flex items-center px-6 py-3 cursor-pointer ${activeTab === 'dashboard' ? 'bg-blue-50 text-blue-600 border-r-4 border-blue-600' : 'text-gray-600 hover:bg-gray-50'}`}
-          >
-            <LayoutDashboard className="w-5 h-5 mr-3" />
-            Баланс / Dashboard
-          </a>
-          <a
-            onClick={() => setActiveTab('transactions')}
-            className={`flex items-center px-6 py-3 cursor-pointer ${activeTab === 'transactions' ? 'bg-blue-50 text-blue-600 border-r-4 border-blue-600' : 'text-gray-600 hover:bg-gray-50'}`}
-          >
-            <Receipt className="w-5 h-5 mr-3" />
-            ДДС (Transactions)
-          </a>
-          <a
-            onClick={() => setActiveTab('income')}
-            className={`flex items-center px-6 py-3 cursor-pointer ${activeTab === 'income' ? 'bg-blue-50 text-blue-600 border-r-4 border-blue-600' : 'text-gray-600 hover:bg-gray-50'}`}
-          >
-            <Receipt className="w-5 h-5 mr-3" />
-            Доходы (Income)
-          </a>
-          <a
-            onClick={() => setActiveTab('expenses')}
-            className={`flex items-center px-6 py-3 cursor-pointer ${activeTab === 'expenses' ? 'bg-blue-50 text-blue-600 border-r-4 border-blue-600' : 'text-gray-600 hover:bg-gray-50'}`}
-          >
-            <Receipt className="w-5 h-5 mr-3" />
-            Расходы (Expenses)
-          </a>
-          <a
-            onClick={() => setActiveTab('settings')}
-            className={`flex items-center px-6 py-3 cursor-pointer ${activeTab === 'settings' ? 'bg-blue-50 text-blue-600 border-r-4 border-blue-600' : 'text-gray-600 hover:bg-gray-50'}`}
-          >
-            <Settings className="w-5 h-5 mr-3" />
-            Settings / Upload
-          </a>
-        </nav>
-      </div>
-
-      {/* Main Content */}
-      <div className="flex-1 overflow-auto">
-        <div className="p-8">
-          {activeTab === 'dashboard' && (
-            <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Баланс (Dashboard)</h2>
-              
-              {/* Summary Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white rounded-lg shadow p-6">
-                  <h3 className="text-gray-500 text-sm font-medium">Total Income</h3>
-                  <p className="text-3xl font-bold text-green-600 mt-2">
-                    {summary?.total_income.toLocaleString()} UZS
-                  </p>
-                </div>
-                <div className="bg-white rounded-lg shadow p-6">
-                  <h3 className="text-gray-500 text-sm font-medium">Total Expenses</h3>
-                  <p className="text-3xl font-bold text-red-600 mt-2">
-                    {summary?.total_expense.toLocaleString()} UZS
-                  </p>
-                </div>
-                <div className="bg-white rounded-lg shadow p-6">
-                  <h3 className="text-gray-500 text-sm font-medium">Net Balance</h3>
-                  <p className={`text-3xl font-bold mt-2 ${summary?.net_balance >= 0 ? 'text-blue-600' : 'text-red-600'}`}>
-                    {summary?.net_balance.toLocaleString()} UZS
-                  </p>
-                </div>
-              </div>
-
-              {/* Chart */}
-              <div className="bg-white rounded-lg shadow p-6 mb-8">
-                <h3 className="text-lg font-bold text-gray-800 mb-4">Income vs Expenses (Monthly)</h3>
-                <div className="h-80">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={chartData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <Tooltip />
-                      <Legend />
-                      <Bar dataKey="Income" fill="#10B981" name="Income (UZS)" />
-                      <Bar dataKey="Expense" fill="#EF4444" name="Expense (UZS)" />
-                    </BarChart>
-                  </ResponsiveContainer>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'transactions' && (
-            <div className="bg-white rounded-lg shadow overflow-hidden">
-              <div className="p-6 border-b border-gray-200">
-                <h2 className="text-xl font-bold text-gray-800">ДДС (Все транзакции)</h2>
-              </div>
-              <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse">
-                  <thead>
-                    <tr className="bg-gray-50 text-gray-600 text-sm border-b border-gray-200">
-                      <th className="p-4 font-medium">Date</th>
-                      <th className="p-4 font-medium">Type</th>
-                      <th className="p-4 font-medium">Category</th>
-                      <th className="p-4 font-medium">Project / Student</th>
-                      <th className="p-4 font-medium">Amount (UZS)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {transactions.map((t, index) => (
-                      <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
-                        <td className="p-4">{t.date}</td>
-                        <td className="p-4">
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${t.type === 'ДОХОД' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
-                            {t.type}
-                          </span>
-                        </td>
-                        <td className="p-4 text-sm text-gray-700">{t.category}</td>
-                        <td className="p-4 text-sm text-gray-700">{t.project}</td>
-                        <td className={`p-4 font-medium ${t.type === 'ДОХОД' ? 'text-green-600' : 'text-red-600'}`}>
-                          {t.type === 'ДОХОД' ? '+' : '-'}{t.amount_uzs.toLocaleString()}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'income' && (
-            <div className="bg-white rounded-lg shadow overflow-hidden">
-              <div className="p-6 border-b border-gray-200">
-                <h2 className="text-xl font-bold text-gray-800">Доходы</h2>
-              </div>
-              <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse">
-                  <thead>
-                    <tr className="bg-gray-50 text-gray-600 text-sm border-b border-gray-200">
-                      <th className="p-4 font-medium">Date</th>
-                      <th className="p-4 font-medium">Category</th>
-                      <th className="p-4 font-medium">Student / Payer</th>
-                      <th className="p-4 font-medium">Amount (UZS)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {transactions.filter(t => t.type === 'ДОХОД').map((t, index) => (
-                      <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
-                        <td className="p-4">{t.date}</td>
-                        <td className="p-4 text-sm text-gray-700">{t.category}</td>
-                        <td className="p-4 text-sm text-gray-700">{t.project}</td>
-                        <td className="p-4 font-medium text-green-600">
-                          +{t.amount_uzs.toLocaleString()}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'expenses' && (
-            <div className="bg-white rounded-lg shadow overflow-hidden">
-              <div className="p-6 border-b border-gray-200">
-                <h2 className="text-xl font-bold text-gray-800">Расходы</h2>
-              </div>
-              <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse">
-                  <thead>
-                    <tr className="bg-gray-50 text-gray-600 text-sm border-b border-gray-200">
-                      <th className="p-4 font-medium">Date</th>
-                      <th className="p-4 font-medium">Category</th>
-                      <th className="p-4 font-medium">Project / Recipient</th>
-                      <th className="p-4 font-medium">Amount (UZS)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {transactions.filter(t => t.type === 'РАСХОД').map((t, index) => (
-                      <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
-                        <td className="p-4">{t.date}</td>
-                        <td className="p-4 text-sm text-gray-700">{t.category}</td>
-                        <td className="p-4 text-sm text-gray-700">{t.project}</td>
-                        <td className="p-4 font-medium text-red-600">
-                          -{t.amount_uzs.toLocaleString()}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'settings' && (
-            <div className="bg-white rounded-lg shadow p-6">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">Settings & Data Import</h2>
-              <div className="mt-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Upload Excel/CSV Data
-                </label>
-                <input
-                  type="file"
-                  accept=".csv,.xlsx,.xls"
-                  onChange={handleFileUpload}
-                  className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-                />
-                <p className="mt-2 text-sm text-gray-500">
-                  Upload the massive CSV or Excel file exported from Pifagor system to populate the database.
-                </p>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
+    <div className="space-y-1 border-t border-slate-800 px-3 py-3">
+      <a href="/api/export" className="flex items-center gap-2 rounded px-2 py-1.5 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">
+        <Download className="h-4 w-4" /> Excel'ga yuklab olish
+      </a>
+      <button onClick={() => fileRef.current?.click()} disabled={busy}
+        className="flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm text-slate-300 hover:bg-slate-800 hover:text-white disabled:opacity-50">
+        <Upload className="h-4 w-4" /> {busy ? 'Import qilinmoqda…' : "Excel'dan import"}
+      </button>
+      <input ref={fileRef} type="file" accept=".xlsx,.xlsm" className="hidden" onChange={e => e.target.files?.[0] && upload(e.target.files[0])} />
+      {message && <p className="px-2 text-xs text-slate-400">{message}</p>}
     </div>
-  );
+  )
 }
 
-export default App;
+function Sidebar({ onNavigate }: { onNavigate: () => void }) {
+  const { meta } = useMeta()
+  return (
+    <div className="flex h-full flex-col bg-slate-900 text-slate-300">
+      <div className="flex items-center gap-2 px-4 py-4">
+        <FileSpreadsheet className="h-6 w-6 text-emerald-400" />
+        <div>
+          <div className="text-sm font-semibold text-white">{meta?.settings.company_name || 'Pifagor'}</div>
+          <div className="text-xs text-slate-400">Cash flow · P&L</div>
+        </div>
+      </div>
+      <nav className="flex-1 space-y-4 overflow-y-auto px-3 pb-4">
+        {GROUPS.map(g => (
+          <div key={g.title}>
+            <div className="px-2 pb-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">{g.title}</div>
+            {g.links.map(l => (
+              <NavLink key={l.to} to={l.to} onClick={onNavigate} title={l.hint}
+                className={({ isActive }) => `flex items-center gap-2 rounded px-2 py-1.5 text-sm ${isActive ? 'bg-emerald-600 text-white' : 'hover:bg-slate-800 hover:text-white'}`}>
+                <l.icon className="h-4 w-4 shrink-0" />
+                <span className="truncate">{l.label}</span>
+              </NavLink>
+            ))}
+          </div>
+        ))}
+      </nav>
+      <ImportExport />
+    </div>
+  )
+}
+
+export default function App() {
+  const { meta, error } = useMeta()
+  const [open, setOpen] = useState(false)
+
+  return (
+    <div className="flex h-screen overflow-hidden">
+      <aside className="hidden w-60 shrink-0 lg:block"><Sidebar onNavigate={() => {}} /></aside>
+      {open && (
+        <div className="fixed inset-0 z-40 flex lg:hidden">
+          <div className="w-64"><Sidebar onNavigate={() => setOpen(false)} /></div>
+          <button className="flex-1 bg-black/40" onClick={() => setOpen(false)} aria-label="Yopish"><X className="m-3 h-5 w-5 text-white" /></button>
+        </div>
+      )}
+      <main className="flex min-w-0 flex-1 flex-col overflow-hidden">
+        <div className="flex items-center gap-2 border-b border-slate-200 bg-white px-3 py-2 lg:hidden">
+          <button onClick={() => setOpen(true)} aria-label="Menyu"><Menu className="h-5 w-5" /></button>
+          <span className="text-sm font-semibold">Pifagor · Cash flow & P&L</span>
+        </div>
+        <div className="flex-1 overflow-auto p-4 lg:p-6">
+          {error && <ErrorBox message={`Server bilan aloqa yo'q: ${error}`} />}
+          {!meta ? (!error && <Spinner />) : (
+            <Routes>
+              <Route path="/" element={<Navigate to="/dashboard-pnl" replace />} />
+              <Route path="/cash-flow" element={<CashFlowPage isPlan={false} />} />
+              <Route path="/pnl" element={<ProjectsPage />} />
+              <Route path="/pnl-reja" element={<CashFlowPage isPlan />} />
+              <Route path="/kurs" element={<KursPage />} />
+              <Route path="/perevodlar" element={<TransfersPage />} />
+              <Route path="/kassa" element={<KassaPage />} />
+              <Route path="/cash-flow-kunlik" element={<CashflowDailyPage />} />
+              <Route path="/cash-flow-oylik" element={<CashflowMonthlyPage />} />
+              <Route path="/pnl-oylik" element={<PnlMonthlyPage />} />
+              <Route path="/otchet" element={<ProjectReportPage />} />
+              <Route path="/otchet/:projectId" element={<ProjectReportPage />} />
+              <Route path="/dashboard-pnl" element={<DashboardPage variant="pnl" />} />
+              <Route path="/dashboard-cash-flow" element={<DashboardPage variant="cashflow" />} />
+              <Route path="/spravochnik" element={<DirectoryPage />} />
+              <Route path="/nastroyki" element={<SettingsPage />} />
+              <Route path="/back-end" element={<BackendPage />} />
+              <Route path="/nastroyki-dashboard-opu" element={<DashboardDataPage variant="pnl" />} />
+              <Route path="/nastroyki-dashboard-dds" element={<DashboardDataPage variant="cashflow" />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          )}
+        </div>
+      </main>
+    </div>
+  )
+}
