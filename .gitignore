@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+backend/*.db
+backend/*.db-journal
+node_modules/
+frontend/dist/
