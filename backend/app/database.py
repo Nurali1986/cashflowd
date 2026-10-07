@@ -7,6 +7,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Docker-compose sets DATABASE_URL to Postgres; without it a local SQLite file is used.
 DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{os.path.join(BASE_DIR, 'cashflow.db')}")
+# Always use the psycopg 3 driver (installed via requirements.txt), whatever SQLAlchemy's default is.
+if DATABASE_URL.startswith("postgresql://"):
+    DATABASE_URL = "postgresql+psycopg://" + DATABASE_URL[len("postgresql://"):]
 
 engine = create_engine(
     DATABASE_URL,
